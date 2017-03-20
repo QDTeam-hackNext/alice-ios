@@ -58,5 +58,9 @@
   <string>Your microphone will be used to record your speech when you press the &quot;Start Recording&quot; button.</string>
   <key>NSSpeechRecognitionUsageDescription</key>
   <string>Speech recognition will be used to determine which words you speak into this device&apos;s microphone.</string>
+  <key>NSHealthShareUsageDescription</key>
+  <string>In order to estimate your curent health we need to read your health data.</string>
+  <key>NSHealthUpdateUsageDescription</key>
+  <string>In order to constatnly track your health status we need to be able to update your data.</string>
 </dict>
 </plist>
