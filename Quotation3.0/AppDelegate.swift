@@ -7,9 +7,11 @@
 //
 
 import UIKit
+import XCGLogger
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
+  static let log = XCGLogger.default
 
   var window: UIWindow?
 
