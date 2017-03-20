@@ -11,7 +11,7 @@ import UIKit
 class GeneralIfomationView: UIViewController {
   @IBOutlet weak var recordButton: UIButton!
   
-  fileprivate var model = GeneralInformationViewModel()
+  fileprivate var model = GeneralInformationViewModel(recorder: Recorder())
 
   override func viewDidLoad() {
     Speech().speek("I hope that it will sound like Siri and won't be necessary to use Siri explicitly")

@@ -20,6 +20,7 @@
 		C744E8861E80312100DE2E7F /* GeneralInformationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C744E8851E80312100DE2E7F /* GeneralInformationView.swift */; };
 		C744E8881E80313500DE2E7F /* GeneralInforationViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C744E8871E80313500DE2E7F /* GeneralInforationViewModel.swift */; };
 		C798F8431E807583002D7C07 /* Speech.swift in Sources */ = {isa = PBXBuildFile; fileRef = C798F8421E807583002D7C07 /* Speech.swift */; };
+		C744E88A1E8039D700DE2E7F /* Recorder.swift in Sources */ = {isa = PBXBuildFile; fileRef = C744E8891E8039D700DE2E7F /* Recorder.swift */; };
 		D1B842B1852B5A03766133FA /* Pods_Quotation3_0.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A48B88BE73AD3BF512942195 /* Pods_Quotation3_0.framework */; };
 /* End PBXBuildFile section */
 
@@ -66,6 +67,7 @@
 		C744E8851E80312100DE2E7F /* GeneralInformationView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GeneralInformationView.swift; sourceTree = "<group>"; };
 		C744E8871E80313500DE2E7F /* GeneralInforationViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GeneralInforationViewModel.swift; sourceTree = "<group>"; };
 		C798F8421E807583002D7C07 /* Speech.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Speech.swift; sourceTree = "<group>"; };
+		C744E8891E8039D700DE2E7F /* Recorder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Recorder.swift; sourceTree = "<group>"; };
 		EA09BC83E575A277EF5E2C92 /* Pods-Quotation3.0.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Quotation3.0.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Quotation3.0/Pods-Quotation3.0.debug.xcconfig"; sourceTree = "<group>"; };
 		EACAAED49F9C3E7AA556FFF1 /* Pods-Quotation3.0Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Quotation3.0Tests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Quotation3.0Tests/Pods-Quotation3.0Tests.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -129,6 +131,7 @@
 				C744E87B1E801A1E00DE2E7F /* Quotation3.0.entitlements */,
 				C744E84D1E80184C00DE2E7F /* AppDelegate.swift */,
 				C798F8421E807583002D7C07 /* Speech.swift */,
+				C744E8891E8039D700DE2E7F /* Recorder.swift */,
 				C744E8511E80184C00DE2E7F /* Main.storyboard */,
 				C744E8541E80184C00DE2E7F /* Assets.xcassets */,
 				C744E8561E80184C00DE2E7F /* LaunchScreen.storyboard */,
@@ -508,6 +511,7 @@
 				C744E8861E80312100DE2E7F /* GeneralInformationView.swift in Sources */,
 				C744E84E1E80184C00DE2E7F /* AppDelegate.swift in Sources */,
 				C798F8431E807583002D7C07 /* Speech.swift in Sources */,
+				C744E88A1E8039D700DE2E7F /* Recorder.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
