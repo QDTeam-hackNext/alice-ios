@@ -16,6 +16,8 @@
 		C744E8581E80184C00DE2E7F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C744E8561E80184C00DE2E7F /* LaunchScreen.storyboard */; };
 		C744E8631E80184D00DE2E7F /* Quotation3_0Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C744E8621E80184D00DE2E7F /* Quotation3_0Tests.swift */; };
 		C744E86E1E80184D00DE2E7F /* Quotation3_0UITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C744E86D1E80184D00DE2E7F /* Quotation3_0UITests.swift */; };
+		C744E87D1E801A3300DE2E7F /* HealthKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C744E87C1E801A3300DE2E7F /* HealthKit.framework */; };
+		C744E8811E801CDD00DE2E7F /* PassKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C744E8801E801CDD00DE2E7F /* PassKit.framework */; };
 		D1B842B1852B5A03766133FA /* Pods_Quotation3_0.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A48B88BE73AD3BF512942195 /* Pods_Quotation3_0.framework */; };
 /* End PBXBuildFile section */
 
@@ -57,6 +59,9 @@
 		C744E8691E80184D00DE2E7F /* Quotation3.0UITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Quotation3.0UITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		C744E86D1E80184D00DE2E7F /* Quotation3_0UITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Quotation3_0UITests.swift; sourceTree = "<group>"; };
 		C744E86F1E80184D00DE2E7F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C744E87B1E801A1E00DE2E7F /* Quotation3.0.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Quotation3.0.entitlements; sourceTree = "<group>"; };
+		C744E87C1E801A3300DE2E7F /* HealthKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = HealthKit.framework; path = System/Library/Frameworks/HealthKit.framework; sourceTree = SDKROOT; };
+		C744E8801E801CDD00DE2E7F /* PassKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = PassKit.framework; path = System/Library/Frameworks/PassKit.framework; sourceTree = SDKROOT; };
 		EA09BC83E575A277EF5E2C92 /* Pods-Quotation3.0.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Quotation3.0.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Quotation3.0/Pods-Quotation3.0.debug.xcconfig"; sourceTree = "<group>"; };
 		EACAAED49F9C3E7AA556FFF1 /* Pods-Quotation3.0Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Quotation3.0Tests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Quotation3.0Tests/Pods-Quotation3.0Tests.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -66,7 +71,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C744E8811E801CDD00DE2E7F /* PassKit.framework in Frameworks */,
 				D1B842B1852B5A03766133FA /* Pods_Quotation3_0.framework in Frameworks */,
+				C744E87D1E801A3300DE2E7F /* HealthKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -114,6 +121,7 @@
 		C744E84C1E80184C00DE2E7F /* Quotation3.0 */ = {
 			isa = PBXGroup;
 			children = (
+				C744E87B1E801A1E00DE2E7F /* Quotation3.0.entitlements */,
 				C744E84D1E80184C00DE2E7F /* AppDelegate.swift */,
 				C744E84F1E80184C00DE2E7F /* ViewController.swift */,
 				C744E8511E80184C00DE2E7F /* Main.storyboard */,
@@ -145,6 +153,8 @@
 		EA0B1FBF6526E29582D0E5C3 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				C744E8801E801CDD00DE2E7F /* PassKit.framework */,
+				C744E87C1E801A3300DE2E7F /* HealthKit.framework */,
 				A48B88BE73AD3BF512942195 /* Pods_Quotation3_0.framework */,
 				B9FAAA4122FCAE4121DB62A6 /* Pods_Quotation3_0Tests.framework */,
 				24B0EC148B2F31DF902608D8 /* Pods_Quotation3_0UITests.framework */,
@@ -244,6 +254,20 @@
 						CreatedOnToolsVersion = 8.2.1;
 						DevelopmentTeam = 8QKQ6Z2FMP;
 						ProvisioningStyle = Automatic;
+						SystemCapabilities = {
+							com.apple.ApplePay = {
+								enabled = 1;
+							};
+							com.apple.HealthKit = {
+								enabled = 1;
+							};
+							com.apple.Siri = {
+								enabled = 1;
+							};
+							com.apple.Wallet = {
+								enabled = 1;
+							};
+						};
 					};
 					C744E85D1E80184D00DE2E7F = {
 						CreatedOnToolsVersion = 8.2.1;
@@ -601,6 +625,7 @@
 			baseConfigurationReference = EA09BC83E575A277EF5E2C92 /* Pods-Quotation3.0.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = Quotation3.0/Quotation3.0.entitlements;
 				DEVELOPMENT_TEAM = 8QKQ6Z2FMP;
 				INFOPLIST_FILE = Quotation3.0/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -615,6 +640,7 @@
 			baseConfigurationReference = 144C444393A2F09E2078C614 /* Pods-Quotation3.0.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = Quotation3.0/Quotation3.0.entitlements;
 				DEVELOPMENT_TEAM = 8QKQ6Z2FMP;
 				INFOPLIST_FILE = Quotation3.0/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -705,6 +731,7 @@
 				C744E8741E80184D00DE2E7F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		C744E8751E80184D00DE2E7F /* Build configuration list for PBXNativeTarget "Quotation3.0Tests" */ = {
 			isa = XCConfigurationList;
@@ -713,6 +740,7 @@
 				C744E8771E80184D00DE2E7F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		C744E8781E80184D00DE2E7F /* Build configuration list for PBXNativeTarget "Quotation3.0UITests" */ = {
 			isa = XCConfigurationList;
@@ -721,6 +749,7 @@
 				C744E87A1E80184D00DE2E7F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
