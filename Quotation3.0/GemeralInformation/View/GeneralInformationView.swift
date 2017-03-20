@@ -13,6 +13,10 @@ class GeneralIfomationView: UIViewController {
   
   fileprivate var model = GeneralInformationViewModel()
 
+  override func viewDidLoad() {
+    Speech().speek("I hope that it will sound like Siri and won't be necessary to use Siri explicitly")
+  }
+
   @IBAction func recordButtonTouchDown(_ sender: Any) {
     self.model.startRecord()
   }
