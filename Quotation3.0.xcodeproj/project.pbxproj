@@ -159,7 +159,7 @@
 				C744E8841E802C0900DE2E7F /* ViewModel */,
 			);
 			name = GeneralInformation;
-			path = GemeralInformationView;
+			path = GemeralInformation;
 			sourceTree = "<group>";
 		};
 		C744E8831E802C0400DE2E7F /* View */ = {
@@ -167,8 +167,7 @@
 			children = (
 				C744E8851E80312100DE2E7F /* GeneralInformationView.swift */,
 			);
-			name = View;
-			path = ../GemeralInformation/View;
+			path = View;
 			sourceTree = "<group>";
 		};
 		C744E8841E802C0900DE2E7F /* ViewModel */ = {
@@ -176,8 +175,7 @@
 			children = (
 				C744E8871E80313500DE2E7F /* GeneralInforationViewModel.swift */,
 			);
-			name = ViewModel;
-			path = ../GemeralInformation/ViewModel;
+			path = ViewModel;
 			sourceTree = "<group>";
 		};
 		EA0B1FBF6526E29582D0E5C3 /* Frameworks */ = {
