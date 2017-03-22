@@ -8,6 +8,7 @@
 
 import UIKit
 
-class UserStoryView: UIViewControllerWithViewModel<UserStoryViewModel> {
+class UserStoryView: UIViewController, WithViewModel {
+  typealias Model = UserStoryViewModel
 
 }

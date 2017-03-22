@@ -8,6 +8,7 @@
 
 import UIKit
 
-class DataAccessView: UIViewControllerWithViewModel<DataAccessViewModel> {
+class DataAccessView: UIViewController, WithViewModel {
+  typealias Model = DataAccessViewModel
 
 }

@@ -8,6 +8,7 @@
 
 import UIKit
 
-class AdditionalQuestionsView: UIViewControllerWithViewModel<AdditionalQuestionsViewModel> {
+class AdditionalQuestionsView: UIViewController, WithViewModel {
+  typealias Model = AdditionalQuestionsViewModel
 
 }

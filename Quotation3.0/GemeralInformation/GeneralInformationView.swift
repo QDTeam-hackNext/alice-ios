@@ -8,7 +8,9 @@
 
 import UIKit
 
-class GeneralIfomationView: UIViewControllerWithViewModel<GeneralInformationViewModel> {
+class GeneralIfomationView: UIViewController, WithViewModel {
+  typealias Model = GeneralInformationViewModel
+
   @IBOutlet weak var recordButton: UIButton!
 
   override func viewDidLoad() {

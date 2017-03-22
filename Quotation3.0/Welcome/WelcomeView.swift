@@ -8,6 +8,7 @@
 
 import UIKit
 
-class WelcomeView: UIViewControllerWithViewModel<WelcomeViewModel> {
+class WelcomeView: UIViewController, WithViewModel {
+  typealias Model =  WelcomeViewModel
 
 }

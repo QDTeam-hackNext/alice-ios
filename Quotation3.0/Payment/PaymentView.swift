@@ -8,6 +8,7 @@
 
 import UIKit
 
-class PaymentView: UIViewControllerWithViewModel<PaymentViewModel> {
+class PaymentView: UIViewController, WithViewModel {
+  typealias Model = PaymentViewModel
 
 }

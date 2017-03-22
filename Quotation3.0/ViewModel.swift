@@ -6,27 +6,34 @@
 //  Copyright © 2017 QD Team. All rights reserved.
 //
 
-import UIKit
+import Foundation
 import SwinjectStoryboard
 
-protocol ModelData {
+protocol ModelData {}
 
-}
-
-protocol ViewModel {
-
-}
+protocol ViewModel {}
 
 class ViewModelWithData<Data: ModelData>: ViewModel {
   var data: Data?
 }
 
-class UIViewControllerWithViewModel<Model: ViewModel>: UIViewController {
-  let model: Model
+protocol WithViewModel {
+  associatedtype Model: ViewModel
 
-  required init?(coder: NSCoder) {
-    self.model =  SwinjectStoryboard.defaultContainer.resolve(Model.self)!
+  var model: Model { get }
+}
 
-    super.init(coder: coder)
+private var modelKey: UInt8 = 0
+
+extension WithViewModel {
+  var model: Model {
+    get {
+      guard let m = objc_getAssociatedObject(self, &modelKey) as? Model else {
+        let new = SwinjectStoryboard.defaultContainer.resolve(Model.self)!
+        objc_setAssociatedObject(self, &modelKey, new, .OBJC_ASSOCIATION_RETAIN)
+        return new
+      }
+      return m
+    }
   }
 }

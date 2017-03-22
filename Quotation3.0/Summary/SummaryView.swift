@@ -8,6 +8,7 @@
 
 import UIKit
 
-class SummaryView: UIViewControllerWithViewModel<SummaryViewModel> {
+class SummaryView: UIViewController, WithViewModel {
+  typealias Model = SummaryViewModel
 
 }
