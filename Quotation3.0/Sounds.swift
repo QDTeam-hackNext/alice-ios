@@ -9,11 +9,27 @@
 import AVFoundation
 
 class Sounds {
-  let questionMp3 = Bundle.main.url(forResource: "sounds/question", withExtension: "mp3")
-  var player: AVPlayer?
+  fileprivate let delegate = Delegate()
+  fileprivate let questionMp3 = Bundle.main.url(forResource: "sounds/question", withExtension: "mp3")
 
-  func question() {
-    self.player = AVPlayer(url: self.questionMp3!)
-    player?.play()
+  fileprivate var player: AVAudioPlayer?
+
+  func question(afterFinish: @escaping () -> () = {}) {
+    self.delegate.afterFinish = afterFinish
+    do {
+      self.player = try AVAudioPlayer(contentsOf: questionMp3!)
+      self.player?.delegate = self.delegate
+      self.player?.play()
+    } catch {
+      
+    }
+  }
+
+  fileprivate class Delegate: NSObject, AVAudioPlayerDelegate {
+    var afterFinish: (() -> ())?
+
+    func audioPlayerDidFinishPlaying(_ player: AVAudioPlayer, successfully flag: Bool) {
+      self.afterFinish?()
+    }
   }
 }
