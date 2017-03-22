@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import SwinjectStoryboard
 
 protocol ModelData {
 
@@ -21,5 +22,11 @@ class ViewModelWithData<Data: ModelData>: ViewModel {
 }
 
 class UIViewControllerWithViewModel<Model: ViewModel>: UIViewController {
-  var model: Model?
+  let model: Model
+
+  required init?(coder: NSCoder) {
+    self.model =  SwinjectStoryboard.defaultContainer.resolve(Model.self)!
+
+    super.init(coder: coder)
+  }
 }

@@ -34,6 +34,7 @@
 		C798F85F1E82D739002D7C07 /* SummaryViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C798F85E1E82D739002D7C07 /* SummaryViewModel.swift */; };
 		C798F8611E82D760002D7C07 /* PaymentViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C798F8601E82D760002D7C07 /* PaymentViewModel.swift */; };
 		C798F8631E82DF1D002D7C07 /* ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C798F8621E82DF1D002D7C07 /* ViewModel.swift */; };
+		C7D22D251E82F53B0062D199 /* SwinjectStoryboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7D22D241E82F53B0062D199 /* SwinjectStoryboard.swift */; };
 		D1B842B1852B5A03766133FA /* Pods_Quotation3_0.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A48B88BE73AD3BF512942195 /* Pods_Quotation3_0.framework */; };
 /* End PBXBuildFile section */
 
@@ -94,6 +95,7 @@
 		C798F85E1E82D739002D7C07 /* SummaryViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SummaryViewModel.swift; sourceTree = "<group>"; };
 		C798F8601E82D760002D7C07 /* PaymentViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PaymentViewModel.swift; sourceTree = "<group>"; };
 		C798F8621E82DF1D002D7C07 /* ViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewModel.swift; sourceTree = "<group>"; };
+		C7D22D241E82F53B0062D199 /* SwinjectStoryboard.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwinjectStoryboard.swift; sourceTree = "<group>"; };
 		EA09BC83E575A277EF5E2C92 /* Pods-Quotation3.0.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Quotation3.0.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Quotation3.0/Pods-Quotation3.0.debug.xcconfig"; sourceTree = "<group>"; };
 		EACAAED49F9C3E7AA556FFF1 /* Pods-Quotation3.0Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Quotation3.0Tests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Quotation3.0Tests/Pods-Quotation3.0Tests.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -153,6 +155,7 @@
 		C744E84C1E80184C00DE2E7F /* Quotation3.0 */ = {
 			isa = PBXGroup;
 			children = (
+				C7D22D231E82F5110062D199 /* extensions */,
 				C798F8441E82D453002D7C07 /* Welcome */,
 				C744E8821E802BEA00DE2E7F /* GeneralInformation */,
 				C798F8451E82D467002D7C07 /* UserStory */,
@@ -253,6 +256,14 @@
 				C798F8601E82D760002D7C07 /* PaymentViewModel.swift */,
 			);
 			path = Payment;
+			sourceTree = "<group>";
+		};
+		C7D22D231E82F5110062D199 /* extensions */ = {
+			isa = PBXGroup;
+			children = (
+				C7D22D241E82F53B0062D199 /* SwinjectStoryboard.swift */,
+			);
+			path = extensions;
 			sourceTree = "<group>";
 		};
 		EA0B1FBF6526E29582D0E5C3 /* Frameworks */ = {
@@ -578,6 +589,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C7D22D251E82F53B0062D199 /* SwinjectStoryboard.swift in Sources */,
 				C744E8881E80313500DE2E7F /* GeneralInforationViewModel.swift in Sources */,
 				C798F8551E82D641002D7C07 /* PaymentView.swift in Sources */,
 				C798F84D1E82D598002D7C07 /* UserStoryView.swift in Sources */,
