@@ -7,6 +7,9 @@ PODS:
     - Result (~> 3.1)
   - Result (3.2.1)
   - Runes (4.0.1)
+  - Swinject (2.0.0)
+  - SwinjectStoryboard (1.0.0):
+    - Swinject (= 2.0.0)
   - XCGLogger (4.0.0):
     - XCGLogger/Core (= 4.0.0)
   - XCGLogger/Core (4.0.0)
@@ -16,6 +19,7 @@ DEPENDENCIES:
   - Argo (~> 4.1.0)
   - Curry (~> 3.0.0)
   - ReactiveSwift (~> 1.1.0)
+  - SwinjectStoryboard (~> 1.0.0)
   - XCGLogger (~> 4.0)
 
 SPEC CHECKSUMS:
@@ -25,8 +29,10 @@ SPEC CHECKSUMS:
   ReactiveSwift: 2f4e4a02e5a5c87ea63f5fe667163ce2a67cbb57
   Result: 2453a22e5c5b11c0c3a478736e82cd02f763b781
   Runes: ff20f163b478ac2c0e18158d6086fd5b1997f983
+  Swinject: 2e964a80d70ab09b3949c99032711f89147bfd60
+  SwinjectStoryboard: 8e0d3c0202b64172bdf915d55e8dc83d9c4e7863
   XCGLogger: 38063ea89b4c8b23232d18efd2e12eb0005f3ea4
 
-PODFILE CHECKSUM: b85b8919668695be2755e03863477fc5719f691a
+PODFILE CHECKSUM: fe497c50f6343a153f544a6c8ac0090610d1c9ea
 
 COCOAPODS: 1.2.0
