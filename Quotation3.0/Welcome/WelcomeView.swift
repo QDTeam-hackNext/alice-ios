@@ -8,6 +8,6 @@
 
 import UIKit
 
-class WelcomeView: UIViewController {
+class WelcomeView: UIViewControllerWithViewModel<WelcomeViewModel> {
 
 }

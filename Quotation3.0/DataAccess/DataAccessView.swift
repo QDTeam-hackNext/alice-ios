@@ -8,6 +8,6 @@
 
 import UIKit
 
-class DataAccessView: UIViewController {
+class DataAccessView: UIViewControllerWithViewModel<DataAccessViewModel> {
 
 }

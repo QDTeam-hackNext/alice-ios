@@ -8,6 +8,6 @@
 
 import UIKit
 
-class UserStoryView: UIViewController {
+class UserStoryView: UIViewControllerWithViewModel<UserStoryViewModel> {
 
 }

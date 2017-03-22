@@ -8,6 +8,6 @@
 
 import UIKit
 
-class PaymentView: UIViewController {
+class PaymentView: UIViewControllerWithViewModel<PaymentViewModel> {
 
 }

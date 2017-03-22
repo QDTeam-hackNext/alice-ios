@@ -8,6 +8,6 @@
 
 import UIKit
 
-class SummaryView: UIViewController {
+class SummaryView: UIViewControllerWithViewModel<SummaryViewModel> {
 
 }

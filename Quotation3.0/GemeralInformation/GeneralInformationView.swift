@@ -8,24 +8,23 @@
 
 import UIKit
 
-class GeneralIfomationView: UIViewController {
+class GeneralIfomationView: UIViewControllerWithViewModel<GeneralInformationViewModel> {
   @IBOutlet weak var recordButton: UIButton!
-  
-  fileprivate var model = GeneralInformationViewModel(recorder: Recorder())
 
   override func viewDidLoad() {
+    self.model = GeneralInformationViewModel(recorder: Recorder())
     Speech().speek("I hope that it will sound like Siri and won't be necessary to use Siri explicitly")
   }
 
   @IBAction func recordButtonTouchDown(_ sender: Any) {
-    self.model.startRecord()
+    self.model?.startRecord()
   }
 
   @IBAction func recordButtonTouchUpInside(_ sender: Any) {
-    self.model.stopRecord()
+    self.model?.stopRecord()
   }
 
   @IBAction func recordButtonTouchUpOutside(_ sender: Any) {
-    self.model.stopRecord()
+    self.model?.stopRecord()
   }
 }

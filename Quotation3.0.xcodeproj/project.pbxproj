@@ -33,6 +33,7 @@
 		C798F85D1E82D71C002D7C07 /* DataAccessViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C798F85C1E82D71C002D7C07 /* DataAccessViewModel.swift */; };
 		C798F85F1E82D739002D7C07 /* SummaryViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C798F85E1E82D739002D7C07 /* SummaryViewModel.swift */; };
 		C798F8611E82D760002D7C07 /* PaymentViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C798F8601E82D760002D7C07 /* PaymentViewModel.swift */; };
+		C798F8631E82DF1D002D7C07 /* ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C798F8621E82DF1D002D7C07 /* ViewModel.swift */; };
 		D1B842B1852B5A03766133FA /* Pods_Quotation3_0.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A48B88BE73AD3BF512942195 /* Pods_Quotation3_0.framework */; };
 /* End PBXBuildFile section */
 
@@ -92,6 +93,7 @@
 		C798F85C1E82D71C002D7C07 /* DataAccessViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataAccessViewModel.swift; sourceTree = "<group>"; };
 		C798F85E1E82D739002D7C07 /* SummaryViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SummaryViewModel.swift; sourceTree = "<group>"; };
 		C798F8601E82D760002D7C07 /* PaymentViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PaymentViewModel.swift; sourceTree = "<group>"; };
+		C798F8621E82DF1D002D7C07 /* ViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewModel.swift; sourceTree = "<group>"; };
 		EA09BC83E575A277EF5E2C92 /* Pods-Quotation3.0.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Quotation3.0.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Quotation3.0/Pods-Quotation3.0.debug.xcconfig"; sourceTree = "<group>"; };
 		EACAAED49F9C3E7AA556FFF1 /* Pods-Quotation3.0Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Quotation3.0Tests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Quotation3.0Tests/Pods-Quotation3.0Tests.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -160,6 +162,7 @@
 				C798F8491E82D49B002D7C07 /* Payment */,
 				C744E87B1E801A1E00DE2E7F /* Quotation3.0.entitlements */,
 				C744E84D1E80184C00DE2E7F /* AppDelegate.swift */,
+				C798F8621E82DF1D002D7C07 /* ViewModel.swift */,
 				C798F8421E807583002D7C07 /* Speech.swift */,
 				C744E8891E8039D700DE2E7F /* Recorder.swift */,
 				C744E8511E80184C00DE2E7F /* Main.storyboard */,
@@ -585,6 +588,7 @@
 				C798F8511E82D5E3002D7C07 /* DataAccessView.swift in Sources */,
 				C798F8571E82D67A002D7C07 /* WelcomeViewModel.swift in Sources */,
 				C798F8591E82D6A3002D7C07 /* UserStoryViewModel.swift in Sources */,
+				C798F8631E82DF1D002D7C07 /* ViewModel.swift in Sources */,
 				C798F85B1E82D6BC002D7C07 /* AdditionalQuestionsViewModel.swift in Sources */,
 				C798F8611E82D760002D7C07 /* PaymentViewModel.swift in Sources */,
 				C798F85F1E82D739002D7C07 /* SummaryViewModel.swift in Sources */,

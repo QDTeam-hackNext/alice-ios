@@ -6,6 +6,6 @@
 //  Copyright © 2017 QD Team. All rights reserved.
 //
 
-class AdditionalQuestionsViewModel {
+class AdditionalQuestionsViewModel: ViewModel {
 
 }

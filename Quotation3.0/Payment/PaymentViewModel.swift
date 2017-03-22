@@ -6,6 +6,6 @@
 //  Copyright © 2017 QD Team. All rights reserved.
 //
 
-class PaymentViewModel {
+class PaymentViewModel: ViewModel {
 
 }

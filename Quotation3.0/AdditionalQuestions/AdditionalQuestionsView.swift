@@ -8,6 +8,6 @@
 
 import UIKit
 
-class AdditionalQuestionsView: UIViewController {
+class AdditionalQuestionsView: UIViewControllerWithViewModel<AdditionalQuestionsViewModel> {
 
 }

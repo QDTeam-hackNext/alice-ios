@@ -8,7 +8,7 @@
 
 import Speech
 
-class GeneralInformationViewModel {
+class GeneralInformationViewModel: ViewModel {
   fileprivate let recorder: Recorder
 
   init(recorder: Recorder) {

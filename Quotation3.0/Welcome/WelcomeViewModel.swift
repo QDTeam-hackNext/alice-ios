@@ -6,6 +6,6 @@
 //  Copyright © 2017 QD Team. All rights reserved.
 //
 
-class WelcomeViewModel {
-
+class WelcomeViewModel: ViewModel {
+  let welcomeMessage = "asdf"
 }
