@@ -17,6 +17,8 @@ extension SwinjectStoryboard {
       .register(Speech.self, factory: { _ in return Speech() })
     self.defaultContainer
       .register(Recorder.self, factory: { _ in return Recorder() })
+    self.defaultContainer
+      .register(Sounds.self, factory: { _ in return Sounds() })
   }
 
   fileprivate class func registerViewModels() {
