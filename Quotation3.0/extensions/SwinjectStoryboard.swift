@@ -15,10 +15,21 @@ extension SwinjectStoryboard {
 
     self.defaultContainer
       .register(Speech.self, factory: { _ in return Speech() })
+      .inObjectScope(.container)
     self.defaultContainer
       .register(Recorder.self, factory: { _ in return Recorder() })
+      .inObjectScope(.container)
     self.defaultContainer
       .register(Sounds.self, factory: { _ in return Sounds() })
+      .inObjectScope(.container)
+    self.defaultContainer
+      .register(InterviewQuestion.self, factory: {
+        r in
+        return InterviewQuestion(speech: resolve(r),
+                                 sounds: resolve(r),
+                                 recorder: resolve(r))
+      })
+      .inObjectScope(.container)
   }
 
   fileprivate class func registerViewModels() {

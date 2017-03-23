@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16D32" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="Y0Z-fp-1bW">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16D32" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -43,6 +43,12 @@
                                     <action selector="recordButtonTouchUpOutside:" destination="BYZ-38-t0r" eventType="touchUpOutside" id="8IC-gf-64f"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Answer..." textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BRH-ge-WvL">
+                                <rect key="frame" x="10" y="368" width="349" height="20.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
@@ -51,19 +57,25 @@
                             <constraint firstAttribute="leadingMargin" secondItem="b1S-v5-fAt" secondAttribute="leading" id="6Oh-GY-ERv"/>
                             <constraint firstItem="LMM-iO-Fvm" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="E7a-ly-Efv"/>
                             <constraint firstItem="b1S-v5-fAt" firstAttribute="top" secondItem="LMM-iO-Fvm" secondAttribute="bottom" constant="24" id="JmV-fN-QsS"/>
+                            <constraint firstItem="BRH-ge-WvL" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="-6" id="Rlo-0O-K8s"/>
                             <constraint firstAttribute="trailingMargin" secondItem="b1S-v5-fAt" secondAttribute="trailing" id="SdY-p2-YL6"/>
+                            <constraint firstItem="BRH-ge-WvL" firstAttribute="top" secondItem="E8X-lH-L6U" secondAttribute="bottom" constant="20" id="TAj-nV-fov"/>
                             <constraint firstItem="E8X-lH-L6U" firstAttribute="top" relation="greaterThanOrEqual" secondItem="b1S-v5-fAt" secondAttribute="bottom" constant="20" id="VtF-CG-clx"/>
                             <constraint firstItem="E8X-lH-L6U" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="nIQ-PW-Tyk"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="BRH-ge-WvL" secondAttribute="trailing" id="odN-UZ-og7"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" relation="greaterThanOrEqual" secondItem="BRH-ge-WvL" secondAttribute="bottom" constant="20" id="qZO-cC-9o0"/>
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="answerLabel" destination="BRH-ge-WvL" id="ycN-Gh-uhi"/>
+                        <outlet property="questionLabel" destination="b1S-v5-fAt" id="ae6-Xp-WKc"/>
                         <outlet property="recordButton" destination="E8X-lH-L6U" id="Osj-PR-TVl"/>
                         <segue destination="llf-b4-bav" kind="show" identifier="toUserStory" id="7SJ-Rp-YuW"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-54" y="124"/>
+            <point key="canvasLocation" x="-55.200000000000003" y="123.68815592203899"/>
         </scene>
         <!--User Story-->
         <scene sceneID="RdP-iM-4Pz">

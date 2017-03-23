@@ -7,18 +7,25 @@
 //
 
 import UIKit
+import SwinjectStoryboard
 
 class GeneralIfomationView: UIViewController, WithViewModel {
   typealias Model = GeneralInformationViewModel
 
   @IBOutlet weak var recordButton: UIButton!
+  @IBOutlet weak var questionLabel: UILabel!
+  @IBOutlet weak var answerLabel: UILabel!
 
   override func viewDidLoad() {
-    Speech().speek("I hope that it will sound like Siri and won't be necessary to use Siri explicitly")
+
   }
 
   @IBAction func recordButtonTouchDown(_ sender: Any) {
-    self.model.startRecord()
+    SwinjectStoryboard.defaultContainer.resolve(InterviewQuestion.self)!.ask(self.questionLabel.text!, answerCallback: {
+      answer, _ in
+      AppDelegate.log.info("answer: \(answer)")
+      self.answerLabel.text = answer
+    })
   }
 
   @IBAction func recordButtonTouchUpInside(_ sender: Any) {

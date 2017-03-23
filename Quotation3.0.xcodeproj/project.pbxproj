@@ -20,6 +20,7 @@
 		C744E8861E80312100DE2E7F /* GeneralInformationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C744E8851E80312100DE2E7F /* GeneralInformationView.swift */; };
 		C744E8881E80313500DE2E7F /* GeneralInforationViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C744E8871E80313500DE2E7F /* GeneralInforationViewModel.swift */; };
 		C744E88A1E8039D700DE2E7F /* Recorder.swift in Sources */ = {isa = PBXBuildFile; fileRef = C744E8891E8039D700DE2E7F /* Recorder.swift */; };
+		C76BC4E61E83399100475956 /* InterviewQuestion.swift in Sources */ = {isa = PBXBuildFile; fileRef = C76BC4E51E83399100475956 /* InterviewQuestion.swift */; };
 		C798F8431E807583002D7C07 /* Speech.swift in Sources */ = {isa = PBXBuildFile; fileRef = C798F8421E807583002D7C07 /* Speech.swift */; };
 		C798F84B1E82D55B002D7C07 /* WelcomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C798F84A1E82D55B002D7C07 /* WelcomeView.swift */; };
 		C798F84D1E82D598002D7C07 /* UserStoryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C798F84C1E82D598002D7C07 /* UserStoryView.swift */; };
@@ -83,6 +84,7 @@
 		C744E8851E80312100DE2E7F /* GeneralInformationView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GeneralInformationView.swift; sourceTree = "<group>"; };
 		C744E8871E80313500DE2E7F /* GeneralInforationViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GeneralInforationViewModel.swift; sourceTree = "<group>"; };
 		C744E8891E8039D700DE2E7F /* Recorder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Recorder.swift; sourceTree = "<group>"; };
+		C76BC4E51E83399100475956 /* InterviewQuestion.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InterviewQuestion.swift; sourceTree = "<group>"; };
 		C798F8421E807583002D7C07 /* Speech.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Speech.swift; sourceTree = "<group>"; };
 		C798F84A1E82D55B002D7C07 /* WelcomeView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WelcomeView.swift; sourceTree = "<group>"; };
 		C798F84C1E82D598002D7C07 /* UserStoryView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserStoryView.swift; sourceTree = "<group>"; };
@@ -174,6 +176,7 @@
 				C798F8421E807583002D7C07 /* Speech.swift */,
 				C7D22D2C1E8301A40062D199 /* Sounds.swift */,
 				C744E8891E8039D700DE2E7F /* Recorder.swift */,
+				C76BC4E51E83399100475956 /* InterviewQuestion.swift */,
 				C744E8511E80184C00DE2E7F /* Main.storyboard */,
 				C744E8541E80184C00DE2E7F /* Assets.xcassets */,
 				C744E8561E80184C00DE2E7F /* LaunchScreen.storyboard */,
@@ -602,6 +605,7 @@
 				C798F84D1E82D598002D7C07 /* UserStoryView.swift in Sources */,
 				C798F84B1E82D55B002D7C07 /* WelcomeView.swift in Sources */,
 				C798F85D1E82D71C002D7C07 /* DataAccessViewModel.swift in Sources */,
+				C76BC4E61E83399100475956 /* InterviewQuestion.swift in Sources */,
 				C744E8861E80312100DE2E7F /* GeneralInformationView.swift in Sources */,
 				C7D22D2D1E8301A40062D199 /* Sounds.swift in Sources */,
 				C744E84E1E80184C00DE2E7F /* AppDelegate.swift in Sources */,

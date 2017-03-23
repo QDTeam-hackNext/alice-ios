@@ -18,6 +18,15 @@ class Recorder {
   init() {
     self.audioEngine = AVAudioEngine()
     self.recognizer = SFSpeechRecognizer(locale: Locale.current)!
+
+    let session = AVAudioSession.sharedInstance()
+    do {
+      try session.setCategory(AVAudioSessionCategoryPlayAndRecord, with: .defaultToSpeaker)
+      // try session.setMode(AVAudioSessionModeMeasurement) // application crashes with this setting
+      try session.setActive(true, with: .notifyOthersOnDeactivation)
+    } catch {
+      AppDelegate.log.error("Sessio was not setup corectly beause of an error")
+    }
   }
 
   func requestAuthorization() {
@@ -38,15 +47,6 @@ class Recorder {
       self.recognitionTask = nil
     }
 
-    let session = AVAudioSession.sharedInstance()
-    do {
-      try session.setCategory(AVAudioSessionCategoryRecord)
-      try session.setMode(AVAudioSessionModeMeasurement)
-      try session.setActive(true, with: .notifyOthersOnDeactivation)
-    } catch {
-      AppDelegate.log.error("Sessio was not setup corectly beause of an error")
-    }
-
     guard let inputNode = self.audioEngine.inputNode else {
       fatalError("Audio enginne has no input node")
     }
@@ -59,7 +59,10 @@ class Recorder {
     self.recognitionTask = recognizer.recognitionTask(with: recognitionRequest, resultHandler:
       { result, error in
         if let r = result, r.isFinal {
-          inputNode.removeTap(onBus: 0)
+          if let node = self.audioEngine.inputNode {
+            node.removeTap(onBus: 0)
+          }
+          self.recognitionTask?.cancel()
           recordingCompleted(r.bestTranscription.formattedString, true)
         }
         if let e = error {
@@ -75,7 +78,6 @@ class Recorder {
     })
 
     self.audioEngine.prepare()
-
     do {
       try self.audioEngine.start()
     } catch {
@@ -85,6 +87,7 @@ class Recorder {
 
   func stop() {
     self.audioEngine.stop()
+    self.audioEngine.reset()
     self.recognitionRequest?.endAudio()
 
     self.recognitionRequest = nil

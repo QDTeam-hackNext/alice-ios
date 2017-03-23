@@ -18,6 +18,7 @@ class Speech {
 
   func speek(_ text: String, afterFinish: @escaping () -> () = {}) {
     let speechUtterance = AVSpeechUtterance(string: text)
+    speechUtterance.volume = 1.0
     self.delegate.afterFinish = afterFinish
     self.speechSynthesier.delegate = self.delegate
     self.speechSynthesier.speak(speechUtterance)
