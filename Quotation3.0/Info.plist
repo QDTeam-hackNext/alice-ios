@@ -15,14 +15,12 @@
 	<string>en</string>
 	<key>CFBundleVersion</key>
 	<string>1</string>
-	<key>NSHealthUpdateUsageDescription</key>
-	<string>In order to constatnly track your health status we need to be able to update your data.</string>
 	<key>CFBundlePackageType</key>
 	<string>APPL</string>
 	<key>UIMainStoryboardFile</key>
 	<string>Main</string>
 	<key>NSMicrophoneUsageDescription</key>
-	<string>“Alice” Would Like to Access the Microphone</string>
+	<string></string>
 	<key>CFBundleShortVersionString</key>
 	<string>1.0</string>
 	<key>NSHealthShareUsageDescription</key>

@@ -51,7 +51,8 @@ extension SwinjectStoryboard {
     self.defaultContainer
       .register(WelcomeViewModel.self, factory: {
         r in
-        return WelcomeViewModel(recorder: resolve(r))
+        return WelcomeViewModel(recorder: resolve(r),
+                                sounds: resolve(r))
       })
     self.defaultContainer
       .register(GeneralInformationViewModel.self, factory: {

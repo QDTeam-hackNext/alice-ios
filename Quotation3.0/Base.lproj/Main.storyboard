@@ -303,6 +303,11 @@
                                             <constraint firstAttribute="height" constant="80" id="gMe-6E-JRC"/>
                                         </constraints>
                                         <state key="normal" title="Button" image="icoMicOff"/>
+                                        <connections>
+                                            <action selector="recordButtonTOuchUpInside:" destination="Y0Z-fp-1bW" eventType="touchUpInside" id="zpU-cz-Le1"/>
+                                            <action selector="recordButtonTouchDown:" destination="Y0Z-fp-1bW" eventType="touchDown" id="3Cd-IZ-7U3"/>
+                                            <action selector="recordButtonTouchUpOutside:" destination="Y0Z-fp-1bW" eventType="touchUpOutside" id="vJr-oW-Swf"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>

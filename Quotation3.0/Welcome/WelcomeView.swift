@@ -87,4 +87,31 @@ class WelcomeView: UIViewController, WithViewModel {
       }
     })
   }
+
+  @IBAction func recordButtonTouchDown(_ sender: Any) {
+    self.recordButton.layer.borderColor = UIColor.vividPurple.cgColor
+    self.messageLabel.text = ""
+    self.messageLabel.textAlignment = .right
+    self.messageLabel.textColor = UIColor.charcoalGrey
+    self.messageLabel.font = UIFont.userSpeechResponseFontFont()
+    self.model.startRecording(callback: {
+      input, status in
+      DispatchQueue.main.async {
+        self.messageLabel.text = input
+      }
+    })
+  }
+
+  @IBAction func recordButtonTOuchUpInside(_ sender: Any) {
+    self.stopRecording()
+  }
+  
+  @IBAction func recordButtonTouchUpOutside(_ sender: Any) {
+    self.stopRecording()
+  }
+
+  fileprivate func stopRecording() {
+    self.model.stopRecording()
+    self.recordButton.layer.borderColor = UIColor.white.cgColor
+  }
 }
