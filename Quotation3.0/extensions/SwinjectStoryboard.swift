@@ -30,6 +30,14 @@ extension SwinjectStoryboard {
                                  recorder: resolve(r))
       })
       .inObjectScope(.container)
+    self.defaultContainer
+      .register(BackendUrls.self, factory: { _ in return BackendUrls() })
+      .inObjectScope(.container)
+    self.defaultContainer
+      .register(Backend.self, factory: {
+        r in
+        return Backend(urls: resolve(r)) })
+      .inObjectScope(.container)
   }
 
   fileprivate class func registerViewModels() {
