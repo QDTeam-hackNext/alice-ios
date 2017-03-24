@@ -39,6 +39,7 @@
 		C7D22D2B1E8300B70062D199 /* sounds in Resources */ = {isa = PBXBuildFile; fileRef = C7D22D2A1E8300B70062D199 /* sounds */; };
 		C7D22D2D1E8301A40062D199 /* Sounds.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7D22D2C1E8301A40062D199 /* Sounds.swift */; };
 		C7E739631E8521F000F14AAF /* ExternalApps.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7E739621E8521F000F14AAF /* ExternalApps.swift */; };
+		C7E739651E852BBF00F14AAF /* HealthKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7E739641E852BBF00F14AAF /* HealthKit.swift */; };
 		C7E95DBD1E8502C500007646 /* AnalyzeResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7E95DBC1E8502C500007646 /* AnalyzeResult.swift */; };
 		C7E95DBF1E85070000007646 /* BackendUrls.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7E95DBE1E85070000007646 /* BackendUrls.swift */; };
 		C7E95DC11E851AE300007646 /* appConfig.plist in Resources */ = {isa = PBXBuildFile; fileRef = C7E95DC01E851AE300007646 /* appConfig.plist */; };
@@ -110,6 +111,7 @@
 		C7D22D2A1E8300B70062D199 /* sounds */ = {isa = PBXFileReference; lastKnownFileType = folder; path = sounds; sourceTree = "<group>"; };
 		C7D22D2C1E8301A40062D199 /* Sounds.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Sounds.swift; sourceTree = "<group>"; };
 		C7E739621E8521F000F14AAF /* ExternalApps.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExternalApps.swift; sourceTree = "<group>"; };
+		C7E739641E852BBF00F14AAF /* HealthKit.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HealthKit.swift; sourceTree = "<group>"; };
 		C7E95DBC1E8502C500007646 /* AnalyzeResult.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AnalyzeResult.swift; sourceTree = "<group>"; };
 		C7E95DBE1E85070000007646 /* BackendUrls.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BackendUrls.swift; sourceTree = "<group>"; };
 		C7E95DC01E851AE300007646 /* appConfig.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = appConfig.plist; sourceTree = "<group>"; };
@@ -189,6 +191,7 @@
 				C7E95DC21E851B0D00007646 /* AppConfig.swift */,
 				C744E84D1E80184C00DE2E7F /* AppDelegate.swift */,
 				C798F8621E82DF1D002D7C07 /* ViewModel.swift */,
+				C7E739641E852BBF00F14AAF /* HealthKit.swift */,
 				C7E739621E8521F000F14AAF /* ExternalApps.swift */,
 				C798F8421E807583002D7C07 /* Speech.swift */,
 				C7D22D2C1E8301A40062D199 /* Sounds.swift */,
@@ -644,6 +647,7 @@
 				C7E95DBD1E8502C500007646 /* AnalyzeResult.swift in Sources */,
 				C744E8881E80313500DE2E7F /* GeneralInforationViewModel.swift in Sources */,
 				C798F8551E82D641002D7C07 /* PaymentView.swift in Sources */,
+				C7E739651E852BBF00F14AAF /* HealthKit.swift in Sources */,
 				C798F84D1E82D598002D7C07 /* UserStoryView.swift in Sources */,
 				C798F84B1E82D55B002D7C07 /* WelcomeView.swift in Sources */,
 				C7FF806E1E848BED0041B312 /* UserInformation.swift in Sources */,
