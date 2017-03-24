@@ -47,7 +47,7 @@ class WelcomeView: UIViewController, WithViewModel {
     self.welcomeButton.roundCorners(corners: [.bottomLeft, .bottomRight], radius: 8)
     self.welcomeButton.setTitleColor(UIColor.white, for: .normal)
     self.welcomeButton.backgroundColor = UIColor.vividPurple
-    self.welcomeButton.titleLabel!.font = UIFont.hiButtonFontFont()
+    self.welcomeButton.titleLabel!.font = UIFont.buttonFontFont()
 
     self.overlay.backgroundColor = UIColor.clear
 

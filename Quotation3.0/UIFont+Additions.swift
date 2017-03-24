@@ -12,7 +12,7 @@ extension UIFont {
 		return UIFont(name: "Isidora-Light", size: 64.0)
 	}
 
-	class func hiButtonFontFont() -> UIFont? {
+	class func buttonFontFont() -> UIFont? {
 		return UIFont(name: "Trenda-Black", size: 24.0)
 	}
 
@@ -28,7 +28,27 @@ extension UIFont {
 		return UIFont(name: "Trenda-Black", size: 20.0)
 	}
 
+	class func aliceMessageFontFont() -> UIFont? {
+		return UIFont(name: "Trenda-Black", size: 20.0)
+	}
+
+	class func priceFontFont() -> UIFont? {
+		return UIFont(name: "Trenda-Black", size: 20.0)
+	}
+
+	class func questionHeaderFontFont() -> UIFont? {
+		return UIFont(name: "Trenda-Bold", size: 18.0)
+	}
+
 	class func subtitleFontFont() -> UIFont? {
 		return UIFont(name: "Trenda-Semibold", size: 14.0)
+	}
+
+	class func questionFontFont() -> UIFont? {
+		return UIFont(name: "Trenda-Semibold", size: 14.0)
+	}
+
+	class func perMonthFontFont() -> UIFont? {
+		return UIFont(name: "Trenda-Black", size: 8.0)
 	}
 }

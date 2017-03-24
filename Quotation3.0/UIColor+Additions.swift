@@ -32,4 +32,16 @@ extension UIColor {
 	class var dodgerBlue: UIColor {
 		return UIColor(red: 46.0 / 255.0, green: 144.0 / 255.0, blue: 243.0 / 255.0, alpha: 1.0)
 	}
+
+	class var azul: UIColor {
+		return UIColor(red: 38.0 / 255.0, green: 121.0 / 255.0, blue: 238.0 / 255.0, alpha: 1.0)
+	}
+
+	class var dodgerBlueTwo: UIColor {
+		return UIColor(red: 46.0 / 255.0, green: 144.0 / 255.0, blue: 242.0 / 255.0, alpha: 1.0)
+	}
+
+	class var silver: UIColor {
+		return UIColor(red: 186.0 / 255.0, green: 192.0 / 255.0, blue: 198.0 / 255.0, alpha: 1.0)
+	}
 }
