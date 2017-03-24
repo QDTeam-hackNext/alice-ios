@@ -7,7 +7,9 @@
 //
 
 class BackendUrls {
-  fileprivate static let base = "https://alice.eu-gb.mybluemix.net/"
+  let analysis: String
 
-  let analysis = base + "api/analysis"
+  init(appConfig: AppConfig) {
+    self.analysis = appConfig.backendUrl + "api/analysis"
+  }
 }

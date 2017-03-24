@@ -14,6 +14,8 @@ extension SwinjectStoryboard {
     self.registerViewModels()
 
     self.defaultContainer
+      .register(AppConfig.self, factory: { _ in return AppConfig() })
+    self.defaultContainer
       .register(Speech.self, factory: { _ in return Speech() })
       .inObjectScope(.container)
     self.defaultContainer
@@ -31,7 +33,10 @@ extension SwinjectStoryboard {
       })
       .inObjectScope(.container)
     self.defaultContainer
-      .register(BackendUrls.self, factory: { _ in return BackendUrls() })
+      .register(BackendUrls.self, factory: {
+        r in
+        return BackendUrls(appConfig: resolve(r))
+      })
       .inObjectScope(.container)
     self.defaultContainer
       .register(Backend.self, factory: {
