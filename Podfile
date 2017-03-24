@@ -1,6 +1,6 @@
 platform :ios, '10.0'
 
-target 'Quotation3.0' do
+target 'Alice' do
   use_frameworks!
 
   # Pods for Quotation3.0
@@ -11,11 +11,11 @@ target 'Quotation3.0' do
   pod 'XCGLogger', '~> 4.0'
   pod 'SwinjectStoryboard', '~> 1.0.0'
 
-  target 'Quotation3.0Tests' do
+  target 'AliceTests' do
     inherit! :search_paths
   end
 
-  target 'Quotation3.0UITests' do
+  target 'AliceUITests' do
     inherit! :search_paths
   end
 

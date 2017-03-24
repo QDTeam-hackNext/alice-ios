@@ -72,16 +72,16 @@
 		8A85A9826F342075FB691A4C /* Pods-Quotation3.0Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Quotation3.0Tests.release.xcconfig"; path = "Pods/Target Support Files/Pods-Quotation3.0Tests/Pods-Quotation3.0Tests.release.xcconfig"; sourceTree = "<group>"; };
 		A48B88BE73AD3BF512942195 /* Pods_Quotation3_0.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Quotation3_0.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B9FAAA4122FCAE4121DB62A6 /* Pods_Quotation3_0Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Quotation3_0Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		C744E84A1E80184C00DE2E7F /* Quotation3.0.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Quotation3.0.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		C744E84A1E80184C00DE2E7F /* Alice.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Alice.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C744E84D1E80184C00DE2E7F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C744E8521E80184C00DE2E7F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		C744E8541E80184C00DE2E7F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C744E8571E80184C00DE2E7F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		C744E8591E80184C00DE2E7F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		C744E85E1E80184D00DE2E7F /* Quotation3.0Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Quotation3.0Tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		C744E85E1E80184D00DE2E7F /* AliceTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AliceTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		C744E8621E80184D00DE2E7F /* Quotation3_0Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Quotation3_0Tests.swift; sourceTree = "<group>"; };
 		C744E8641E80184D00DE2E7F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		C744E8691E80184D00DE2E7F /* Quotation3.0UITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Quotation3.0UITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		C744E8691E80184D00DE2E7F /* AliceUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AliceUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		C744E86D1E80184D00DE2E7F /* Quotation3_0UITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Quotation3_0UITests.swift; sourceTree = "<group>"; };
 		C744E86F1E80184D00DE2E7F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C744E87B1E801A1E00DE2E7F /* Quotation3.0.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Quotation3.0.entitlements; sourceTree = "<group>"; };
@@ -151,9 +151,9 @@
 		C744E8411E80184C00DE2E7F = {
 			isa = PBXGroup;
 			children = (
-				C744E84C1E80184C00DE2E7F /* Quotation3.0 */,
-				C744E8611E80184D00DE2E7F /* Quotation3.0Tests */,
-				C744E86C1E80184D00DE2E7F /* Quotation3.0UITests */,
+				C744E84C1E80184C00DE2E7F /* Alice */,
+				C744E8611E80184D00DE2E7F /* AliceTests */,
+				C744E86C1E80184D00DE2E7F /* AliceUITests */,
 				C744E84B1E80184C00DE2E7F /* Products */,
 				EDD1630E533535397BA4F9B9 /* Pods */,
 				EA0B1FBF6526E29582D0E5C3 /* Frameworks */,
@@ -163,14 +163,14 @@
 		C744E84B1E80184C00DE2E7F /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				C744E84A1E80184C00DE2E7F /* Quotation3.0.app */,
-				C744E85E1E80184D00DE2E7F /* Quotation3.0Tests.xctest */,
-				C744E8691E80184D00DE2E7F /* Quotation3.0UITests.xctest */,
+				C744E84A1E80184C00DE2E7F /* Alice.app */,
+				C744E85E1E80184D00DE2E7F /* AliceTests.xctest */,
+				C744E8691E80184D00DE2E7F /* AliceUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		C744E84C1E80184C00DE2E7F /* Quotation3.0 */ = {
+		C744E84C1E80184C00DE2E7F /* Alice */ = {
 			isa = PBXGroup;
 			children = (
 				C7D22D2A1E8300B70062D199 /* sounds */,
@@ -198,24 +198,27 @@
 				C744E8591E80184C00DE2E7F /* Info.plist */,
 				C7E95DC01E851AE300007646 /* appConfig.plist */,
 			);
+			name = Alice;
 			path = Quotation3.0;
 			sourceTree = "<group>";
 		};
-		C744E8611E80184D00DE2E7F /* Quotation3.0Tests */ = {
+		C744E8611E80184D00DE2E7F /* AliceTests */ = {
 			isa = PBXGroup;
 			children = (
 				C744E8621E80184D00DE2E7F /* Quotation3_0Tests.swift */,
 				C744E8641E80184D00DE2E7F /* Info.plist */,
 			);
+			name = AliceTests;
 			path = Quotation3.0Tests;
 			sourceTree = "<group>";
 		};
-		C744E86C1E80184D00DE2E7F /* Quotation3.0UITests */ = {
+		C744E86C1E80184D00DE2E7F /* AliceUITests */ = {
 			isa = PBXGroup;
 			children = (
 				C744E86D1E80184D00DE2E7F /* Quotation3_0UITests.swift */,
 				C744E86F1E80184D00DE2E7F /* Info.plist */,
 			);
+			name = AliceUITests;
 			path = Quotation3.0UITests;
 			sourceTree = "<group>";
 		};
@@ -337,9 +340,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		C744E8491E80184C00DE2E7F /* Quotation3.0 */ = {
+		C744E8491E80184C00DE2E7F /* Alice */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = C744E8721E80184D00DE2E7F /* Build configuration list for PBXNativeTarget "Quotation3.0" */;
+			buildConfigurationList = C744E8721E80184D00DE2E7F /* Build configuration list for PBXNativeTarget "Alice" */;
 			buildPhases = (
 				DEACF4577AFAF05BDB6ED405 /* [CP] Check Pods Manifest.lock */,
 				C744E8461E80184C00DE2E7F /* Sources */,
@@ -352,14 +355,14 @@
 			);
 			dependencies = (
 			);
-			name = Quotation3.0;
+			name = Alice;
 			productName = Quotation3.0;
-			productReference = C744E84A1E80184C00DE2E7F /* Quotation3.0.app */;
+			productReference = C744E84A1E80184C00DE2E7F /* Alice.app */;
 			productType = "com.apple.product-type.application";
 		};
-		C744E85D1E80184D00DE2E7F /* Quotation3.0Tests */ = {
+		C744E85D1E80184D00DE2E7F /* AliceTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = C744E8751E80184D00DE2E7F /* Build configuration list for PBXNativeTarget "Quotation3.0Tests" */;
+			buildConfigurationList = C744E8751E80184D00DE2E7F /* Build configuration list for PBXNativeTarget "AliceTests" */;
 			buildPhases = (
 				B21C248916B57E918E1A45A1 /* [CP] Check Pods Manifest.lock */,
 				C744E85A1E80184D00DE2E7F /* Sources */,
@@ -373,14 +376,14 @@
 			dependencies = (
 				C744E8601E80184D00DE2E7F /* PBXTargetDependency */,
 			);
-			name = Quotation3.0Tests;
+			name = AliceTests;
 			productName = Quotation3.0Tests;
-			productReference = C744E85E1E80184D00DE2E7F /* Quotation3.0Tests.xctest */;
+			productReference = C744E85E1E80184D00DE2E7F /* AliceTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
-		C744E8681E80184D00DE2E7F /* Quotation3.0UITests */ = {
+		C744E8681E80184D00DE2E7F /* AliceUITests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = C744E8781E80184D00DE2E7F /* Build configuration list for PBXNativeTarget "Quotation3.0UITests" */;
+			buildConfigurationList = C744E8781E80184D00DE2E7F /* Build configuration list for PBXNativeTarget "AliceUITests" */;
 			buildPhases = (
 				01A36E94462C15E5790D7173 /* [CP] Check Pods Manifest.lock */,
 				C744E8651E80184D00DE2E7F /* Sources */,
@@ -394,9 +397,9 @@
 			dependencies = (
 				C744E86B1E80184D00DE2E7F /* PBXTargetDependency */,
 			);
-			name = Quotation3.0UITests;
+			name = AliceUITests;
 			productName = Quotation3.0UITests;
-			productReference = C744E8691E80184D00DE2E7F /* Quotation3.0UITests.xctest */;
+			productReference = C744E8691E80184D00DE2E7F /* AliceUITests.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
 		};
 /* End PBXNativeTarget section */
@@ -442,7 +445,7 @@
 					};
 				};
 			};
-			buildConfigurationList = C744E8451E80184C00DE2E7F /* Build configuration list for PBXProject "Quotation3.0" */;
+			buildConfigurationList = C744E8451E80184C00DE2E7F /* Build configuration list for PBXProject "Alice" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -455,9 +458,9 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				C744E8491E80184C00DE2E7F /* Quotation3.0 */,
-				C744E85D1E80184D00DE2E7F /* Quotation3.0Tests */,
-				C744E8681E80184D00DE2E7F /* Quotation3.0UITests */,
+				C744E8491E80184C00DE2E7F /* Alice */,
+				C744E85D1E80184D00DE2E7F /* AliceTests */,
+				C744E8681E80184D00DE2E7F /* AliceUITests */,
 			);
 		};
 /* End PBXProject section */
@@ -684,12 +687,12 @@
 /* Begin PBXTargetDependency section */
 		C744E8601E80184D00DE2E7F /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = C744E8491E80184C00DE2E7F /* Quotation3.0 */;
+			target = C744E8491E80184C00DE2E7F /* Alice */;
 			targetProxy = C744E85F1E80184D00DE2E7F /* PBXContainerItemProxy */;
 		};
 		C744E86B1E80184D00DE2E7F /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = C744E8491E80184C00DE2E7F /* Quotation3.0 */;
+			target = C744E8491E80184C00DE2E7F /* Alice */;
 			targetProxy = C744E86A1E80184D00DE2E7F /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -814,7 +817,7 @@
 				DEVELOPMENT_TEAM = 8QKQ6Z2FMP;
 				INFOPLIST_FILE = Quotation3.0/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "de.hacknext.Quotation3-0";
+				PRODUCT_BUNDLE_IDENTIFIER = de.hacknext.alice;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
 			};
@@ -829,7 +832,7 @@
 				DEVELOPMENT_TEAM = 8QKQ6Z2FMP;
 				INFOPLIST_FILE = Quotation3.0/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "de.hacknext.Quotation3-0";
+				PRODUCT_BUNDLE_IDENTIFIER = de.hacknext.alice;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
 			};
@@ -847,7 +850,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "de.hacknext.Quotation3-0Tests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Quotation3.0.app/Quotation3.0";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Alice.app/Alice";
 			};
 			name = Debug;
 		};
@@ -863,7 +866,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "de.hacknext.Quotation3-0Tests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Quotation3.0.app/Quotation3.0";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Alice.app/Alice";
 			};
 			name = Release;
 		};
@@ -900,7 +903,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		C744E8451E80184C00DE2E7F /* Build configuration list for PBXProject "Quotation3.0" */ = {
+		C744E8451E80184C00DE2E7F /* Build configuration list for PBXProject "Alice" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				C744E8701E80184D00DE2E7F /* Debug */,
@@ -909,7 +912,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		C744E8721E80184D00DE2E7F /* Build configuration list for PBXNativeTarget "Quotation3.0" */ = {
+		C744E8721E80184D00DE2E7F /* Build configuration list for PBXNativeTarget "Alice" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				C744E8731E80184D00DE2E7F /* Debug */,
@@ -918,7 +921,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		C744E8751E80184D00DE2E7F /* Build configuration list for PBXNativeTarget "Quotation3.0Tests" */ = {
+		C744E8751E80184D00DE2E7F /* Build configuration list for PBXNativeTarget "AliceTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				C744E8761E80184D00DE2E7F /* Debug */,
@@ -927,7 +930,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		C744E8781E80184D00DE2E7F /* Build configuration list for PBXNativeTarget "Quotation3.0UITests" */ = {
+		C744E8781E80184D00DE2E7F /* Build configuration list for PBXNativeTarget "AliceUITests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				C744E8791E80184D00DE2E7F /* Debug */,

@@ -2,7 +2,7 @@
 <Workspace
    version = "1.0">
    <FileRef
-      location = "group:Quotation3.0.xcodeproj">
+      location = "group:/Users/lock/workspace/hackNext/ios-app/Quotation3.0/Alice.xcodeproj">
    </FileRef>
    <FileRef
       location = "group:Pods/Pods.xcodeproj">
