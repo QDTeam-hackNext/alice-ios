@@ -38,6 +38,7 @@
 		C7D22D251E82F53B0062D199 /* SwinjectStoryboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7D22D241E82F53B0062D199 /* SwinjectStoryboard.swift */; };
 		C7D22D2B1E8300B70062D199 /* sounds in Resources */ = {isa = PBXBuildFile; fileRef = C7D22D2A1E8300B70062D199 /* sounds */; };
 		C7D22D2D1E8301A40062D199 /* Sounds.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7D22D2C1E8301A40062D199 /* Sounds.swift */; };
+		C7E739631E8521F000F14AAF /* ExternalApps.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7E739621E8521F000F14AAF /* ExternalApps.swift */; };
 		C7E95DBD1E8502C500007646 /* AnalyzeResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7E95DBC1E8502C500007646 /* AnalyzeResult.swift */; };
 		C7E95DBF1E85070000007646 /* BackendUrls.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7E95DBE1E85070000007646 /* BackendUrls.swift */; };
 		C7E95DC11E851AE300007646 /* appConfig.plist in Resources */ = {isa = PBXBuildFile; fileRef = C7E95DC01E851AE300007646 /* appConfig.plist */; };
@@ -108,6 +109,7 @@
 		C7D22D241E82F53B0062D199 /* SwinjectStoryboard.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwinjectStoryboard.swift; sourceTree = "<group>"; };
 		C7D22D2A1E8300B70062D199 /* sounds */ = {isa = PBXFileReference; lastKnownFileType = folder; path = sounds; sourceTree = "<group>"; };
 		C7D22D2C1E8301A40062D199 /* Sounds.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Sounds.swift; sourceTree = "<group>"; };
+		C7E739621E8521F000F14AAF /* ExternalApps.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExternalApps.swift; sourceTree = "<group>"; };
 		C7E95DBC1E8502C500007646 /* AnalyzeResult.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AnalyzeResult.swift; sourceTree = "<group>"; };
 		C7E95DBE1E85070000007646 /* BackendUrls.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BackendUrls.swift; sourceTree = "<group>"; };
 		C7E95DC01E851AE300007646 /* appConfig.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = appConfig.plist; sourceTree = "<group>"; };
@@ -187,6 +189,7 @@
 				C7E95DC21E851B0D00007646 /* AppConfig.swift */,
 				C744E84D1E80184C00DE2E7F /* AppDelegate.swift */,
 				C798F8621E82DF1D002D7C07 /* ViewModel.swift */,
+				C7E739621E8521F000F14AAF /* ExternalApps.swift */,
 				C798F8421E807583002D7C07 /* Speech.swift */,
 				C7D22D2C1E8301A40062D199 /* Sounds.swift */,
 				C744E8891E8039D700DE2E7F /* Recorder.swift */,
@@ -661,6 +664,7 @@
 				C798F8431E807583002D7C07 /* Speech.swift in Sources */,
 				C798F8531E82D628002D7C07 /* SummaryView.swift in Sources */,
 				C7E95DC31E851B0D00007646 /* AppConfig.swift in Sources */,
+				C7E739631E8521F000F14AAF /* ExternalApps.swift in Sources */,
 				C744E88A1E8039D700DE2E7F /* Recorder.swift in Sources */,
 				C798F84F1E82D5C7002D7C07 /* AdditionalQuestionsView.swift in Sources */,
 			);

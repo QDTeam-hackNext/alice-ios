@@ -25,6 +25,8 @@ extension SwinjectStoryboard {
       .register(Sounds.self, factory: { _ in return Sounds() })
       .inObjectScope(.container)
     self.defaultContainer
+      .register(ExternalApps.self, factory: { _ in return ExternalApps() })
+    self.defaultContainer
       .register(InterviewQuestion.self, factory: {
         r in
         return InterviewQuestion(speech: resolve(r),
