@@ -2,26 +2,51 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
-	<key>CFBundleDevelopmentRegion</key>
-	<string>en</string>
-	<key>CFBundleExecutable</key>
-	<string>$(EXECUTABLE_NAME)</string>
-	<key>CFBundleIdentifier</key>
-	<string>$(PRODUCT_BUNDLE_IDENTIFIER)</string>
-	<key>CFBundleInfoDictionaryVersion</key>
-	<string>6.0</string>
-	<key>CFBundleName</key>
-	<string>$(PRODUCT_NAME)</string>
-	<key>CFBundlePackageType</key>
-	<string>APPL</string>
-	<key>CFBundleShortVersionString</key>
-	<string>1.0</string>
-	<key>CFBundleVersion</key>
-	<string>1</string>
+	<key>UIAppFonts</key>
+	<array>
+    <string>fonts/Trenda-Black.otf</string>
+    <string>fonts/Trenda-BlackIt.otf</string>
+    <string>fonts/Trenda-Bold.otf</string>
+    <string>fonts/Trenda-BoldIt.otf</string>
+    <string>fonts/Trenda-ExtraLight.otf</string>
+    <string>fonts/Trenda-ExtraLightIt.otf</string>
+    <string>fonts/Trenda-Heavy.otf</string>
+    <string>fonts/Trenda-HeavyIt.otf</string>
+    <string>fonts/Trenda-Light.otf</string>
+    <string>fonts/Trenda-LightIt.otf</string>
+    <string>fonts/Trenda-Regular.otf</string>
+    <string>fonts/Trenda-RegularIt.otf</string>
+    <string>fonts/Trenda-Semibold.otf</string>
+    <string>fonts/Trenda-SemiboldIt.otf</string>
+    <string>fonts/Trenda-Thin.otf</string>
+    <string>fonts/Trenda-ThinIt.otf</string>
+    <string>fonts/isidora-light.otf</string>
+	</array>
+	<key>UILaunchStoryboardName</key>
+	<string>LaunchScreen</string>
 	<key>ITSAppUsesNonExemptEncryption</key>
 	<false/>
-	<key>LSRequiresIPhoneOS</key>
-	<true/>
+	<key>LSApplicationQueriesSchemes</key>
+	<array>
+		<string>strava</string>
+		<string>gcm-ciq</string>
+	</array>
+	<key>CFBundleDevelopmentRegion</key>
+	<string>en</string>
+	<key>CFBundleVersion</key>
+	<string>1</string>
+	<key>NSHealthUpdateUsageDescription</key>
+	<string>In order to constatnly track your health status we need to be able to update your data.</string>
+	<key>CFBundlePackageType</key>
+	<string>APPL</string>
+	<key>UIMainStoryboardFile</key>
+	<string>Main</string>
+	<key>NSMicrophoneUsageDescription</key>
+	<string>Your microphone will be used to record your speech when you press the &quot;Start Recording&quot; button.</string>
+	<key>CFBundleShortVersionString</key>
+	<string>1.0</string>
+	<key>NSHealthShareUsageDescription</key>
+	<string>In order to estimate your curent health we need to read your health data.</string>
 	<key>NSAppTransportSecurity</key>
 	<dict>
 		<key>NSExceptionDomains</key>
@@ -32,42 +57,35 @@
 				<true/>
 				<key>NSExceptionRequiresForwardSecrecy</key>
 				<false/>
-				<key>NSIncludesSubdomains</key>
-				<true/>
 				<key>NSTemporaryExceptionMinimumTLSVersion</key>
 				<string>TLSv1.2</string>
+				<key>NSIncludesSubdomains</key>
+				<true/>
 			</dict>
 		</dict>
 	</dict>
-	<key>NSHealthShareUsageDescription</key>
-	<string>In order to estimate your curent health we need to read your health data.</string>
-	<key>NSHealthUpdateUsageDescription</key>
-	<string>In order to constatnly track your health status we need to be able to update your data.</string>
-	<key>NSMicrophoneUsageDescription</key>
-	<string>Your microphone will be used to record your speech when you press the "Start Recording" button.</string>
-	<key>NSSpeechRecognitionUsageDescription</key>
-	<string>Speech recognition will be used to determine which words you speak into this device's microphone.</string>
-  <key>NSContactsUsageDescription</key>
-  <string>We will only read your personal information so that you don't need to provide them over and over again.</string>
-	<key>UILaunchStoryboardName</key>
-	<string>LaunchScreen</string>
-	<key>UIMainStoryboardFile</key>
-	<string>Main</string>
+	<key>CFBundleInfoDictionaryVersion</key>
+	<string>6.0</string>
+	<key>CFBundleExecutable</key>
+	<string>$(EXECUTABLE_NAME)</string>
 	<key>UIRequiredDeviceCapabilities</key>
 	<array>
 		<string>armv7</string>
 		<string>healthkit</string>
 	</array>
+	<key>CFBundleIdentifier</key>
+	<string>$(PRODUCT_BUNDLE_IDENTIFIER)</string>
+	<key>NSContactsUsageDescription</key>
+	<string>We will only read your personal information so that you don&apos;t need to provide them over and over again.</string>
+	<key>LSRequiresIPhoneOS</key>
+	<true/>
 	<key>UISupportedInterfaceOrientations</key>
 	<array>
 		<string>UIInterfaceOrientationPortrait</string>
 		<string>UIInterfaceOrientationLandscapeLeft</string>
 		<string>UIInterfaceOrientationLandscapeRight</string>
 	</array>
-  <key>LSApplicationQueriesSchemes</key>
-  <array>
-    <string>strava</string>
-    <string>gcm-ciq</string>
-  </array>
+	<key>NSSpeechRecognitionUsageDescription</key>
+	<string>Speech recognition will be used to determine which words you speak into this device&apos;s microphone.</string>
 </dict>
 </plist>

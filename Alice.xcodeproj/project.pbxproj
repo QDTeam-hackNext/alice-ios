@@ -40,6 +40,10 @@
 		C7D22D2D1E8301A40062D199 /* Sounds.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7D22D2C1E8301A40062D199 /* Sounds.swift */; };
 		C7E739631E8521F000F14AAF /* ExternalApps.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7E739621E8521F000F14AAF /* ExternalApps.swift */; };
 		C7E739651E852BBF00F14AAF /* HealthKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7E739641E852BBF00F14AAF /* HealthKit.swift */; };
+		C7E739671E8551AC00F14AAF /* UIColor+Additions.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7E739661E8551AC00F14AAF /* UIColor+Additions.swift */; };
+		C7E739691E8551D500F14AAF /* UIFont+Additions.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7E739681E8551D500F14AAF /* UIFont+Additions.swift */; };
+		C7E7396B1E855AFA00F14AAF /* UIButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7E7396A1E855AFA00F14AAF /* UIButton.swift */; };
+		C7E7396D1E8562A800F14AAF /* fonts in Resources */ = {isa = PBXBuildFile; fileRef = C7E7396C1E8562A800F14AAF /* fonts */; };
 		C7E95DBD1E8502C500007646 /* AnalyzeResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7E95DBC1E8502C500007646 /* AnalyzeResult.swift */; };
 		C7E95DBF1E85070000007646 /* BackendUrls.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7E95DBE1E85070000007646 /* BackendUrls.swift */; };
 		C7E95DC11E851AE300007646 /* appConfig.plist in Resources */ = {isa = PBXBuildFile; fileRef = C7E95DC01E851AE300007646 /* appConfig.plist */; };
@@ -112,6 +116,10 @@
 		C7D22D2C1E8301A40062D199 /* Sounds.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Sounds.swift; sourceTree = "<group>"; };
 		C7E739621E8521F000F14AAF /* ExternalApps.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExternalApps.swift; sourceTree = "<group>"; };
 		C7E739641E852BBF00F14AAF /* HealthKit.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HealthKit.swift; sourceTree = "<group>"; };
+		C7E739661E8551AC00F14AAF /* UIColor+Additions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIColor+Additions.swift"; sourceTree = "<group>"; };
+		C7E739681E8551D500F14AAF /* UIFont+Additions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIFont+Additions.swift"; sourceTree = "<group>"; };
+		C7E7396A1E855AFA00F14AAF /* UIButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIButton.swift; sourceTree = "<group>"; };
+		C7E7396C1E8562A800F14AAF /* fonts */ = {isa = PBXFileReference; lastKnownFileType = folder; path = fonts; sourceTree = "<group>"; };
 		C7E95DBC1E8502C500007646 /* AnalyzeResult.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AnalyzeResult.swift; sourceTree = "<group>"; };
 		C7E95DBE1E85070000007646 /* BackendUrls.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BackendUrls.swift; sourceTree = "<group>"; };
 		C7E95DC01E851AE300007646 /* appConfig.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = appConfig.plist; sourceTree = "<group>"; };
@@ -177,6 +185,7 @@
 		C744E84C1E80184C00DE2E7F /* Alice */ = {
 			isa = PBXGroup;
 			children = (
+				C7E7396C1E8562A800F14AAF /* fonts */,
 				C7D22D2A1E8300B70062D199 /* sounds */,
 				C7FF806F1E848D010041B312 /* api */,
 				C7D22D231E82F5110062D199 /* extensions */,
@@ -198,6 +207,8 @@
 				C744E8891E8039D700DE2E7F /* Recorder.swift */,
 				C76BC4E51E83399100475956 /* InterviewQuestion.swift */,
 				C7FF806D1E848BED0041B312 /* UserInformation.swift */,
+				C7E739661E8551AC00F14AAF /* UIColor+Additions.swift */,
+				C7E739681E8551D500F14AAF /* UIFont+Additions.swift */,
 				C744E8511E80184C00DE2E7F /* Main.storyboard */,
 				C744E8541E80184C00DE2E7F /* Assets.xcassets */,
 				C744E8561E80184C00DE2E7F /* LaunchScreen.storyboard */,
@@ -296,6 +307,7 @@
 			isa = PBXGroup;
 			children = (
 				C7D22D241E82F53B0062D199 /* SwinjectStoryboard.swift */,
+				C7E7396A1E855AFA00F14AAF /* UIButton.swift */,
 			);
 			path = extensions;
 			sourceTree = "<group>";
@@ -479,6 +491,7 @@
 				C744E8581E80184C00DE2E7F /* LaunchScreen.storyboard in Resources */,
 				C744E8551E80184C00DE2E7F /* Assets.xcassets in Resources */,
 				C7D22D2B1E8300B70062D199 /* sounds in Resources */,
+				C7E7396D1E8562A800F14AAF /* fonts in Resources */,
 				C744E8531E80184C00DE2E7F /* Main.storyboard in Resources */,
 				C7E95DC11E851AE300007646 /* appConfig.plist in Resources */,
 			);
@@ -653,16 +666,19 @@
 				C7FF806E1E848BED0041B312 /* UserInformation.swift in Sources */,
 				C798F85D1E82D71C002D7C07 /* DataAccessViewModel.swift in Sources */,
 				C76BC4E61E83399100475956 /* InterviewQuestion.swift in Sources */,
+				C7E7396B1E855AFA00F14AAF /* UIButton.swift in Sources */,
 				C7E95DBF1E85070000007646 /* BackendUrls.swift in Sources */,
 				C744E8861E80312100DE2E7F /* GeneralInformationView.swift in Sources */,
 				C7D22D2D1E8301A40062D199 /* Sounds.swift in Sources */,
 				C7FF80721E848D510041B312 /* Backend.swift in Sources */,
 				C744E84E1E80184C00DE2E7F /* AppDelegate.swift in Sources */,
 				C798F8511E82D5E3002D7C07 /* DataAccessView.swift in Sources */,
+				C7E739691E8551D500F14AAF /* UIFont+Additions.swift in Sources */,
 				C798F8571E82D67A002D7C07 /* WelcomeViewModel.swift in Sources */,
 				C798F8591E82D6A3002D7C07 /* UserStoryViewModel.swift in Sources */,
 				C798F8631E82DF1D002D7C07 /* ViewModel.swift in Sources */,
 				C798F85B1E82D6BC002D7C07 /* AdditionalQuestionsViewModel.swift in Sources */,
+				C7E739671E8551AC00F14AAF /* UIColor+Additions.swift in Sources */,
 				C798F8611E82D760002D7C07 /* PaymentViewModel.swift in Sources */,
 				C798F85F1E82D739002D7C07 /* SummaryViewModel.swift in Sources */,
 				C798F8431E807583002D7C07 /* Speech.swift in Sources */,

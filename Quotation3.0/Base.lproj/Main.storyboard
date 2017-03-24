@@ -1,11 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16D32" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16D32" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="Y0Z-fp-1bW">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -13,7 +14,7 @@
         <!--General Infomation-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" userLabel="General Infomation" customClass="GeneralIfomationView" customModule="Quotation3_0" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" userLabel="General Infomation" customClass="GeneralIfomationView" customModule="Alice" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -80,7 +81,7 @@
         <!--User Story-->
         <scene sceneID="RdP-iM-4Pz">
             <objects>
-                <viewController id="llf-b4-bav" userLabel="User Story" customClass="UserStoryView" customModule="Quotation3_0" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="llf-b4-bav" userLabel="User Story" customClass="UserStoryView" customModule="Alice" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="dh0-yJ-fgk"/>
                         <viewControllerLayoutGuide type="bottom" id="8F9-Dc-Ser"/>
@@ -102,7 +103,7 @@
         <!--Data Access-->
         <scene sceneID="eUr-nL-1k0">
             <objects>
-                <viewController id="LCT-Kh-TCg" userLabel="Data Access" customClass="DataAccessView" customModule="Quotation3_0" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="LCT-Kh-TCg" userLabel="Data Access" customClass="DataAccessView" customModule="Alice" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="Hzn-qj-HVP"/>
                         <viewControllerLayoutGuide type="bottom" id="dvp-e0-aFQ"/>
@@ -123,7 +124,7 @@
         <!--Summary-->
         <scene sceneID="5Xh-g3-42G">
             <objects>
-                <viewController id="zxR-aj-G34" userLabel="Summary" customClass="SummaryView" customModule="Quotation3_0" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="zxR-aj-G34" userLabel="Summary" customClass="SummaryView" customModule="Alice" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="n9q-uK-BLN"/>
                         <viewControllerLayoutGuide type="bottom" id="IL3-fk-JBo"/>
@@ -144,7 +145,7 @@
         <!--Payment-->
         <scene sceneID="rCN-Lu-AfD">
             <objects>
-                <viewController id="hNb-zE-SXl" userLabel="Payment" customClass="PaymentView" customModule="Quotation3_0" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="hNb-zE-SXl" userLabel="Payment" customClass="PaymentView" customModule="Alice" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="Pzw-Vq-II3"/>
                         <viewControllerLayoutGuide type="bottom" id="yMZ-s9-RF3"/>
@@ -162,7 +163,7 @@
         <!--Additional Questions-->
         <scene sceneID="lnq-gF-fWY">
             <objects>
-                <viewController id="Bkn-hM-KV1" userLabel="Additional Questions" customClass="AdditionalQuestionsView" customModule="Quotation3_0" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="Bkn-hM-KV1" userLabel="Additional Questions" customClass="AdditionalQuestionsView" customModule="Alice" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="KrG-zH-6xi"/>
                         <viewControllerLayoutGuide type="bottom" id="q5l-hE-Y7y"/>
@@ -183,7 +184,7 @@
         <!--Welcome-->
         <scene sceneID="uHR-5L-v22">
             <objects>
-                <viewController id="Y0Z-fp-1bW" userLabel="Welcome" customClass="WelcomeView" customModule="Quotation3_0" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="Y0Z-fp-1bW" userLabel="Welcome" customClass="WelcomeView" customModule="Alice" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="Ltm-hl-kLV"/>
                         <viewControllerLayoutGuide type="bottom" id="E8A-Jr-FMz"/>
@@ -191,17 +192,110 @@
                     <view key="view" contentMode="scaleToFill" id="HS7-mq-Eja">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="allianzId" translatesAutoresizingMaskIntoConstraints="NO" id="I2L-9x-wcA">
+                                <rect key="frame" x="107" y="34" width="160" height="60"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="160" id="aA2-eF-vA2"/>
+                                    <constraint firstAttribute="height" constant="60" id="cLk-bs-E5J"/>
+                                </constraints>
+                            </imageView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="uPv-aV-OtG" userLabel="container">
+                                <rect key="frame" x="28" y="116" width="319" height="511"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Hi, meet your personal assistant" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mim-K0-9JM" userLabel="title">
+                                        <rect key="frame" x="14" y="38" width="291" height="21"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="userAlice" translatesAutoresizingMaskIntoConstraints="NO" id="hwN-Rf-3Mu">
+                                        <rect key="frame" x="79" y="99" width="160" height="160"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" relation="lessThanOrEqual" constant="160" id="DJS-GX-0Y2"/>
+                                            <constraint firstAttribute="height" relation="lessThanOrEqual" constant="160" id="qEz-0b-U2t"/>
+                                            <constraint firstAttribute="width" secondItem="hwN-Rf-3Mu" secondAttribute="height" multiplier="1:1" id="sDH-c8-fHI"/>
+                                        </constraints>
+                                    </imageView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Alice" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wfC-yF-Pih" userLabel="aliceName">
+                                        <rect key="frame" x="14" y="285" width="291" height="21"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="some say I’m from wonderland" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XeL-M4-DdN" userLabel="subtitle">
+                                        <rect key="frame" x="8" y="296" width="303" height="21"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Jbx-fg-qi2" userLabel="welcomeButton">
+                                        <rect key="frame" x="-8" y="446" width="336" height="65"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="65" id="eHF-v0-pZS"/>
+                                        </constraints>
+                                        <state key="normal" title="Say hi to Alice"/>
+                                    </button>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="icoArrowRight" translatesAutoresizingMaskIntoConstraints="NO" id="wqO-a5-erG">
+                                        <rect key="frame" x="286" y="470.5" width="18" height="16"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="16" id="2ve-pe-4IS"/>
+                                            <constraint firstAttribute="width" constant="18" id="Qup-pO-RKx"/>
+                                        </constraints>
+                                    </imageView>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstItem="wfC-yF-Pih" firstAttribute="leading" secondItem="uPv-aV-OtG" secondAttribute="leading" constant="14" id="4pA-x6-bCL"/>
+                                    <constraint firstItem="hwN-Rf-3Mu" firstAttribute="centerX" secondItem="uPv-aV-OtG" secondAttribute="centerX" id="6vu-hi-Ipm"/>
+                                    <constraint firstItem="mim-K0-9JM" firstAttribute="leading" secondItem="uPv-aV-OtG" secondAttribute="leading" constant="14" id="AMD-Fc-JTu"/>
+                                    <constraint firstItem="hwN-Rf-3Mu" firstAttribute="leading" secondItem="uPv-aV-OtG" secondAttribute="leading" constant="79" id="ANn-qo-ssr"/>
+                                    <constraint firstAttribute="trailing" secondItem="hwN-Rf-3Mu" secondAttribute="trailing" constant="80" id="Eun-eE-iuj"/>
+                                    <constraint firstItem="wqO-a5-erG" firstAttribute="centerY" secondItem="Jbx-fg-qi2" secondAttribute="centerY" id="FOO-Tl-xVA"/>
+                                    <constraint firstItem="XeL-M4-DdN" firstAttribute="leading" secondItem="uPv-aV-OtG" secondAttribute="leading" constant="8" id="M9X-ef-eY0"/>
+                                    <constraint firstItem="Jbx-fg-qi2" firstAttribute="centerX" secondItem="uPv-aV-OtG" secondAttribute="centerX" id="Pdj-yU-Gex"/>
+                                    <constraint firstAttribute="trailing" secondItem="mim-K0-9JM" secondAttribute="trailing" constant="14" id="U5z-Pj-yU5"/>
+                                    <constraint firstItem="mim-K0-9JM" firstAttribute="top" secondItem="uPv-aV-OtG" secondAttribute="top" constant="38" id="VAK-co-7Hg"/>
+                                    <constraint firstItem="XeL-M4-DdN" firstAttribute="top" secondItem="wfC-yF-Pih" secondAttribute="bottom" constant="-10" id="XMf-bu-IL7"/>
+                                    <constraint firstItem="hwN-Rf-3Mu" firstAttribute="top" secondItem="mim-K0-9JM" secondAttribute="bottom" constant="40" id="Zr2-xK-5vT"/>
+                                    <constraint firstAttribute="bottom" secondItem="Jbx-fg-qi2" secondAttribute="bottom" id="dxI-U3-ZrU"/>
+                                    <constraint firstItem="wfC-yF-Pih" firstAttribute="top" secondItem="hwN-Rf-3Mu" secondAttribute="bottom" constant="26" id="kzP-Ev-UnX"/>
+                                    <constraint firstItem="Jbx-fg-qi2" firstAttribute="trailing" secondItem="wqO-a5-erG" secondAttribute="trailing" constant="24" id="lMj-EB-QTp"/>
+                                    <constraint firstItem="Jbx-fg-qi2" firstAttribute="width" secondItem="uPv-aV-OtG" secondAttribute="width" constant="17" id="lfY-BZ-4fX"/>
+                                    <constraint firstAttribute="trailing" secondItem="XeL-M4-DdN" secondAttribute="trailing" constant="8" id="rOl-1l-K7j"/>
+                                    <constraint firstAttribute="trailing" secondItem="wfC-yF-Pih" secondAttribute="trailing" constant="14" id="rxQ-0z-Bw7"/>
+                                </constraints>
+                            </view>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="uPv-aV-OtG" firstAttribute="leading" secondItem="HS7-mq-Eja" secondAttribute="leading" constant="28" id="Ewo-a5-Gje"/>
+                            <constraint firstItem="uPv-aV-OtG" firstAttribute="top" secondItem="I2L-9x-wcA" secondAttribute="bottom" constant="22" id="HeN-VS-fhw"/>
+                            <constraint firstItem="I2L-9x-wcA" firstAttribute="top" secondItem="Ltm-hl-kLV" secondAttribute="bottom" constant="14" id="X04-pB-pzA"/>
+                            <constraint firstItem="I2L-9x-wcA" firstAttribute="centerX" secondItem="HS7-mq-Eja" secondAttribute="centerX" id="ebB-IO-Dx1"/>
+                            <constraint firstAttribute="trailing" secondItem="uPv-aV-OtG" secondAttribute="trailing" constant="28" id="qfK-2H-xA8"/>
+                            <constraint firstItem="E8A-Jr-FMz" firstAttribute="top" secondItem="uPv-aV-OtG" secondAttribute="bottom" constant="40" id="vJ6-cp-yDi"/>
+                        </constraints>
                     </view>
                     <connections>
+                        <outlet property="aliceNameLabel" destination="wfC-yF-Pih" id="mPG-cb-GS6"/>
+                        <outlet property="container" destination="uPv-aV-OtG" id="XLP-qZ-a3Y"/>
+                        <outlet property="subtitleLabel" destination="XeL-M4-DdN" id="JDh-ke-qau"/>
+                        <outlet property="titleLabel" destination="mim-K0-9JM" id="cQx-FM-Wbk"/>
+                        <outlet property="welcomeButton" destination="Jbx-fg-qi2" id="HuO-Ec-tVA"/>
                         <segue destination="BYZ-38-t0r" kind="show" identifier="toGeneralInfrmation" id="QRa-ne-VCU"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="OuS-3W-39g" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-758" y="124"/>
+            <point key="canvasLocation" x="-759.20000000000005" y="123.68815592203899"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="allianzId" width="236" height="89"/>
+        <image name="icoArrowRight" width="20" height="17"/>
+        <image name="userAlice" width="160" height="160"/>
+    </resources>
     <inferredMetricsTieBreakers>
         <segue reference="xZv-RZ-nDz"/>
     </inferredMetricsTieBreakers>
