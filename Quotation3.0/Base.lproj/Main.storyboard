@@ -240,7 +240,7 @@
                                         </connections>
                                     </button>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="icoArrowRight" translatesAutoresizingMaskIntoConstraints="NO" id="wqO-a5-erG">
-                                        <rect key="frame" x="286" y="470.5" width="18" height="16"/>
+                                        <rect key="frame" x="286" y="471" width="18" height="16"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="16" id="2ve-pe-4IS"/>
                                             <constraint firstAttribute="width" constant="18" id="Qup-pO-RKx"/>
@@ -278,6 +278,13 @@
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="q7A-fq-apc" userLabel="animationView" customClass="WaveformView" customModule="Alice" customModuleProvider="target">
+                                        <rect key="frame" x="-0.5" y="403" width="375" height="84"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="84" id="nGL-Hq-eoF"/>
+                                        </constraints>
+                                    </view>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8eF-BZ-cfB" userLabel="dividerLabel">
                                         <rect key="frame" x="0.0" y="545" width="375" height="2"/>
                                         <constraints>
@@ -312,9 +319,12 @@
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
+                                    <constraint firstItem="q7A-fq-apc" firstAttribute="width" secondItem="tuD-fR-LEl" secondAttribute="width" id="0Ve-6a-gi3"/>
                                     <constraint firstItem="8eF-BZ-cfB" firstAttribute="centerX" secondItem="tuD-fR-LEl" secondAttribute="centerX" id="1dA-Q0-Uw7"/>
                                     <constraint firstItem="dR0-K7-8QE" firstAttribute="leading" secondItem="tuD-fR-LEl" secondAttribute="leading" constant="20" id="5gs-hZ-on4"/>
+                                    <constraint firstItem="8eF-BZ-cfB" firstAttribute="top" secondItem="q7A-fq-apc" secondAttribute="bottom" constant="58" id="7fu-CM-oTS"/>
                                     <constraint firstItem="dR0-K7-8QE" firstAttribute="top" secondItem="tuD-fR-LEl" secondAttribute="top" constant="48" id="86b-FV-muR"/>
+                                    <constraint firstItem="q7A-fq-apc" firstAttribute="centerX" secondItem="tuD-fR-LEl" secondAttribute="centerX" id="Bbn-3k-Wqn"/>
                                     <constraint firstAttribute="bottom" secondItem="b1H-cf-HpY" secondAttribute="bottom" id="DzW-aT-WG5"/>
                                     <constraint firstItem="b1H-cf-HpY" firstAttribute="top" secondItem="8eF-BZ-cfB" secondAttribute="bottom" id="KKF-el-KZe"/>
                                     <constraint firstAttribute="trailing" secondItem="dR0-K7-8QE" secondAttribute="trailing" constant="20" id="T4m-VG-qxh"/>
@@ -351,6 +361,7 @@
                         <outlet property="recordButton" destination="XWZ-X8-83Y" id="FeI-Kt-nLv"/>
                         <outlet property="subtitleLabel" destination="XeL-M4-DdN" id="JDh-ke-qau"/>
                         <outlet property="titleLabel" destination="mim-K0-9JM" id="cQx-FM-Wbk"/>
+                        <outlet property="voiceAnimation" destination="q7A-fq-apc" id="EdX-Lp-h8o"/>
                         <outlet property="welcomeButton" destination="Jbx-fg-qi2" id="HuO-Ec-tVA"/>
                         <segue destination="BYZ-38-t0r" kind="show" identifier="toGeneralInfrmation" id="QRa-ne-VCU"/>
                     </connections>

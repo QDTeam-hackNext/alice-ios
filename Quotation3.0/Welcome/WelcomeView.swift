@@ -19,9 +19,12 @@ class WelcomeView: UIViewController, WithViewModel {
   @IBOutlet weak var welcomeButton: UIButton!
   @IBOutlet weak var overlay: UIView!
   @IBOutlet weak var messageLabel: UILabel!
+  @IBOutlet weak var voiceAnimation: WaveformView!
   @IBOutlet weak var dividerLabel: UILabel!
   @IBOutlet weak var recordBackground: UILabel!
   @IBOutlet weak var recordButton: UIButton!
+
+  fileprivate var displayLink: CADisplayLink?
 
   override func viewDidLoad() {
     self.overlay.isHidden = true
@@ -56,12 +59,18 @@ class WelcomeView: UIViewController, WithViewModel {
                                   height: self.overlay.frame.height - self.recordBackground.frame.height)
     self.overlay.addSubview(blurEffectView)
     self.overlay.addSubview(self.messageLabel)
+    self.overlay.addSubview(self.voiceAnimation)
     self.overlay.addSubview(self.dividerLabel)
 
     self.messageLabel.numberOfLines = 0
     self.messageLabel.lineBreakMode = .byWordWrapping
     self.messageLabel.textColor = UIColor.darkishBlue
     self.messageLabel.font = UIFont.recordHelpMessageFont()
+
+    self.voiceAnimation.isHidden = true
+    self.voiceAnimation.numberOfWaves = 4
+    self.voiceAnimation.waveColor = UIColor.dodgerBlue
+    self.voiceAnimation.backgroundColor = UIColor.clear
 
     self.dividerLabel.text = ""
     self.dividerLabel.backgroundColor = UIColor.dodgerBlue
@@ -94,6 +103,9 @@ class WelcomeView: UIViewController, WithViewModel {
     self.messageLabel.textAlignment = .right
     self.messageLabel.textColor = UIColor.charcoalGrey
     self.messageLabel.font = UIFont.userSpeechResponseFontFont()
+    self.displayLink = CADisplayLink(target: self, selector: #selector(self.updateMeters))
+    self.displayLink?.add(to: RunLoop.current, forMode: RunLoopMode.commonModes)
+    self.voiceAnimation.isHidden = false
     self.model.startRecording(callback: {
       input, status in
       DispatchQueue.main.async {
@@ -111,7 +123,14 @@ class WelcomeView: UIViewController, WithViewModel {
   }
 
   fileprivate func stopRecording() {
+    self.displayLink?.invalidate()
+    self.voiceAnimation.isHidden = true
     self.model.stopRecording()
     self.recordButton.layer.borderColor = UIColor.white.cgColor
+  }
+
+  func updateMeters() {
+    let random = Double(arc4random_uniform(255))
+    self.voiceAnimation.updateWithLevel(CGFloat(random.divided(by: 255)))
   }
 }
