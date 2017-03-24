@@ -7,5 +7,13 @@
 //
 
 class WelcomeViewModel: ViewModel {
-  let welcomeMessage = "asdf"
+  fileprivate let recorder: Recorder
+
+  init(recorder: Recorder) {
+    self.recorder = recorder
+  }
+
+  func requestMicrophoneAccess() {
+    self.recorder.requestAuthorization()
+  }
 }

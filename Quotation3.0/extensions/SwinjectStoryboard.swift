@@ -49,7 +49,10 @@ extension SwinjectStoryboard {
 
   fileprivate class func registerViewModels() {
     self.defaultContainer
-      .register(WelcomeViewModel.self, factory: { _ in return WelcomeViewModel() })
+      .register(WelcomeViewModel.self, factory: {
+        r in
+        return WelcomeViewModel(recorder: resolve(r))
+      })
     self.defaultContainer
       .register(GeneralInformationViewModel.self, factory: {
         r in

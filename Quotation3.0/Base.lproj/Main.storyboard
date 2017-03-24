@@ -235,6 +235,9 @@
                                             <constraint firstAttribute="height" constant="65" id="eHF-v0-pZS"/>
                                         </constraints>
                                         <state key="normal" title="Say hi to Alice"/>
+                                        <connections>
+                                            <action selector="welcomeButtonTouchDown:" destination="Y0Z-fp-1bW" eventType="touchDown" id="MDQ-Og-xZI"/>
+                                        </connections>
                                     </button>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="icoArrowRight" translatesAutoresizingMaskIntoConstraints="NO" id="wqO-a5-erG">
                                         <rect key="frame" x="286" y="470.5" width="18" height="16"/>

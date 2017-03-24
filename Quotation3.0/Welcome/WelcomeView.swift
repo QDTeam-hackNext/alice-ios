@@ -38,4 +38,8 @@ class WelcomeView: UIViewController, WithViewModel {
     self.welcomeButton.backgroundColor = UIColor.vividPurple
     self.welcomeButton.titleLabel!.font = UIFont.hiButtonFontFont()
   }
+
+  @IBAction func welcomeButtonTouchDown(_ sender: Any) {
+    self.model.requestMicrophoneAccess()
+  }
 }
