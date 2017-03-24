@@ -24,4 +24,12 @@ extension UIColor {
 	class var vividPurple: UIColor {
 		return UIColor(red: 144.0 / 255.0, green: 18.0 / 255.0, blue: 254.0 / 255.0, alpha: 1.0)
 	}
+
+	class var darkishBlue: UIColor {
+		return UIColor(red: 0.0, green: 74.0 / 255.0, blue: 148.0 / 255.0, alpha: 1.0)
+	}
+
+	class var dodgerBlue: UIColor {
+		return UIColor(red: 46.0 / 255.0, green: 144.0 / 255.0, blue: 243.0 / 255.0, alpha: 1.0)
+	}
 }

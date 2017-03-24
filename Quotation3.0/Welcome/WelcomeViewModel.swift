@@ -13,7 +13,7 @@ class WelcomeViewModel: ViewModel {
     self.recorder = recorder
   }
 
-  func requestMicrophoneAccess() {
-    self.recorder.requestAuthorization()
+  func requestMicrophoneAccess(callback: @escaping (Bool) -> Void) {
+    self.recorder.requestAuthorization(callback: callback)
   }
 }

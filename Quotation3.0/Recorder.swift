@@ -29,11 +29,14 @@ class Recorder {
     }
   }
 
-  func requestAuthorization() {
+  func requestAuthorization(callback: @escaping (Bool) -> Void) {
     if SFSpeechRecognizer.authorizationStatus() != .authorized {
       SFSpeechRecognizer.requestAuthorization {
         status in
+        callback(status == .authorized)
       }
+    } else {
+      callback(true)
     }
   }
 

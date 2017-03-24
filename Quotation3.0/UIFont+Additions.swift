@@ -20,6 +20,10 @@ extension UIFont {
 		return UIFont(name: "Trenda-Black", size: 20.0)
 	}
 
+	class func recordHelpMessageFont() -> UIFont? {
+		return UIFont(name: "Trenda-Black", size: 20.0)
+	}
+
 	class func subtitleFontFont() -> UIFont? {
 		return UIFont(name: "Trenda-Semibold", size: 14.0)
 	}
