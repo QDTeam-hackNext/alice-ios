@@ -19,6 +19,7 @@ class WelcomeView: UIViewController, WithViewModel {
   @IBOutlet weak var welcomeButton: UIButton!
   @IBOutlet weak var overlay: UIView!
   @IBOutlet weak var messageLabel: UILabel!
+  @IBOutlet weak var questionLable: UILabel!
   @IBOutlet weak var voiceAnimation: WaveformView!
   @IBOutlet weak var dividerLabel: UILabel!
   @IBOutlet weak var recordBackground: UILabel!
@@ -59,6 +60,7 @@ class WelcomeView: UIViewController, WithViewModel {
                                   height: self.overlay.frame.height - self.recordBackground.frame.height)
     self.overlay.addSubview(blurEffectView)
     self.overlay.addSubview(self.messageLabel)
+    self.overlay.addSubview(self.questionLable)
     self.overlay.addSubview(self.voiceAnimation)
     self.overlay.addSubview(self.dividerLabel)
 
@@ -66,6 +68,12 @@ class WelcomeView: UIViewController, WithViewModel {
     self.messageLabel.lineBreakMode = .byWordWrapping
     self.messageLabel.textColor = UIColor.darkishBlue
     self.messageLabel.font = UIFont.recordHelpMessageFont()
+
+    self.questionLable.isHidden = true
+    self.questionLable.numberOfLines = 0
+    self.questionLable.lineBreakMode = .byCharWrapping
+    self.questionLable.textColor = UIColor.darkishBlue
+    self.questionLable.font = UIFont.recordHelpMessageFont()
 
     self.voiceAnimation.isHidden = true
     self.voiceAnimation.numberOfWaves = 4
@@ -98,20 +106,29 @@ class WelcomeView: UIViewController, WithViewModel {
   }
 
   @IBAction func recordButtonTouchDown(_ sender: Any) {
-    self.recordButton.layer.borderColor = UIColor.vividPurple.cgColor
-    self.messageLabel.text = ""
-    self.messageLabel.textAlignment = .right
-    self.messageLabel.textColor = UIColor.charcoalGrey
-    self.messageLabel.font = UIFont.userSpeechResponseFontFont()
-    self.displayLink = CADisplayLink(target: self, selector: #selector(self.updateMeters))
-    self.displayLink?.add(to: RunLoop.current, forMode: RunLoopMode.commonModes)
-    self.voiceAnimation.isHidden = false
-    self.model.startRecording(callback: {
-      input, status in
-      DispatchQueue.main.async {
-        self.messageLabel.text = input
-      }
-    })
+    if self.questionLable.isHidden {
+      self.recordButton.layer.borderColor = UIColor.vividPurple.cgColor
+      self.messageLabel.text = ""
+      self.messageLabel.textAlignment = .right
+      self.messageLabel.textColor = UIColor.charcoalGrey
+      self.messageLabel.font = UIFont.userSpeechResponseFontFont()
+      self.displayLink = CADisplayLink(target: self, selector: #selector(self.updateMeters))
+      self.displayLink?.add(to: RunLoop.current, forMode: RunLoopMode.commonModes)
+      self.voiceAnimation.isHidden = false
+      self.model.startRecording(callback: {
+        input, status in
+        DispatchQueue.main.async {
+          self.messageLabel.text = input
+        }
+      })
+    } else {
+      self.model.requestContactsAccess(callback: {
+        status in
+        if status {
+          self.performSegue(withIdentifier: "toGeneralInfrmation", sender: self)
+        }
+      })
+    }
   }
 
   @IBAction func recordButtonTOuchUpInside(_ sender: Any) {
@@ -123,10 +140,13 @@ class WelcomeView: UIViewController, WithViewModel {
   }
 
   fileprivate func stopRecording() {
+    self.model.speak(text: self.questionLable.text!)
     self.displayLink?.invalidate()
     self.voiceAnimation.isHidden = true
     self.model.stopRecording()
     self.recordButton.layer.borderColor = UIColor.white.cgColor
+    self.questionLable.isHidden = false
+    self.recordButton.setImage(UIImage(named: "icoTick"), for: .normal)
   }
 
   func updateMeters() {

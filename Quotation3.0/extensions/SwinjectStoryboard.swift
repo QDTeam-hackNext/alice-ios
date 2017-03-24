@@ -45,6 +45,8 @@ extension SwinjectStoryboard {
         r in
         return Backend(urls: resolve(r)) })
       .inObjectScope(.container)
+    self.defaultContainer
+      .register(UserInformation.self, factory: { _ in return UserInformation() })
   }
 
   fileprivate class func registerViewModels() {
@@ -52,7 +54,9 @@ extension SwinjectStoryboard {
       .register(WelcomeViewModel.self, factory: {
         r in
         return WelcomeViewModel(recorder: resolve(r),
-                                sounds: resolve(r))
+                                sounds: resolve(r),
+                                speech: resolve(r),
+                                userInformation: resolve(r))
       })
     self.defaultContainer
       .register(GeneralInformationViewModel.self, factory: {

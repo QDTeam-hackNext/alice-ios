@@ -54,7 +54,7 @@
 	<key>CFBundleIdentifier</key>
 	<string>$(PRODUCT_BUNDLE_IDENTIFIER)</string>
 	<key>NSContactsUsageDescription</key>
-	<string>We will only read your personal information so that you don&apos;t need to provide them over and over again.</string>
+	<string></string>
 	<key>UIAppFonts</key>
 	<array>
 		<string>fonts/Trenda-Black.otf</string>

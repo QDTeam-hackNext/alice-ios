@@ -278,6 +278,14 @@
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Xml-GW-lHU" userLabel="questionLabel">
+                                        <rect key="frame" x="20" y="95" width="315" height="21"/>
+                                        <string key="text">I’d love to know you better.
+Can you share with me your card?</string>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="q7A-fq-apc" userLabel="animationView" customClass="WaveformView" customModule="Alice" customModuleProvider="target">
                                         <rect key="frame" x="-0.5" y="403" width="375" height="84"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -321,16 +329,19 @@
                                 <constraints>
                                     <constraint firstItem="q7A-fq-apc" firstAttribute="width" secondItem="tuD-fR-LEl" secondAttribute="width" id="0Ve-6a-gi3"/>
                                     <constraint firstItem="8eF-BZ-cfB" firstAttribute="centerX" secondItem="tuD-fR-LEl" secondAttribute="centerX" id="1dA-Q0-Uw7"/>
+                                    <constraint firstAttribute="trailing" secondItem="Xml-GW-lHU" secondAttribute="trailing" constant="40" id="3fs-3w-Crh"/>
                                     <constraint firstItem="dR0-K7-8QE" firstAttribute="leading" secondItem="tuD-fR-LEl" secondAttribute="leading" constant="20" id="5gs-hZ-on4"/>
                                     <constraint firstItem="8eF-BZ-cfB" firstAttribute="top" secondItem="q7A-fq-apc" secondAttribute="bottom" constant="58" id="7fu-CM-oTS"/>
                                     <constraint firstItem="dR0-K7-8QE" firstAttribute="top" secondItem="tuD-fR-LEl" secondAttribute="top" constant="48" id="86b-FV-muR"/>
                                     <constraint firstItem="q7A-fq-apc" firstAttribute="centerX" secondItem="tuD-fR-LEl" secondAttribute="centerX" id="Bbn-3k-Wqn"/>
+                                    <constraint firstItem="Xml-GW-lHU" firstAttribute="leading" secondItem="tuD-fR-LEl" secondAttribute="leading" constant="20" id="Bzl-TI-g58"/>
                                     <constraint firstAttribute="bottom" secondItem="b1H-cf-HpY" secondAttribute="bottom" id="DzW-aT-WG5"/>
                                     <constraint firstItem="b1H-cf-HpY" firstAttribute="top" secondItem="8eF-BZ-cfB" secondAttribute="bottom" id="KKF-el-KZe"/>
                                     <constraint firstAttribute="trailing" secondItem="dR0-K7-8QE" secondAttribute="trailing" constant="20" id="T4m-VG-qxh"/>
                                     <constraint firstItem="XWZ-X8-83Y" firstAttribute="centerY" secondItem="b1H-cf-HpY" secondAttribute="centerY" id="ZqX-Ph-jGa"/>
                                     <constraint firstItem="XWZ-X8-83Y" firstAttribute="centerX" secondItem="b1H-cf-HpY" secondAttribute="centerX" id="bIp-Yo-lVo"/>
                                     <constraint firstItem="b1H-cf-HpY" firstAttribute="centerX" secondItem="tuD-fR-LEl" secondAttribute="centerX" id="hpY-xx-CAK"/>
+                                    <constraint firstItem="Xml-GW-lHU" firstAttribute="top" secondItem="dR0-K7-8QE" secondAttribute="bottom" constant="26" id="hsA-7j-LmC"/>
                                     <constraint firstItem="b1H-cf-HpY" firstAttribute="width" secondItem="tuD-fR-LEl" secondAttribute="width" id="jIt-He-I9x"/>
                                     <constraint firstItem="8eF-BZ-cfB" firstAttribute="width" secondItem="tuD-fR-LEl" secondAttribute="width" id="wLA-eg-YD2"/>
                                 </constraints>
@@ -357,6 +368,7 @@
                         <outlet property="dividerLabel" destination="8eF-BZ-cfB" id="3S6-mp-XmH"/>
                         <outlet property="messageLabel" destination="dR0-K7-8QE" id="ckX-9R-IsW"/>
                         <outlet property="overlay" destination="tuD-fR-LEl" id="RLv-Dv-dlB"/>
+                        <outlet property="questionLable" destination="Xml-GW-lHU" id="Sn9-VI-Nar"/>
                         <outlet property="recordBackground" destination="b1H-cf-HpY" id="iAm-pF-113"/>
                         <outlet property="recordButton" destination="XWZ-X8-83Y" id="FeI-Kt-nLv"/>
                         <outlet property="subtitleLabel" destination="XeL-M4-DdN" id="JDh-ke-qau"/>

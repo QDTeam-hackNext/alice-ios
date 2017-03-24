@@ -8,12 +8,18 @@
 
 class WelcomeViewModel: ViewModel {
   fileprivate let sounds: Sounds
+  fileprivate let speech: Speech
   fileprivate let recorder: Recorder
+  fileprivate let userInformation: UserInformation
 
   init(recorder: Recorder,
-       sounds: Sounds) {
+       sounds: Sounds,
+       speech: Speech,
+       userInformation: UserInformation) {
     self.sounds = sounds
+    self.speech = speech
     self.recorder = recorder
+    self.userInformation = userInformation
   }
 
   func requestMicrophoneAccess(callback: @escaping (Bool) -> Void) {
@@ -28,5 +34,13 @@ class WelcomeViewModel: ViewModel {
 
   func stopRecording() {
     self.recorder.stop()
+  }
+
+  func requestContactsAccess(callback: @escaping (Bool) -> Void) {
+    self.userInformation.requestForAccess(completionHandler: callback)
+  }
+
+  func speak(text: String) {
+    self.speech.speek(text)
   }
 }
