@@ -55,8 +55,10 @@ class GeneralIfomationView: UIViewController, WithViewModel {
     self.styleValue(label: self.firstQuestionValue)
     self.styleValue(label: self.secondQuestionValue)
 
-    self.firstQuestionSlider.minimumValue = 10000
+    self.firstQuestionSlider.value = 100000
+    self.firstQuestionSlider.minimumValue = 25000
     self.firstQuestionSlider.maximumValue = 10000000
+    self.secondQuestionSlider.value = 10
     self.secondQuestionSlider.minimumValue = 1
     self.secondQuestionSlider.maximumValue = 50
 
@@ -65,6 +67,16 @@ class GeneralIfomationView: UIViewController, WithViewModel {
     self.quoteButton.clipsToBounds = true
     self.quoteButton.titleLabel?.font = UIFont.buttonFontFont()
     self.quoteButton.setTitleColor(UIColor.white, for: .normal)
+  }
+
+  @IBAction func firstSliderValueChanged(_ sender: Any) {
+    let v = Int(self.firstQuestionSlider.value)
+    self.firstQuestionValue.text = "\(v)"
+  }
+
+  @IBAction func secondSliderValueChanged(_ sender: Any) {
+    let v = Int(self.secondQuestionSlider.value)
+    self.secondQuestionValue.text = "\(v)"
   }
 
   fileprivate func styleContainer(container: UIView) {
