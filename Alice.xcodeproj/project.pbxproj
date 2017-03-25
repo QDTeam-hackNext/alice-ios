@@ -7,16 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		00F5078CA1D5F774690E021A /* Pods_Quotation3_0UITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 24B0EC148B2F31DF902608D8 /* Pods_Quotation3_0UITests.framework */; };
 		3EF8A60861FAB95D8863B669 /* Pods_AliceTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CD9284442721E00A33C923E5 /* Pods_AliceTests.framework */; };
 		7B1CE66A5BAF981F545EF487 /* Pods_AliceUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A2EF4836AA21884D8A4893DA /* Pods_AliceUITests.framework */; };
-		96F6FB76C40DAFFA153A8B00 /* Pods_Quotation3_0Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B9FAAA4122FCAE4121DB62A6 /* Pods_Quotation3_0Tests.framework */; };
 		C744E84E1E80184C00DE2E7F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C744E84D1E80184C00DE2E7F /* AppDelegate.swift */; };
 		C744E8531E80184C00DE2E7F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C744E8511E80184C00DE2E7F /* Main.storyboard */; };
 		C744E8551E80184C00DE2E7F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C744E8541E80184C00DE2E7F /* Assets.xcassets */; };
 		C744E8581E80184C00DE2E7F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C744E8561E80184C00DE2E7F /* LaunchScreen.storyboard */; };
-		C744E8631E80184D00DE2E7F /* Quotation3_0Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C744E8621E80184D00DE2E7F /* Quotation3_0Tests.swift */; };
-		C744E86E1E80184D00DE2E7F /* Quotation3_0UITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C744E86D1E80184D00DE2E7F /* Quotation3_0UITests.swift */; };
 		C744E87D1E801A3300DE2E7F /* HealthKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C744E87C1E801A3300DE2E7F /* HealthKit.framework */; };
 		C744E8811E801CDD00DE2E7F /* PassKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C744E8801E801CDD00DE2E7F /* PassKit.framework */; };
 		C744E8861E80312100DE2E7F /* GeneralInformationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C744E8851E80312100DE2E7F /* GeneralInformationView.swift */; };
@@ -53,7 +49,6 @@
 		C7E95DC31E851B0D00007646 /* AppConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7E95DC21E851B0D00007646 /* AppConfig.swift */; };
 		C7FF806E1E848BED0041B312 /* UserInformation.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7FF806D1E848BED0041B312 /* UserInformation.swift */; };
 		C7FF80721E848D510041B312 /* Backend.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7FF80711E848D510041B312 /* Backend.swift */; };
-		D1B842B1852B5A03766133FA /* Pods_Quotation3_0.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A48B88BE73AD3BF512942195 /* Pods_Quotation3_0.framework */; };
 		E1014E02E7D75CA1E5912D82 /* Pods_Alice.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EE30770D8B7956132000BFA9 /* Pods_Alice.framework */; };
 /* End PBXBuildFile section */
 
@@ -76,17 +71,14 @@
 
 /* Begin PBXFileReference section */
 		144C444393A2F09E2078C614 /* Pods-Quotation3.0.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Quotation3.0.release.xcconfig"; path = "Pods/Target Support Files/Pods-Quotation3.0/Pods-Quotation3.0.release.xcconfig"; sourceTree = "<group>"; };
-		24B0EC148B2F31DF902608D8 /* Pods_Quotation3_0UITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Quotation3_0UITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		65F8E8E5E2A3CE798E6820D9 /* Pods-Quotation3.0UITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Quotation3.0UITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-Quotation3.0UITests/Pods-Quotation3.0UITests.release.xcconfig"; sourceTree = "<group>"; };
 		6D364770750E2C0BF4C6FBF6 /* Pods-Quotation3.0UITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Quotation3.0UITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Quotation3.0UITests/Pods-Quotation3.0UITests.debug.xcconfig"; sourceTree = "<group>"; };
 		749910AFBA1063E29F65E851 /* Pods-AliceUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AliceUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-AliceUITests/Pods-AliceUITests.release.xcconfig"; sourceTree = "<group>"; };
 		7891FECE4A97AF4683E25E26 /* Pods-Alice.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Alice.release.xcconfig"; path = "Pods/Target Support Files/Pods-Alice/Pods-Alice.release.xcconfig"; sourceTree = "<group>"; };
 		8A85A9826F342075FB691A4C /* Pods-Quotation3.0Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Quotation3.0Tests.release.xcconfig"; path = "Pods/Target Support Files/Pods-Quotation3.0Tests/Pods-Quotation3.0Tests.release.xcconfig"; sourceTree = "<group>"; };
 		A2EF4836AA21884D8A4893DA /* Pods_AliceUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AliceUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		A48B88BE73AD3BF512942195 /* Pods_Quotation3_0.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Quotation3_0.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B6F59384AB9A12DF0C84F360 /* Pods-AliceTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AliceTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-AliceTests/Pods-AliceTests.release.xcconfig"; sourceTree = "<group>"; };
 		B797B79527740A61C564C6D7 /* Pods-AliceTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AliceTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-AliceTests/Pods-AliceTests.debug.xcconfig"; sourceTree = "<group>"; };
-		B9FAAA4122FCAE4121DB62A6 /* Pods_Quotation3_0Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Quotation3_0Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C5184271CDE375984C586272 /* Pods-AliceUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AliceUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-AliceUITests/Pods-AliceUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		C744E84A1E80184C00DE2E7F /* Alice.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Alice.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C744E84D1E80184C00DE2E7F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -95,10 +87,8 @@
 		C744E8571E80184C00DE2E7F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		C744E8591E80184C00DE2E7F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C744E85E1E80184D00DE2E7F /* AliceTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AliceTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		C744E8621E80184D00DE2E7F /* Quotation3_0Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Quotation3_0Tests.swift; sourceTree = "<group>"; };
 		C744E8641E80184D00DE2E7F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C744E8691E80184D00DE2E7F /* AliceUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AliceUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		C744E86D1E80184D00DE2E7F /* Quotation3_0UITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Quotation3_0UITests.swift; sourceTree = "<group>"; };
 		C744E86F1E80184D00DE2E7F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C744E87B1E801A1E00DE2E7F /* Quotation3.0.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Quotation3.0.entitlements; sourceTree = "<group>"; };
 		C744E87C1E801A3300DE2E7F /* HealthKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = HealthKit.framework; path = System/Library/Frameworks/HealthKit.framework; sourceTree = SDKROOT; };
@@ -150,7 +140,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				C744E8811E801CDD00DE2E7F /* PassKit.framework in Frameworks */,
-				D1B842B1852B5A03766133FA /* Pods_Quotation3_0.framework in Frameworks */,
 				C744E87D1E801A3300DE2E7F /* HealthKit.framework in Frameworks */,
 				E1014E02E7D75CA1E5912D82 /* Pods_Alice.framework in Frameworks */,
 			);
@@ -160,7 +149,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				96F6FB76C40DAFFA153A8B00 /* Pods_Quotation3_0Tests.framework in Frameworks */,
 				3EF8A60861FAB95D8863B669 /* Pods_AliceTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -169,7 +157,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				00F5078CA1D5F774690E021A /* Pods_Quotation3_0UITests.framework in Frameworks */,
 				7B1CE66A5BAF981F545EF487 /* Pods_AliceUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -240,7 +227,6 @@
 		C744E8611E80184D00DE2E7F /* AliceTests */ = {
 			isa = PBXGroup;
 			children = (
-				C744E8621E80184D00DE2E7F /* Quotation3_0Tests.swift */,
 				C744E8641E80184D00DE2E7F /* Info.plist */,
 			);
 			name = AliceTests;
@@ -250,7 +236,6 @@
 		C744E86C1E80184D00DE2E7F /* AliceUITests */ = {
 			isa = PBXGroup;
 			children = (
-				C744E86D1E80184D00DE2E7F /* Quotation3_0UITests.swift */,
 				C744E86F1E80184D00DE2E7F /* Info.plist */,
 			);
 			name = AliceUITests;
@@ -353,9 +338,6 @@
 			children = (
 				C744E8801E801CDD00DE2E7F /* PassKit.framework */,
 				C744E87C1E801A3300DE2E7F /* HealthKit.framework */,
-				A48B88BE73AD3BF512942195 /* Pods_Quotation3_0.framework */,
-				B9FAAA4122FCAE4121DB62A6 /* Pods_Quotation3_0Tests.framework */,
-				24B0EC148B2F31DF902608D8 /* Pods_Quotation3_0UITests.framework */,
 				EE30770D8B7956132000BFA9 /* Pods_Alice.framework */,
 				CD9284442721E00A33C923E5 /* Pods_AliceTests.framework */,
 				A2EF4836AA21884D8A4893DA /* Pods_AliceUITests.framework */,
@@ -722,7 +704,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C744E8631E80184D00DE2E7F /* Quotation3_0Tests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -730,7 +711,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C744E86E1E80184D00DE2E7F /* Quotation3_0UITests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -784,20 +764,21 @@
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
-				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = NO;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
-				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = NO;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_BITCODE = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
-				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_NO_COMMON_BLOCKS = NO;
 				GCC_OPTIMIZATION_LEVEL = 0;
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"DEBUG=1",
@@ -833,19 +814,20 @@
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
-				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = NO;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
-				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = NO;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_BITCODE = NO;
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
-				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_NO_COMMON_BLOCKS = NO;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
 				GCC_WARN_UNDECLARED_SELECTOR = YES;
