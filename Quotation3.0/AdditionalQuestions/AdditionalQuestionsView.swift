@@ -98,6 +98,17 @@ class AdditionalQuestionsView: UIViewController, WithViewModel {
       self.aliceTextImage.isHidden = true
       self.summaryButton.isHidden = true
       self.healthOverlay.isHidden = false
+      DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + 3, execute: {
+        self.aliceImage.isHidden = false
+        self.aliceTextLabel.isHidden = false
+        self.aliceTextImage.isHidden = false
+        self.summaryButton.isHidden = false
+        self.healthOverlay.isHidden = true
+        self.healthDiscountLabel.text = "Great shape -10%"
+        self.healthDiscountLabel.isHidden = false
+      })
+    } else {
+      self.healthDiscountLabel.isHidden = true
     }
   }
 }
