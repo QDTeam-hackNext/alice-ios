@@ -422,13 +422,23 @@ your typical day</string>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="R76-ID-9Gk" userLabel="applyButton">
+                                        <rect key="frame" x="28" y="552" width="320" height="65"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="65" id="tQF-I1-3D5"/>
+                                        </constraints>
+                                        <state key="normal" title="Apply"/>
+                                    </button>
                                 </subviews>
                                 <constraints>
                                     <constraint firstItem="2I3-18-QDk" firstAttribute="leading" secondItem="pYD-lL-P7X" secondAttribute="leading" constant="80" id="1lg-GU-swh"/>
                                     <constraint firstItem="cu0-6G-k6z" firstAttribute="top" secondItem="DPB-HD-72v" secondAttribute="bottom" constant="44" id="4Zr-Tb-j7a"/>
+                                    <constraint firstItem="R76-ID-9Gk" firstAttribute="top" secondItem="2I3-18-QDk" secondAttribute="bottom" constant="30" id="83b-5m-PbO"/>
                                     <constraint firstItem="DPB-HD-72v" firstAttribute="leading" secondItem="pYD-lL-P7X" secondAttribute="leading" constant="28" id="A1Y-jP-B2b"/>
                                     <constraint firstAttribute="trailing" secondItem="2I3-18-QDk" secondAttribute="trailing" constant="28" id="Ahl-f3-Usp"/>
-                                    <constraint firstAttribute="bottom" secondItem="2I3-18-QDk" secondAttribute="bottom" constant="125" id="Nzy-oB-1ZY"/>
+                                    <constraint firstItem="R76-ID-9Gk" firstAttribute="leading" secondItem="pYD-lL-P7X" secondAttribute="leading" constant="28" id="BXY-mF-Qm5"/>
+                                    <constraint firstAttribute="trailing" secondItem="R76-ID-9Gk" secondAttribute="trailing" constant="28" id="FaI-6T-PL5"/>
+                                    <constraint firstAttribute="bottom" secondItem="R76-ID-9Gk" secondAttribute="bottom" constant="30" id="MRe-tm-kZo"/>
                                     <constraint firstItem="cu0-6G-k6z" firstAttribute="leading" secondItem="pYD-lL-P7X" secondAttribute="leading" constant="28" id="Ry0-hu-oae"/>
                                     <constraint firstItem="y4n-P5-X3P" firstAttribute="top" secondItem="2I3-18-QDk" secondAttribute="top" constant="10" id="TKs-5S-Sc7"/>
                                     <constraint firstItem="2I3-18-QDk" firstAttribute="bottom" secondItem="y4n-P5-X3P" secondAttribute="bottom" constant="10" id="WQM-OC-9Yq"/>
@@ -439,24 +449,13 @@ your typical day</string>
                                     <constraint firstItem="2I3-18-QDk" firstAttribute="trailing" secondItem="y4n-P5-X3P" secondAttribute="trailing" constant="10" id="zfa-Wk-mRr"/>
                                 </constraints>
                             </scrollView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="R76-ID-9Gk" userLabel="applyButton">
-                                <rect key="frame" x="28" y="572" width="319" height="65"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="65" id="tQF-I1-3D5"/>
-                                </constraints>
-                                <state key="normal" title="Apply"/>
-                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="R76-ID-9Gk" firstAttribute="leading" secondItem="pYD-lL-P7X" secondAttribute="leading" constant="28" id="1v9-bo-mX3"/>
-                            <constraint firstItem="pYD-lL-P7X" firstAttribute="bottom" secondItem="R76-ID-9Gk" secondAttribute="bottom" constant="30" id="HAC-NR-Cm5"/>
-                            <constraint firstItem="pYD-lL-P7X" firstAttribute="trailing" secondItem="R76-ID-9Gk" secondAttribute="trailing" constant="28" id="HK5-yh-Yan"/>
                             <constraint firstItem="pYD-lL-P7X" firstAttribute="centerX" secondItem="4QY-Gw-twb" secondAttribute="centerX" id="MTZ-sa-hQE"/>
                             <constraint firstItem="pYD-lL-P7X" firstAttribute="top" secondItem="dh0-yJ-fgk" secondAttribute="bottom" id="fZJ-Ml-aur"/>
                             <constraint firstItem="pYD-lL-P7X" firstAttribute="width" secondItem="4QY-Gw-twb" secondAttribute="width" id="hkP-XW-fd9"/>
                             <constraint firstItem="8F9-Dc-Ser" firstAttribute="top" secondItem="pYD-lL-P7X" secondAttribute="bottom" id="l2O-Hg-vMw"/>
-                            <constraint firstItem="R76-ID-9Gk" firstAttribute="top" secondItem="2I3-18-QDk" secondAttribute="bottom" constant="30" id="wVD-xP-2Zx"/>
                         </constraints>
                     </view>
                     <connections>
