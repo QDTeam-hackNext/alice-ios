@@ -33,6 +33,11 @@ class AdditionalQuestionsView: UIViewController, WithViewModel {
   @IBOutlet weak var healthMsg: UILabel!
   @IBOutlet weak var healthLabel: UILabel!
   @IBOutlet weak var bottomLabel: UILabel!
+  fileprivate var generalData: GeneralInformationData?
+
+  func setData(generalData: GeneralInformationData) {
+    self.generalData = generalData
+  }
 
   override func viewDidLoad() {
     self.healthOverlay.isHidden = true
@@ -83,6 +88,7 @@ class AdditionalQuestionsView: UIViewController, WithViewModel {
 
     self.bottomLabel.text = ""
     self.bottomLabel.backgroundColor = UIColor.vividPurple
+    self.aliceSayPrice(price: (self.generalData?.price)!)
   }
 
   fileprivate func styleDiscount(label: UILabel) {
@@ -108,10 +114,23 @@ class AdditionalQuestionsView: UIViewController, WithViewModel {
           self.healthOverlay.isHidden = true
           self.healthDiscountLabel.text = "Great shape -10%"
           self.healthDiscountLabel.isHidden = false
+          self.aliceSayPrice(price: "\(Double((self.generalData?.price)!)! * 0.9)")
         })
       })
-    } else {
+    } else {self.aliceSayPrice(price: (self.generalData?.price)!)
       self.healthDiscountLabel.isHidden = true
+    }
+  }
+
+  fileprivate func aliceSayPrice(price: String) {
+    DispatchQueue.main.async {
+      if !price.isEmpty {
+        self.aliceTextLabel.text = "\(self.generalData!.user.givenName), your current quote is \(price)€"
+      } else {
+        self.aliceTextLabel.text = "I'm checking price for you"
+      }
+      //      let formattedText = NSAttributedString(string: text)
+      //      self.aliceTextLabel.attributedText = formattedText
     }
   }
 }

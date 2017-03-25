@@ -135,6 +135,13 @@ class UserStoryView: UIViewController, WithViewModel {
     self.addressLabel.text = "\(address.street) \(address.postalCode) \(address.city), \(address.country)"
   }
 
+  override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+     if segue.identifier == "toAdditionalQuestions" {
+      let controller = segue.destination as! AdditionalQuestionsView
+      controller.setData(generalData: self.generalData!)
+    }
+  }
+
   @IBAction func applyButtonPushed(_ sender: Any) {
     self.container2.isHidden = false
   }
