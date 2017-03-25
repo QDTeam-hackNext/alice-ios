@@ -62,7 +62,8 @@ extension SwinjectStoryboard {
     self.defaultContainer
       .register(GeneralInformationViewModel.self, factory: {
         r in
-        return GeneralInformationViewModel(userInfo: resolve(r))
+        return GeneralInformationViewModel(backend: resolve(r),
+                                           userInfo: resolve(r))
       })
     self.defaultContainer
       .register(UserStoryViewModel.self, factory: { _ in return UserStoryViewModel() })

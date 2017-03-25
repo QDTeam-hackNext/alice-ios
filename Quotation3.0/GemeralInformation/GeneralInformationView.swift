@@ -73,20 +73,23 @@ class GeneralIfomationView: UIViewController, WithViewModel {
       self.quoteButton.titleLabel?.font = UIFont.buttonFontFont()
       self.quoteButton.setTitleColor(UIColor.white, for: .normal)
 
-      self.aliceSayPrice(price: 0.0)
+      self.aliceSayPrice(price: "")
       self.firstSliderValueChanged(self)
       self.secondSliderValueChanged(self)
     }
+    self.computePrice()
   }
 
   @IBAction func firstSliderValueChanged(_ sender: Any) {
     let v = Int(ceil(self.firstQuestionSlider.value / 5000.0) * 5000)
     self.firstQuestionValue.text = "\(v)€"
+    self.computePrice()
   }
 
   @IBAction func secondSliderValueChanged(_ sender: Any) {
     let v = Int(self.secondQuestionSlider.value)
     self.secondQuestionValue.text = "\(v)"
+    self.computePrice()
   }
 
   fileprivate func styleContainer(container: UIView) {
@@ -114,12 +117,21 @@ class GeneralIfomationView: UIViewController, WithViewModel {
     label.font = UIFont.questionValueFont()
   }
 
-  fileprivate func aliceSayPrice(price: Float) {
-    let priceStr = String(format: "%.2f", arguments: [price])
-    let text = "\(self.model.userRealName()), your current quote is \(priceStr)€"
-    let formattedText = NSAttributedString(string: text)
+  fileprivate func aliceSayPrice(price: String) {
     DispatchQueue.main.async {
+      let text = "\(self.model.userRealName()), your current quote is \(price)€"
+      let formattedText = NSAttributedString(string: text)
       self.aliceTextLabel.attributedText = formattedText
     }
+  }
+
+  fileprivate func computePrice() {
+    self.model.calculateQuote(period: Int(self.secondQuestionSlider.value),
+                              smokes: self.thirdQuestionSwitch.isOn,
+                              sum: "\(self.firstQuestionSlider.value)",
+                              callback: {
+      price in
+      self.aliceSayPrice(price: price)
+    })
   }
 }

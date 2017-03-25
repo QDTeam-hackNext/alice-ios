@@ -20,6 +20,7 @@
 		C744E88A1E8039D700DE2E7F /* Recorder.swift in Sources */ = {isa = PBXBuildFile; fileRef = C744E8891E8039D700DE2E7F /* Recorder.swift */; };
 		C76BC4E61E83399100475956 /* InterviewQuestion.swift in Sources */ = {isa = PBXBuildFile; fileRef = C76BC4E51E83399100475956 /* InterviewQuestion.swift */; };
 		C791D5DB1E86099200BE7088 /* CloudKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C791D5DA1E86099200BE7088 /* CloudKit.framework */; };
+		C791D5DD1E86254800BE7088 /* Quote.swift in Sources */ = {isa = PBXBuildFile; fileRef = C791D5DC1E86254800BE7088 /* Quote.swift */; };
 		C798F8431E807583002D7C07 /* Speech.swift in Sources */ = {isa = PBXBuildFile; fileRef = C798F8421E807583002D7C07 /* Speech.swift */; };
 		C798F84B1E82D55B002D7C07 /* WelcomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C798F84A1E82D55B002D7C07 /* WelcomeView.swift */; };
 		C798F84D1E82D598002D7C07 /* UserStoryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C798F84C1E82D598002D7C07 /* UserStoryView.swift */; };
@@ -99,6 +100,7 @@
 		C744E8891E8039D700DE2E7F /* Recorder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Recorder.swift; sourceTree = "<group>"; };
 		C76BC4E51E83399100475956 /* InterviewQuestion.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InterviewQuestion.swift; sourceTree = "<group>"; };
 		C791D5DA1E86099200BE7088 /* CloudKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CloudKit.framework; path = System/Library/Frameworks/CloudKit.framework; sourceTree = SDKROOT; };
+		C791D5DC1E86254800BE7088 /* Quote.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Quote.swift; sourceTree = "<group>"; };
 		C798F8421E807583002D7C07 /* Speech.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Speech.swift; sourceTree = "<group>"; };
 		C798F84A1E82D55B002D7C07 /* WelcomeView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WelcomeView.swift; sourceTree = "<group>"; };
 		C798F84C1E82D598002D7C07 /* UserStoryView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserStoryView.swift; sourceTree = "<group>"; };
@@ -332,6 +334,7 @@
 			isa = PBXGroup;
 			children = (
 				C7E95DBC1E8502C500007646 /* AnalyzeResult.swift */,
+				C791D5DC1E86254800BE7088 /* Quote.swift */,
 			);
 			path = model;
 			sourceTree = "<group>";
@@ -685,6 +688,7 @@
 				C7FF806E1E848BED0041B312 /* UserInformation.swift in Sources */,
 				C798F85D1E82D71C002D7C07 /* DataAccessViewModel.swift in Sources */,
 				C76BC4E61E83399100475956 /* InterviewQuestion.swift in Sources */,
+				C791D5DD1E86254800BE7088 /* Quote.swift in Sources */,
 				C7E7396B1E855AFA00F14AAF /* UIButton.swift in Sources */,
 				C7E95DBF1E85070000007646 /* BackendUrls.swift in Sources */,
 				C744E8861E80312100DE2E7F /* GeneralInformationView.swift in Sources */,

@@ -27,4 +27,19 @@ class Backend {
         }
       })
   }
+
+  func quickQuote(_ quote: Quote, callback: @escaping (QuoteResult?) -> Void) {
+    Alamofire.request(self.urls.quickQuote,
+                      method: HTTPMethod.post,
+                      parameters: quote.toJson(),
+                      encoding: JSONEncoding.default)
+      .responseJSON(completionHandler: {
+        resp in
+        if let data = resp.result.value,
+            resp.response?.statusCode == 200 {
+          let decoded: QuoteResult? = decode(data as AnyObject)
+          callback(decoded)
+        }
+      })
+  }
 }

@@ -8,8 +8,10 @@
 
 class BackendUrls {
   let analysis: String
+  let quickQuote: String
 
   init(appConfig: AppConfig) {
     self.analysis = appConfig.backendUrl + "api/analysis"
+    self.quickQuote = appConfig.backendUrl + "api/policies/quick_quote"
   }
 }
