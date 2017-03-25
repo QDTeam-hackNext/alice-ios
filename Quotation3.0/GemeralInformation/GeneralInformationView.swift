@@ -119,9 +119,13 @@ class GeneralIfomationView: UIViewController, WithViewModel {
 
   fileprivate func aliceSayPrice(price: String) {
     DispatchQueue.main.async {
-      let text = "\(self.model.userRealName()), your current quote is \(price)€"
-      let formattedText = NSAttributedString(string: text)
-      self.aliceTextLabel.attributedText = formattedText
+      if !price.isEmpty {
+        self.aliceTextLabel.text = "\(self.model.userRealName()), your current quote is \(price)€"
+      } else {
+        self.aliceTextLabel.text = "I'm checking price for you"
+      }
+//      let formattedText = NSAttributedString(string: text)
+//      self.aliceTextLabel.attributedText = formattedText
     }
   }
 
