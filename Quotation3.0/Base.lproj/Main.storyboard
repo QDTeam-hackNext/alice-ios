@@ -889,6 +889,9 @@ your typical day</string>
                         <outletCollection property="appNames" destination="gMd-7r-HNb" collectionClass="NSMutableArray" id="iRv-YV-TGS"/>
                         <outletCollection property="appNames" destination="sJA-L0-DcX" collectionClass="NSMutableArray" id="nS0-wk-pjm"/>
                         <outletCollection property="appNames" destination="vjs-j8-Bwr" collectionClass="NSMutableArray" id="334-qF-C8l"/>
+                        <outletCollection property="diviers" destination="vUo-ml-Q7w" collectionClass="NSMutableArray" id="0DT-jf-LdW"/>
+                        <outletCollection property="diviers" destination="cG1-9s-6JI" collectionClass="NSMutableArray" id="JqH-u8-6Vf"/>
+                        <outletCollection property="diviers" destination="mxV-uX-RVT" collectionClass="NSMutableArray" id="mGR-pe-L7l"/>
                         <segue destination="LCT-Kh-TCg" kind="show" identifier="toDataAccess" id="xZv-RZ-nDz"/>
                     </connections>
                 </viewController>

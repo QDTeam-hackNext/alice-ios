@@ -14,6 +14,7 @@ class AdditionalQuestionsView: UIViewController, WithViewModel {
   @IBOutlet weak var container: UIView!
   @IBOutlet weak var aliceTextLabel: UILabel!
   @IBOutlet var appNames: [UILabel]!
+  @IBOutlet var diviers: [UILabel]!
   @IBOutlet weak var healthDiscountLabel: UILabel!
   @IBOutlet weak var nikeDiscountLabel: UILabel!
   @IBOutlet weak var stravaDiscount: UILabel!
@@ -34,9 +35,13 @@ class AdditionalQuestionsView: UIViewController, WithViewModel {
     self.aliceTextLabel.textColor = UIColor.charcoalGrey
     self.aliceTextLabel.font = UIFont.aliceMessageFontFont()
 
-    for label in appNames {
+    for label in self.appNames {
       label.font = UIFont.sumaryNameFontFont()
       label.textColor = UIColor.slate
+    }
+    for label in self.diviers {
+      label.text = ""
+      label.backgroundColor = UIColor.slate10
     }
 
     self.healthSwitch.setOn(false, animated: false)
