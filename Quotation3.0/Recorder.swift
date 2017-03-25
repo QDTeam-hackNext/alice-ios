@@ -63,12 +63,14 @@ class Recorder {
       self.recognitionTask = recognizer.recognitionTask(with: recognitionRequest, resultHandler:
         { result, error in
           if let r = result {
-            recordingCompleted(r.bestTranscription.formattedString, true)
             if r.isFinal {
+              recordingCompleted(r.bestTranscription.formattedString, true)
               if let node = self.audioEngine.inputNode {
                 node.removeTap(onBus: 0)
               }
               self.recognitionTask?.cancel()
+            } else {
+              recordingCompleted(r.bestTranscription.formattedString, false)
             }
           }
           if let e = error {

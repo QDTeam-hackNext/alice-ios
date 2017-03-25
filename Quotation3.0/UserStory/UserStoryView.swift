@@ -121,16 +121,16 @@ class UserStoryView: UIViewController, WithViewModel {
     self.recordButton.layer.borderWidth = 2
     self.recordButton.layer.borderColor = UIColor.white.cgColor
 
-    self.nameLabel.text = "\(self.generalData!.user.givenName) \(self.generalData!.user.familyName)"
-    self.ageLabel.text = "\(2017 - self.generalData!.user.birthday!.year!) yrs."
-    self.sposeLabelValue.text = "Aleksandra"
-    self.phoneLabelValue.text = "\(self.generalData!.user.phoneNumbers.first!.value.stringValue)"
-    self.emailLabelValue.text = "\(self.generalData!.user.emailAddresses[0].value)"
-    self.coverageLabelValue.text = "\(self.generalData!.sum)€"
-    self.yearsOfProtectionLabelValue.text = "\(self.generalData!.period)"
-    self.monthlyFeeValueLabel.text = "\(self.generalData!.price)€"
-    let address = self.generalData!.user.postalAddresses[0].value
-    self.addressLabel.text = "\(address.street) \(address.postalCode) \(address.city), \(address.country)"
+//    self.nameLabel.text = "\(self.generalData!.user.givenName) \(self.generalData!.user.familyName)"
+//    self.ageLabel.text = "\(2017 - self.generalData!.user.birthday!.year!) yrs."
+//    self.sposeLabelValue.text = "Aleksandra"
+//    self.phoneLabelValue.text = "\(self.generalData!.user.phoneNumbers.first!.value.stringValue)"
+//    self.emailLabelValue.text = "\(self.generalData!.user.emailAddresses[0].value)"
+//    self.coverageLabelValue.text = "\(self.generalData!.sum)€"
+//    self.yearsOfProtectionLabelValue.text = "\(self.generalData!.period)"
+//    self.monthlyFeeValueLabel.text = "\(self.generalData!.price)€"
+//    let address = self.generalData!.user.postalAddresses[0].value
+//    self.addressLabel.text = "\(address.street) \(address.postalCode) \(address.city), \(address.country)"
   }
 
   @IBAction func applyButtonPushed(_ sender: Any) {

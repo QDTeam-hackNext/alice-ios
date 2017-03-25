@@ -9,9 +9,11 @@
 class BackendUrls {
   let analysis: String
   let quickQuote: String
+  let personalData: String
 
   init(appConfig: AppConfig) {
     self.analysis = appConfig.backendUrl + "api/analysis"
     self.quickQuote = appConfig.backendUrl + "api/policies/quick_quote"
+    self.personalData = appConfig.backendUrl + "api/conversation/personal_data"
   }
 }

@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		3EF8A60861FAB95D8863B669 /* Pods_AliceTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CD9284442721E00A33C923E5 /* Pods_AliceTests.framework */; };
 		7B1CE66A5BAF981F545EF487 /* Pods_AliceUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A2EF4836AA21884D8A4893DA /* Pods_AliceUITests.framework */; };
+		C71CB68D1E86945900CA6681 /* PersonalData.swift in Sources */ = {isa = PBXBuildFile; fileRef = C71CB68C1E86945900CA6681 /* PersonalData.swift */; };
 		C744E84E1E80184C00DE2E7F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C744E84D1E80184C00DE2E7F /* AppDelegate.swift */; };
 		C744E8531E80184C00DE2E7F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C744E8511E80184C00DE2E7F /* Main.storyboard */; };
 		C744E8551E80184C00DE2E7F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C744E8541E80184C00DE2E7F /* Assets.xcassets */; };
@@ -81,6 +82,7 @@
 		B6F59384AB9A12DF0C84F360 /* Pods-AliceTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AliceTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-AliceTests/Pods-AliceTests.release.xcconfig"; sourceTree = "<group>"; };
 		B797B79527740A61C564C6D7 /* Pods-AliceTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AliceTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-AliceTests/Pods-AliceTests.debug.xcconfig"; sourceTree = "<group>"; };
 		C5184271CDE375984C586272 /* Pods-AliceUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AliceUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-AliceUITests/Pods-AliceUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		C71CB68C1E86945900CA6681 /* PersonalData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PersonalData.swift; sourceTree = "<group>"; };
 		C744E84A1E80184C00DE2E7F /* Alice.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Alice.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C744E84D1E80184C00DE2E7F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C744E8521E80184C00DE2E7F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -332,6 +334,7 @@
 			children = (
 				C7E95DBC1E8502C500007646 /* AnalyzeResult.swift */,
 				C791D5DC1E86254800BE7088 /* Quote.swift */,
+				C71CB68C1E86945900CA6681 /* PersonalData.swift */,
 			);
 			path = model;
 			sourceTree = "<group>";
@@ -683,6 +686,7 @@
 				C798F84B1E82D55B002D7C07 /* WelcomeView.swift in Sources */,
 				C7FF806E1E848BED0041B312 /* UserInformation.swift in Sources */,
 				C798F85D1E82D71C002D7C07 /* DataAccessViewModel.swift in Sources */,
+				C71CB68D1E86945900CA6681 /* PersonalData.swift in Sources */,
 				C76BC4E61E83399100475956 /* InterviewQuestion.swift in Sources */,
 				C791D5DD1E86254800BE7088 /* Quote.swift in Sources */,
 				C7E7396B1E855AFA00F14AAF /* UIButton.swift in Sources */,
