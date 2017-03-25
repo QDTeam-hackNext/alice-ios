@@ -6,10 +6,28 @@
 //  Copyright © 2017 QD Team. All rights reserved.
 //
 
-import Speech
+import Contacts
 
 class GeneralInformationViewModel: ViewModel {
+  fileprivate let userInfo: UserInformation
 
-  init() {
+  fileprivate var userData: CNContact?
+
+  init(userInfo: UserInformation) {
+    self.userInfo = userInfo
+  }
+
+  func userRealName() -> String {
+    if self.userData == nil {
+      self.fetchUserData()
+    }
+    return self.userData?.givenName ?? ""
+  }
+
+  fileprivate func fetchUserData() {
+    self.userInfo.loadUserContact(callback: {
+      userData in
+      self.userData = userData
+    })
   }
 }

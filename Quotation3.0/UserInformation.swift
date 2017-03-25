@@ -6,23 +6,43 @@
 //  Copyright © 2017 QD Team. All rights reserved.
 //
 
+import UIKit
+import CloudKit
 import Contacts
+import AddressBook
 
 class UserInformation {
+  fileprivate var userData: CNContact?
 
   func requestForAccess(completionHandler: @escaping (_ accessGranted: Bool) -> Void) {
     let authorizationStatus = CNContactStore.authorizationStatus(for: CNEntityType.contacts)
 
     switch authorizationStatus {
     case .authorized:
-      completionHandler(true)
+      CKContainer.default().requestApplicationPermission(.userDiscoverability) {
+        status, error in
+        if status == .granted {
+          DispatchQueue.global(qos: .background).async {
+            self.loadUserContact(callback: {
+              userData in
+              self.userData = userData
+              completionHandler(true)
+            })
+          }
+        }
+      }
 
     case .denied, .notDetermined:
       let contactStore = CNContactStore()
 
       contactStore.requestAccess(for: CNEntityType.contacts, completionHandler: { (access, accessError) -> Void in
         if access {
-          completionHandler(access)
+          CKContainer.default().requestApplicationPermission(.userDiscoverability) {
+            status, error in
+            if status == .granted {
+              completionHandler(access)
+            }
+          }
         } else {
           if authorizationStatus == CNAuthorizationStatus.denied {
             let queue = DispatchQueue(label: "com.app.queue")
@@ -39,29 +59,40 @@ class UserInformation {
     }
   }
 
-  func getUserDetails() {
-    requestForAccess { (accessGranted) -> Void in
-      if accessGranted {
-        let predicate = CNContact.predicateForContacts(matchingName: NSFullUserName())
-        let keys = [CNContactBirthdayKey, CNContactJobTitleKey]
+  func loadUserContact(callback: @escaping (CNContact) -> Void) {
+    if let data = self.userData {
+      callback(data)
+    }
+    let container = CKContainer.default()
+    container.fetchUserRecordID(completionHandler: {
+      record, error in
+      if let r = record {
+        container.discoverUserIdentity(withUserRecordID: r, completionHandler: {
+          userIdentity, error in
+          if let ui = userIdentity,
+              let nameData = ui.nameComponents,
+              let givenName = nameData.givenName ,
+              let familyName = nameData.familyName {
+            let predicate = CNContact.predicateForContacts(matchingName: "\(givenName) \(familyName)")
+            let contactStore = CNContactStore()
+            let keys = [CNContactGivenNameKey, CNContactFamilyNameKey,
+                        CNContactBirthdayKey, CNContactJobTitleKey]
+            do {
 
-        do {
-          let contactStore = CNContactStore()
-          let contacts = try contactStore.unifiedContacts(matching: predicate, keysToFetch: keys as [CNKeyDescriptor])
+              let contacts = try contactStore.unifiedContacts(matching: predicate,
+                                                              keysToFetch: keys as [CNKeyDescriptor])
 
-          if contacts.count == 0 {
-            print("No contacts were found matching the given name.")
-          } else {
-            for contact in contacts {
-              contact.birthday
-              contact.jobTitle
+              if contacts.count == 0 {
+                print("No contacts were found matching the given name.")
+              } else {
+                callback(contacts.first!)
+              }
+            } catch {
+              print("Unable to fetch contacts.")
             }
           }
-        }
-        catch {
-          print("Unable to fetch contacts.")
-        }
+        })
       }
-    }
+    })
   }
 }

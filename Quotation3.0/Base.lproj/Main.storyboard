@@ -25,7 +25,7 @@
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="F3b-VC-ynz">
                                 <rect key="frame" x="0.0" y="20" width="375" height="647"/>
                                 <subviews>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="userAlice" translatesAutoresizingMaskIntoConstraints="NO" id="9Hm-60-rXM">
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="userAliceBig" translatesAutoresizingMaskIntoConstraints="NO" id="9Hm-60-rXM">
                                         <rect key="frame" x="28" y="50" width="60" height="60"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="60" id="1AC-EN-W3L"/>
@@ -546,6 +546,7 @@ Can you share with me your card?</string>
         <image name="icoArrowRight" width="20" height="17"/>
         <image name="icoMicOff" width="24" height="45"/>
         <image name="userAlice" width="160" height="160"/>
+        <image name="userAliceBig" width="160" height="160"/>
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="ynn-Ih-Rjo"/>

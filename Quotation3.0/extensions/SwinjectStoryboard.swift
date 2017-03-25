@@ -47,6 +47,7 @@ extension SwinjectStoryboard {
       .inObjectScope(.container)
     self.defaultContainer
       .register(UserInformation.self, factory: { _ in return UserInformation() })
+      .inObjectScope(.container)
   }
 
   fileprivate class func registerViewModels() {
@@ -61,7 +62,7 @@ extension SwinjectStoryboard {
     self.defaultContainer
       .register(GeneralInformationViewModel.self, factory: {
         r in
-        return GeneralInformationViewModel()
+        return GeneralInformationViewModel(userInfo: resolve(r))
       })
     self.defaultContainer
       .register(UserStoryViewModel.self, factory: { _ in return UserStoryViewModel() })

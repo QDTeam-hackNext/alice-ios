@@ -35,8 +35,11 @@ class GeneralIfomationView: UIViewController, WithViewModel {
 
   override func viewDidLoad() {
     self.view.backgroundColor = UIColor.background
-    self.scrollView.contentSize = CGSize(width: self.scrollView.frame.size.width,
-                                         height: self.scrollView.contentSize.height)
+
+    self.aliceTextLabel.numberOfLines = 0
+    self.aliceTextLabel.lineBreakMode = .byWordWrapping
+    self.aliceTextLabel.textColor = UIColor.charcoalGrey
+    self.aliceTextLabel.font = UIFont.aliceMessageFontFont()
 
     self.styleContainer(container: self.firstQuestionContainer)
     self.styleContainer(container: self.secondQuestionContainer)
@@ -55,23 +58,30 @@ class GeneralIfomationView: UIViewController, WithViewModel {
     self.styleValue(label: self.firstQuestionValue)
     self.styleValue(label: self.secondQuestionValue)
 
-    self.firstQuestionSlider.value = 100000
     self.firstQuestionSlider.minimumValue = 25000
     self.firstQuestionSlider.maximumValue = 10000000
-    self.secondQuestionSlider.value = 10
+    self.firstQuestionSlider.value = 100000
     self.secondQuestionSlider.minimumValue = 1
     self.secondQuestionSlider.maximumValue = 50
+    self.secondQuestionSlider.value = 10
+    self.thirdQuestionSwitch.setOn(false, animated: false)
 
-    self.quoteButton.backgroundColor = UIColor.vividPurple
-    self.quoteButton.layer.cornerRadius = 8
-    self.quoteButton.clipsToBounds = true
-    self.quoteButton.titleLabel?.font = UIFont.buttonFontFont()
-    self.quoteButton.setTitleColor(UIColor.white, for: .normal)
+    DispatchQueue.main.async {
+      self.quoteButton.backgroundColor = UIColor.vividPurple
+      self.quoteButton.layer.cornerRadius = 8
+      self.quoteButton.clipsToBounds = true
+      self.quoteButton.titleLabel?.font = UIFont.buttonFontFont()
+      self.quoteButton.setTitleColor(UIColor.white, for: .normal)
+
+      self.aliceSayPrice(price: 0.0)
+      self.firstSliderValueChanged(self)
+      self.secondSliderValueChanged(self)
+    }
   }
 
   @IBAction func firstSliderValueChanged(_ sender: Any) {
-    let v = Int(self.firstQuestionSlider.value)
-    self.firstQuestionValue.text = "\(v)"
+    let v = Int(ceil(self.firstQuestionSlider.value / 5000.0) * 5000)
+    self.firstQuestionValue.text = "\(v) €"
   }
 
   @IBAction func secondSliderValueChanged(_ sender: Any) {
@@ -102,5 +112,11 @@ class GeneralIfomationView: UIViewController, WithViewModel {
   fileprivate func styleValue(label: UILabel) {
     label.textColor = UIColor.dodgerBlueTwo
     label.font = UIFont.questionValueFont()
+  }
+
+  fileprivate func aliceSayPrice(price: Float) {
+    let text = "\(self.model.userRealName()), your current quote is 3,65 €"
+    let formattedText = NSAttributedString(string: text)
+     self.aliceTextLabel.attributedText = formattedText
   }
 }
