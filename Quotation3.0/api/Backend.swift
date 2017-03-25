@@ -28,17 +28,18 @@ class Backend {
       })
   }
 
-  func quickQuote(_ quote: Quote, callback: @escaping (QuoteResult?) -> Void) {
+  func quickQuote(_ quote: Quote, callback: @escaping (String?) -> Void) {
     Alamofire.request(self.urls.quickQuote,
                       method: HTTPMethod.post,
                       parameters: quote.toJson(),
-                      encoding: JSONEncoding.default)
+                      encoding: JSONEncoding.default,
+                      headers: ["Content-Type": "application/json;charset=utf-8"])
       .responseJSON(completionHandler: {
         resp in
-        if let data = resp.result.value,
+        if let data = resp.result.value as? NSDictionary,
             resp.response?.statusCode == 200 {
-          let decoded: QuoteResult? = decode(data as AnyObject)
-          callback(decoded)
+          let netto = (data["premium"] as! NSDictionary)["netto"] as? Double
+          callback("\(netto!)")
         }
       })
   }

@@ -7,6 +7,7 @@
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12086"/>
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -63,6 +64,8 @@
                                             <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="Q1R-wf-VEJ" userLabel="firstQuestionSlider">
                                                 <rect key="frame" x="36" y="83" width="247" height="31"/>
                                                 <connections>
+                                                    <action selector="firstSliderTouchUpInside:" destination="BYZ-38-t0r" eventType="touchUpOutside" id="E3J-OB-dPW"/>
+                                                    <action selector="firstSliderTouchUpInside:" destination="BYZ-38-t0r" eventType="touchUpInside" id="JXM-1J-2b5"/>
                                                     <action selector="firstSliderValueChanged:" destination="BYZ-38-t0r" eventType="valueChanged" id="8PX-2z-Zgl"/>
                                                 </connections>
                                             </slider>
@@ -107,6 +110,8 @@
                                             <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="TNl-I0-7g6" userLabel="secondQuestionSlider">
                                                 <rect key="frame" x="36" y="83" width="247" height="31"/>
                                                 <connections>
+                                                    <action selector="firstSliderTouchUpInside:" destination="BYZ-38-t0r" eventType="touchUpOutside" id="HU7-0y-bQ0"/>
+                                                    <action selector="firstSliderTouchUpInside:" destination="BYZ-38-t0r" eventType="touchUpInside" id="y6U-ao-Cz5"/>
                                                     <action selector="secondSliderValueChanged:" destination="BYZ-38-t0r" eventType="valueChanged" id="JlN-aI-7da"/>
                                                 </connections>
                                             </slider>
@@ -475,7 +480,6 @@ your typical day</string>
                         <outletCollection property="labels" destination="F9O-1b-cRE" collectionClass="NSMutableArray" id="bDf-nk-Qpl"/>
                         <outletCollection property="labels" destination="RbZ-Lh-ek1" collectionClass="NSMutableArray" id="mLl-Km-WrD"/>
                         <segue destination="Bkn-hM-KV1" kind="show" identifier="toAdditionalQuestions" id="TG7-z8-Fsh"/>
-                        <segue destination="LCT-Kh-TCg" kind="show" identifier="toDataAccess" id="ynn-Ih-Rjo"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="aKA-vU-OtM" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -501,7 +505,7 @@ your typical day</string>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Zzp-Wp-ASJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1444" y="486"/>
+            <point key="canvasLocation" x="2185" y="124"/>
         </scene>
         <!--Summary-->
         <scene sceneID="5Xh-g3-42G">
@@ -522,7 +526,7 @@ your typical day</string>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="tqw-6H-dLE" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2228" y="124"/>
+            <point key="canvasLocation" x="2950" y="124"/>
         </scene>
         <!--Payment-->
         <scene sceneID="rCN-Lu-AfD">
@@ -540,7 +544,7 @@ your typical day</string>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="1Fv-Cx-rtu" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2940" y="124"/>
+            <point key="canvasLocation" x="3662" y="124"/>
         </scene>
         <!--Additional Questions-->
         <scene sceneID="lnq-gF-fWY">
@@ -553,7 +557,18 @@ your typical day</string>
                     <view key="view" contentMode="scaleToFill" id="XjS-ht-y4R">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rqG-TH-uj9">
+                                <rect key="frame" x="0.0" y="20" width="375" height="647"/>
+                            </scrollView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailingMargin" secondItem="rqG-TH-uj9" secondAttribute="trailing" constant="-16" id="7oj-MH-C4z"/>
+                            <constraint firstItem="rqG-TH-uj9" firstAttribute="top" secondItem="KrG-zH-6xi" secondAttribute="bottom" id="YNC-M8-7gU"/>
+                            <constraint firstItem="q5l-hE-Y7y" firstAttribute="top" secondItem="rqG-TH-uj9" secondAttribute="bottom" id="jSB-z0-oAa"/>
+                            <constraint firstItem="rqG-TH-uj9" firstAttribute="leading" secondItem="XjS-ht-y4R" secondAttribute="leading" id="m2e-F4-ShF"/>
+                        </constraints>
                     </view>
                     <connections>
                         <segue destination="LCT-Kh-TCg" kind="show" identifier="toDataAccess" id="xZv-RZ-nDz"/>
@@ -561,7 +576,7 @@ your typical day</string>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="rPz-Qb-HBh" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1444" y="-205"/>
+            <point key="canvasLocation" x="1428" y="123.68815592203899"/>
         </scene>
         <!--Welcome-->
         <scene sceneID="uHR-5L-v22">
@@ -775,7 +790,4 @@ Can you share with me your card?</string>
         <image name="userAliceBig" width="160" height="160"/>
         <image name="userAliceSmall" width="60" height="60"/>
     </resources>
-    <inferredMetricsTieBreakers>
-        <segue reference="ynn-Ih-Rjo"/>
-    </inferredMetricsTieBreakers>
 </document>

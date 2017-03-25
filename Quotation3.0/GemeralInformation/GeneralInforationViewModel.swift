@@ -34,7 +34,7 @@ class GeneralInformationViewModel: ViewModel {
     self.backend.quickQuote(quote) {
       result in
       if let r = result {
-        callback(r.premium.netto)
+        callback("\(r)")
       }
     }
   }

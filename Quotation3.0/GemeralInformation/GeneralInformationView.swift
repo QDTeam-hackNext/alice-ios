@@ -83,13 +83,15 @@ class GeneralIfomationView: UIViewController, WithViewModel {
   @IBAction func firstSliderValueChanged(_ sender: Any) {
     let v = Int(ceil(self.firstQuestionSlider.value / 5000.0) * 5000)
     self.firstQuestionValue.text = "\(v)€"
+  }
+
+  @IBAction func firstSliderTouchUpInside(_ sender: Any) {
     self.computePrice()
   }
 
   @IBAction func secondSliderValueChanged(_ sender: Any) {
     let v = Int(self.secondQuestionSlider.value)
     self.secondQuestionValue.text = "\(v)"
-    self.computePrice()
   }
 
   @IBAction func smokingSwitchChangedValue(_ sender: Any) {
@@ -138,6 +140,7 @@ class GeneralIfomationView: UIViewController, WithViewModel {
   }
 
   fileprivate func computePrice() {
+    self.aliceSayPrice(price: "")
     self.model.calculateQuote(period: Int(self.secondQuestionSlider.value),
                               smokes: self.thirdQuestionSwitch.isOn,
                               sum: "\(self.firstQuestionSlider.value)",
