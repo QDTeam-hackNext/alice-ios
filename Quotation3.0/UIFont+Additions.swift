@@ -16,6 +16,10 @@ extension UIFont {
 		return UIFont(name: "Trenda-Black", size: 24.0)
 	}
 
+	class func partialPriceFontFont() -> UIFont? {
+		return UIFont(name: "Trenda-Black", size: 24.0)
+	}
+
 	class func headerFontFont() -> UIFont? {
 		return UIFont(name: "Trenda-Black", size: 20.0)
 	}
@@ -41,6 +45,18 @@ extension UIFont {
 	}
 
 	class func questionHeaderFontFont() -> UIFont? {
+		return UIFont(name: "Trenda-Bold", size: 18.0)
+	}
+
+	class func summaryValueFontFont() -> UIFont? {
+		return UIFont(name: "Trenda-Bold", size: 18.0)
+	}
+
+	class func sumaryNameFontFont() -> UIFont? {
+		return UIFont(name: "Trenda-Bold", size: 18.0)
+	}
+
+	class func sumaryAgeFontFont() -> UIFont? {
 		return UIFont(name: "Trenda-Bold", size: 18.0)
 	}
 

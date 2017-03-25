@@ -96,6 +96,10 @@ class GeneralIfomationView: UIViewController, WithViewModel {
     self.computePrice()
   }
 
+  @IBAction func reduceButtonTouchDown(_ sender: Any) {
+    self.performSegue(withIdentifier: "toUserStory", sender: self)
+  }
+
   fileprivate func styleContainer(container: UIView) {
     container.layer.cornerRadius = 8
     container.clipsToBounds = true
