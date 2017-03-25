@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Contacts
 import SwinjectStoryboard
 
 class GeneralIfomationView: UIViewController, WithViewModel {
@@ -32,6 +33,8 @@ class GeneralIfomationView: UIViewController, WithViewModel {
   @IBOutlet weak var thirdQuestionSwitch: UISwitch!
 
   @IBOutlet weak var quoteButton: UIButton!
+
+  private var price = ""
 
   override func viewDidLoad() {
     self.view.backgroundColor = UIColor.background
@@ -78,6 +81,18 @@ class GeneralIfomationView: UIViewController, WithViewModel {
       self.secondSliderValueChanged(self)
     }
     self.computePrice()
+  }
+
+  override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+    if segue.identifier == "toUserStory" {
+      let nextControler = segue.destination as! UserStoryView
+      let data = GeneralInformationData(price: self.price,
+                                        period: Int(self.secondQuestionSlider.value),
+                                        smokes: self.thirdQuestionSwitch.isOn,
+                                        sum: Int(ceil(self.firstQuestionSlider.value / 5000.0) * 5000),
+                                        user: self.model.userData!)
+      nextControler.setData(generalData: data)
+    }
   }
 
   @IBAction func firstSliderValueChanged(_ sender: Any) {
@@ -143,10 +158,19 @@ class GeneralIfomationView: UIViewController, WithViewModel {
     self.aliceSayPrice(price: "")
     self.model.calculateQuote(period: Int(self.secondQuestionSlider.value),
                               smokes: self.thirdQuestionSwitch.isOn,
-                              sum: "\(self.firstQuestionSlider.value)",
+                              sum: "\(Int(ceil(self.firstQuestionSlider.value / 5000.0) * 5000))",
                               callback: {
       price in
+      self.price = price
       self.aliceSayPrice(price: price)
     })
   }
+}
+
+struct GeneralInformationData {
+  let price: String
+  let period: Int
+  let smokes: Bool
+  let sum: Int
+  let user: CNContact
 }

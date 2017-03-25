@@ -36,6 +36,12 @@ class UserStoryView: UIViewController, WithViewModel {
   @IBOutlet weak var recordingBacground: UILabel!
   @IBOutlet weak var recordButton: UIButton!
 
+  fileprivate var generalData: GeneralInformationData?
+
+  func setData(generalData: GeneralInformationData) {
+    self.generalData = generalData
+  }
+
   override func viewDidLoad() {
     self.container2.isHidden = true
     self.view.backgroundColor = UIColor.background
@@ -45,6 +51,8 @@ class UserStoryView: UIViewController, WithViewModel {
 
     self.ageLabel.textColor = UIColor.dodgerBlueTwo
     self.ageLabel.font = UIFont.sumaryAgeFontFont()
+    self.addressLabel.numberOfLines = 0
+    self.addressLabel.lineBreakMode = .byWordWrapping
     self.addressLabel.textColor = UIColor.slate50
     self.addressLabel.font = UIFont.questionFontFont()
     self.styleKeyLabel(label: nameLabel)
@@ -112,6 +120,17 @@ class UserStoryView: UIViewController, WithViewModel {
     self.recordButton.clipsToBounds = true
     self.recordButton.layer.borderWidth = 2
     self.recordButton.layer.borderColor = UIColor.white.cgColor
+
+    self.nameLabel.text = "\(self.generalData!.user.givenName) \(self.generalData!.user.familyName)"
+    self.ageLabel.text = "\(2017 - self.generalData!.user.birthday!.year!) yrs."
+    self.sposeLabelValue.text = "Aleksandra"
+    self.phoneLabelValue.text = "\(self.generalData!.user.phoneNumbers.first!.value.stringValue)"
+    self.emailLabelValue.text = "\(self.generalData!.user.emailAddresses[0].value)"
+    self.coverageLabelValue.text = "\(self.generalData!.sum)€"
+    self.yearsOfProtectionLabelValue.text = "\(self.generalData!.period)"
+    self.monthlyFeeValueLabel.text = "\(self.generalData!.price)€"
+    let address = self.generalData!.user.postalAddresses[0].value
+    self.addressLabel.text = "\(address.street) \(address.postalCode) \(address.city), \(address.country)"
   }
 
   @IBAction func applyButtonPushed(_ sender: Any) {

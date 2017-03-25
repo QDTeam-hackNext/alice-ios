@@ -77,6 +77,7 @@ class UserInformation {
             let contactStore = CNContactStore()
             let keys = [CNContactGivenNameKey, CNContactFamilyNameKey,
                         CNContactBirthdayKey, CNContactJobTitleKey,
+                        CNContactPhoneNumbersKey,
                         CNContactEmailAddressesKey, CNContactPostalAddressesKey]
             do {
 

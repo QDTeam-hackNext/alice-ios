@@ -12,7 +12,7 @@ class GeneralInformationViewModel: ViewModel {
   fileprivate let backend: Backend
   fileprivate let userInfo: UserInformation
 
-  fileprivate var userData: CNContact?
+  var userData: CNContact?
 
   init(backend: Backend,
        userInfo: UserInformation) {
