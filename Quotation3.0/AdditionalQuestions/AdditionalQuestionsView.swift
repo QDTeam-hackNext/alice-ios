@@ -12,6 +12,8 @@ class AdditionalQuestionsView: UIViewController, WithViewModel {
   typealias Model = AdditionalQuestionsViewModel
 
   @IBOutlet weak var container: UIView!
+  @IBOutlet weak var aliceImage: UIImageView!
+  @IBOutlet weak var aliceTextImage: UIImageView!
   @IBOutlet weak var aliceTextLabel: UILabel!
   @IBOutlet var appNames: [UILabel]!
   @IBOutlet var diviers: [UILabel]!
@@ -27,8 +29,17 @@ class AdditionalQuestionsView: UIViewController, WithViewModel {
 
   @IBOutlet weak var summaryButton: UIButton!
 
+  @IBOutlet weak var healthOverlay: UIView!
+  @IBOutlet weak var healthMsg: UILabel!
+  @IBOutlet weak var healthLabel: UILabel!
+  @IBOutlet weak var bottomLabel: UILabel!
+
   override func viewDidLoad() {
+    self.healthOverlay.isHidden = true
     self.view.backgroundColor = UIColor.background
+
+    self.container.layer.cornerRadius = 8
+    self.container.clipsToBounds = true
 
     self.aliceTextLabel.numberOfLines = 0
     self.aliceTextLabel.lineBreakMode = .byWordWrapping
@@ -59,11 +70,34 @@ class AdditionalQuestionsView: UIViewController, WithViewModel {
     self.summaryButton.clipsToBounds = true
     self.summaryButton.titleLabel?.font = UIFont.buttonFontFont()
     self.summaryButton.setTitleColor(UIColor.white, for: .normal)
+
+    self.healthOverlay.layer.cornerRadius = 8
+    self.healthOverlay.clipsToBounds = true
+
+    self.healthMsg.textAlignment = .center
+    self.healthMsg.font = UIFont.headerFontFont()
+    self.healthMsg.textColor = UIColor.charcoalGrey
+
+    self.healthLabel.font = UIFont.sumaryNameFontFont()
+    self.healthLabel.textColor = UIColor.slate
+
+    self.bottomLabel.text = ""
+    self.bottomLabel.backgroundColor = UIColor.vividPurple
   }
 
   fileprivate func styleDiscount(label: UILabel) {
     label.isHidden = true
     label.textColor = UIColor.green
     label.font = UIFont.appDiscountFontFont()
+  }
+
+  @IBAction func healthChwithValueChanged(_ sender: Any) {
+    if self.healthSwitch.isOn {
+      self.aliceImage.isHidden = true
+      self.aliceTextLabel.isHidden = true
+      self.aliceTextImage.isHidden = true
+      self.summaryButton.isHidden = true
+      self.healthOverlay.isHidden = false
+    }
   }
 }

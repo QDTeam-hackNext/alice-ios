@@ -368,6 +368,7 @@
                                             <constraint firstItem="bBd-28-Iwe" firstAttribute="leading" secondItem="DPB-HD-72v" secondAttribute="leading" constant="40" id="FDc-Pl-JIt"/>
                                             <constraint firstAttribute="trailing" secondItem="bBd-28-Iwe" secondAttribute="trailing" constant="40" id="Fse-fY-cwV"/>
                                             <constraint firstItem="tJ8-Nf-W6z" firstAttribute="top" secondItem="F9O-1b-cRE" secondAttribute="top" id="Gm4-AT-fdY"/>
+                                            <constraint firstItem="uAl-5l-A99" firstAttribute="top" secondItem="tJ8-Nf-W6z" secondAttribute="bottom" constant="38" id="ITL-gM-CKv"/>
                                             <constraint firstItem="feB-Wy-VrE" firstAttribute="top" secondItem="vkU-Eu-Irg" secondAttribute="top" id="NKs-jn-kww"/>
                                             <constraint firstAttribute="height" constant="392" id="Nkr-2C-ODP"/>
                                             <constraint firstItem="BpB-Cv-7zZ" firstAttribute="leading" secondItem="DPB-HD-72v" secondAttribute="leading" constant="34" id="OTj-iJ-sup"/>
@@ -385,6 +386,7 @@
                                             <constraint firstItem="mBY-em-4aE" firstAttribute="leading" secondItem="DPB-HD-72v" secondAttribute="leading" constant="34" id="hX3-Ag-xei"/>
                                             <constraint firstItem="5H3-4W-JiR" firstAttribute="top" secondItem="mBY-em-4aE" secondAttribute="top" id="l3a-xL-ssG"/>
                                             <constraint firstItem="iA5-Wm-xh2" firstAttribute="top" secondItem="NsC-1Z-Mcn" secondAttribute="top" id="laj-bM-OsS"/>
+                                            <constraint firstItem="RbZ-Lh-ek1" firstAttribute="top" secondItem="F9O-1b-cRE" secondAttribute="bottom" constant="38" id="myg-l0-qyq"/>
                                             <constraint firstAttribute="trailing" secondItem="4gU-xI-p9A" secondAttribute="trailing" constant="34" id="n4E-P0-2ES"/>
                                             <constraint firstItem="RbZ-Lh-ek1" firstAttribute="top" secondItem="BpB-Cv-7zZ" secondAttribute="bottom" constant="18" id="nvL-YW-UtW"/>
                                             <constraint firstItem="vkU-Eu-Irg" firstAttribute="top" secondItem="rum-jB-Jo8" secondAttribute="bottom" constant="8" id="oEG-l9-CUm"/>
@@ -693,6 +695,9 @@ your typical day</string>
                                             </label>
                                             <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="oej-GC-Ic8">
                                                 <rect key="frame" x="236" y="114" width="51" height="31"/>
+                                                <connections>
+                                                    <action selector="healthChwithValueChanged:" destination="Bkn-hM-KV1" eventType="valueChanged" id="97q-cN-N6x"/>
+                                                </connections>
                                             </switch>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nH5-Vy-mLf">
                                                 <rect key="frame" x="83" y="133" width="42" height="21"/>
@@ -713,7 +718,7 @@ your typical day</string>
                                                 <rect key="frame" x="34" y="190" width="35" height="35"/>
                                             </imageView>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Nike+ Run Club" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gMd-7r-HNb">
-                                                <rect key="frame" x="83" y="190" width="118.5" height="21"/>
+                                                <rect key="frame" x="83" y="190" width="119" height="21"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
@@ -740,7 +745,7 @@ your typical day</string>
                                                 <rect key="frame" x="34" y="268" width="35" height="35"/>
                                             </imageView>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Strava" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sJA-L0-DcX">
-                                                <rect key="frame" x="83" y="268" width="48.5" height="21"/>
+                                                <rect key="frame" x="83" y="268" width="49" height="21"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
@@ -864,21 +869,87 @@ your typical day</string>
                                     <constraint firstItem="i0K-jl-eJ1" firstAttribute="top" secondItem="rqG-TH-uj9" secondAttribute="top" constant="28" id="t1j-vr-Ehk"/>
                                 </constraints>
                             </scrollView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Bem-JD-9uQ" userLabel="healthOverlay">
+                                <rect key="frame" x="28" y="77" width="319" height="513"/>
+                                <subviews>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" image="headerS08Insurance" translatesAutoresizingMaskIntoConstraints="NO" id="jsZ-2X-8Zc">
+                                        <rect key="frame" x="42" y="26" width="235" height="216"/>
+                                    </imageView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="752" ambiguous="YES" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZHv-IC-GHh">
+                                        <rect key="frame" x="34" y="270" width="251" height="61"/>
+                                        <string key="text">Michael, please give me
+few seconds. I need to
+get few things from:</string>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="745" ambiguous="YES" image="iconHealth" translatesAutoresizingMaskIntoConstraints="NO" id="7MM-aE-DZ8">
+                                        <rect key="frame" x="145" y="359" width="29" height="29"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="29" id="Cb2-DQ-uIs"/>
+                                            <constraint firstAttribute="width" constant="29" id="ojr-Xy-9nG"/>
+                                        </constraints>
+                                    </imageView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Health" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="v3I-Gr-YHK">
+                                        <rect key="frame" x="134.5" y="394" width="50" height="21"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CGw-iQ-VLJ">
+                                        <rect key="frame" x="0.0" y="456" width="319" height="57"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="57" id="BGR-5v-SPN"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="CGw-iQ-VLJ" secondAttribute="trailing" id="0mj-pH-6xb"/>
+                                    <constraint firstItem="7MM-aE-DZ8" firstAttribute="centerX" secondItem="Bem-JD-9uQ" secondAttribute="centerX" id="2wR-F1-jbA"/>
+                                    <constraint firstItem="CGw-iQ-VLJ" firstAttribute="top" secondItem="v3I-Gr-YHK" secondAttribute="bottom" constant="35" id="6pS-96-x8W"/>
+                                    <constraint firstItem="v3I-Gr-YHK" firstAttribute="top" secondItem="7MM-aE-DZ8" secondAttribute="bottom" constant="6" id="KCJ-CB-Dod"/>
+                                    <constraint firstItem="ZHv-IC-GHh" firstAttribute="leading" secondItem="Bem-JD-9uQ" secondAttribute="leading" constant="34" id="Opn-HS-8Zl"/>
+                                    <constraint firstItem="7MM-aE-DZ8" firstAttribute="top" secondItem="ZHv-IC-GHh" secondAttribute="bottom" constant="28" id="c5W-f5-Izw"/>
+                                    <constraint firstItem="ZHv-IC-GHh" firstAttribute="top" secondItem="jsZ-2X-8Zc" secondAttribute="bottom" constant="28" id="jV3-IM-VJO"/>
+                                    <constraint firstAttribute="trailing" secondItem="ZHv-IC-GHh" secondAttribute="trailing" constant="34" id="jmK-kd-YO2"/>
+                                    <constraint firstItem="v3I-Gr-YHK" firstAttribute="centerX" secondItem="Bem-JD-9uQ" secondAttribute="centerX" id="kBx-qb-4TS"/>
+                                    <constraint firstAttribute="trailing" secondItem="jsZ-2X-8Zc" secondAttribute="trailing" constant="42" id="oV8-zk-mhf"/>
+                                    <constraint firstItem="jsZ-2X-8Zc" firstAttribute="top" secondItem="Bem-JD-9uQ" secondAttribute="top" constant="26" id="rAh-ot-b8u"/>
+                                    <constraint firstItem="jsZ-2X-8Zc" firstAttribute="leading" secondItem="Bem-JD-9uQ" secondAttribute="leading" constant="42" id="sBb-If-UPt"/>
+                                    <constraint firstAttribute="bottom" secondItem="CGw-iQ-VLJ" secondAttribute="bottom" id="syq-Ak-fbw"/>
+                                    <constraint firstItem="CGw-iQ-VLJ" firstAttribute="leading" secondItem="Bem-JD-9uQ" secondAttribute="leading" id="wrl-Uk-m3f"/>
+                                </constraints>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="Bem-JD-9uQ" firstAttribute="leading" secondItem="XjS-ht-y4R" secondAttribute="leading" constant="28" id="1IX-jj-muW"/>
                             <constraint firstAttribute="trailing" secondItem="rqG-TH-uj9" secondAttribute="trailing" id="7oj-MH-C4z"/>
+                            <constraint firstItem="q5l-hE-Y7y" firstAttribute="top" secondItem="Bem-JD-9uQ" secondAttribute="bottom" constant="77" id="Oua-Om-4Ez"/>
+                            <constraint firstItem="Bem-JD-9uQ" firstAttribute="top" secondItem="KrG-zH-6xi" secondAttribute="bottom" constant="57" id="SSg-Mp-K98"/>
                             <constraint firstItem="rqG-TH-uj9" firstAttribute="top" secondItem="KrG-zH-6xi" secondAttribute="bottom" id="YNC-M8-7gU"/>
+                            <constraint firstAttribute="trailing" secondItem="Bem-JD-9uQ" secondAttribute="trailing" constant="28" id="bs6-2i-BaE"/>
                             <constraint firstItem="q5l-hE-Y7y" firstAttribute="top" secondItem="rqG-TH-uj9" secondAttribute="bottom" id="jSB-z0-oAa"/>
                             <constraint firstItem="rqG-TH-uj9" firstAttribute="leading" secondItem="XjS-ht-y4R" secondAttribute="leading" id="m2e-F4-ShF"/>
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="aliceImage" destination="i0K-jl-eJ1" id="p1r-f0-TEF"/>
+                        <outlet property="aliceTextImage" destination="vDK-HT-wUq" id="jST-gd-NrT"/>
                         <outlet property="aliceTextLabel" destination="NnG-h9-grE" id="vyR-2u-II0"/>
+                        <outlet property="bottomLabel" destination="CGw-iQ-VLJ" id="dj6-C6-A81"/>
                         <outlet property="container" destination="m9X-8L-gUb" id="p56-GD-3N7"/>
                         <outlet property="foursquareDiscountLabel" destination="QqU-g6-oIC" id="FAa-R8-KpX"/>
                         <outlet property="foursquareSwitch" destination="ZwU-i3-Dm1" id="P5g-zJ-nHi"/>
                         <outlet property="healthDiscountLabel" destination="nH5-Vy-mLf" id="IuO-fm-b9l"/>
+                        <outlet property="healthLabel" destination="v3I-Gr-YHK" id="cbN-7E-6Rq"/>
+                        <outlet property="healthMsg" destination="ZHv-IC-GHh" id="OsO-R9-4J3"/>
+                        <outlet property="healthOverlay" destination="Bem-JD-9uQ" id="UwU-Pz-riF"/>
                         <outlet property="healthSwitch" destination="oej-GC-Ic8" id="HTp-VA-vDi"/>
                         <outlet property="nikeDiscountLabel" destination="8mc-Uy-l08" id="ctk-y6-aTf"/>
                         <outlet property="nikeSwitch" destination="3fr-SE-jSa" id="g6k-SW-K8d"/>
@@ -1105,6 +1176,7 @@ Can you share with me your card?</string>
         <image name="aliceSays" width="268" height="73"/>
         <image name="allianzId" width="236" height="89"/>
         <image name="headerS04Insurance" width="223" height="31"/>
+        <image name="headerS08Insurance" width="239" height="216"/>
         <image name="headerS09Insurance" width="203" height="62"/>
         <image name="icoArrowRight" width="20" height="17"/>
         <image name="icoMicOff" width="24" height="45"/>
