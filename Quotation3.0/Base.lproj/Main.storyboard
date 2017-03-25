@@ -253,7 +253,11 @@
                                         <rect key="frame" x="28" y="20" width="320" height="392"/>
                                         <subviews>
                                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="headerS04Insurance" translatesAutoresizingMaskIntoConstraints="NO" id="bBd-28-Iwe">
-                                                <rect key="frame" x="40" y="26" width="240" height="31"/>
+                                                <rect key="frame" x="60" y="26" width="200" height="31"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="200" id="9aA-nO-wFs"/>
+                                                    <constraint firstAttribute="height" constant="31" id="U0U-1b-B6m"/>
+                                                </constraints>
                                             </imageView>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NsC-1Z-Mcn" userLabel="nameLabel">
                                                 <rect key="frame" x="34" y="77" width="164" height="21"/>
@@ -365,8 +369,8 @@
                                             <constraint firstAttribute="trailing" secondItem="BpB-Cv-7zZ" secondAttribute="trailing" constant="39" id="AMe-83-c9c"/>
                                             <constraint firstAttribute="trailing" secondItem="tJ8-Nf-W6z" secondAttribute="trailing" constant="34" id="DGL-ro-azV"/>
                                             <constraint firstItem="bBd-28-Iwe" firstAttribute="top" secondItem="DPB-HD-72v" secondAttribute="top" constant="26" id="DXa-on-CFU"/>
-                                            <constraint firstItem="bBd-28-Iwe" firstAttribute="leading" secondItem="DPB-HD-72v" secondAttribute="leading" constant="40" id="FDc-Pl-JIt"/>
-                                            <constraint firstAttribute="trailing" secondItem="bBd-28-Iwe" secondAttribute="trailing" constant="40" id="Fse-fY-cwV"/>
+                                            <constraint firstItem="bBd-28-Iwe" firstAttribute="leading" secondItem="DPB-HD-72v" secondAttribute="leading" constant="60" id="FDc-Pl-JIt"/>
+                                            <constraint firstAttribute="trailing" secondItem="bBd-28-Iwe" secondAttribute="trailing" constant="60" id="Fse-fY-cwV"/>
                                             <constraint firstItem="tJ8-Nf-W6z" firstAttribute="top" secondItem="F9O-1b-cRE" secondAttribute="top" id="Gm4-AT-fdY"/>
                                             <constraint firstItem="uAl-5l-A99" firstAttribute="top" secondItem="tJ8-Nf-W6z" secondAttribute="bottom" constant="38" id="ITL-gM-CKv"/>
                                             <constraint firstItem="feB-Wy-VrE" firstAttribute="top" secondItem="vkU-Eu-Irg" secondAttribute="top" id="NKs-jn-kww"/>
@@ -552,6 +556,11 @@ your typical day</string>
                             <constraint firstItem="8F9-Dc-Ser" firstAttribute="top" secondItem="r8y-Nl-lei" secondAttribute="bottom" id="wl6-b7-ZGQ"/>
                             <constraint firstItem="r8y-Nl-lei" firstAttribute="top" secondItem="dh0-yJ-fgk" secondAttribute="bottom" id="yBp-xU-QcS"/>
                         </constraints>
+                        <variation key="default">
+                            <mask key="subviews">
+                                <exclude reference="r8y-Nl-lei"/>
+                            </mask>
+                        </variation>
                     </view>
                     <connections>
                         <outlet property="addressLabel" destination="SCF-ZP-HQw" id="qUw-oF-haj"/>
@@ -941,11 +950,6 @@ get few things from:</string>
                             <constraint firstItem="q5l-hE-Y7y" firstAttribute="top" secondItem="rqG-TH-uj9" secondAttribute="bottom" id="jSB-z0-oAa"/>
                             <constraint firstItem="rqG-TH-uj9" firstAttribute="leading" secondItem="XjS-ht-y4R" secondAttribute="leading" id="m2e-F4-ShF"/>
                         </constraints>
-                        <variation key="default">
-                            <mask key="subviews">
-                                <exclude reference="Bem-JD-9uQ"/>
-                            </mask>
-                        </variation>
                     </view>
                     <connections>
                         <outlet property="aliceImage" destination="i0K-jl-eJ1" id="p1r-f0-TEF"/>

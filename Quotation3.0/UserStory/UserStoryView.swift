@@ -162,6 +162,7 @@ class UserStoryView: UIViewController, WithViewModel {
         self.alice2Label.isHidden = false
         self.readyForNextStep = true
         self.alice2Label.text = "Great, let's continue!";
+        self.recordButton.setImage(UIImage(named: "icoTick"), for: .normal)
       }
     }, updateAliceCallback: {
       text, fields in
