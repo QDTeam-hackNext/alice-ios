@@ -12,7 +12,6 @@
 		C744E84E1E80184C00DE2E7F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C744E84D1E80184C00DE2E7F /* AppDelegate.swift */; };
 		C744E8531E80184C00DE2E7F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C744E8511E80184C00DE2E7F /* Main.storyboard */; };
 		C744E8551E80184C00DE2E7F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C744E8541E80184C00DE2E7F /* Assets.xcassets */; };
-		C744E8581E80184C00DE2E7F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C744E8561E80184C00DE2E7F /* LaunchScreen.storyboard */; };
 		C744E87D1E801A3300DE2E7F /* HealthKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C744E87C1E801A3300DE2E7F /* HealthKit.framework */; };
 		C744E8811E801CDD00DE2E7F /* PassKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C744E8801E801CDD00DE2E7F /* PassKit.framework */; };
 		C744E8861E80312100DE2E7F /* GeneralInformationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C744E8851E80312100DE2E7F /* GeneralInformationView.swift */; };
@@ -86,7 +85,6 @@
 		C744E84D1E80184C00DE2E7F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C744E8521E80184C00DE2E7F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		C744E8541E80184C00DE2E7F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		C744E8571E80184C00DE2E7F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		C744E8591E80184C00DE2E7F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C744E85E1E80184D00DE2E7F /* AliceTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AliceTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		C744E8641E80184D00DE2E7F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -221,7 +219,6 @@
 				C7E739701E85A24500F14AAF /* WaveformView.swift */,
 				C744E8511E80184C00DE2E7F /* Main.storyboard */,
 				C744E8541E80184C00DE2E7F /* Assets.xcassets */,
-				C744E8561E80184C00DE2E7F /* LaunchScreen.storyboard */,
 				C744E8591E80184C00DE2E7F /* Info.plist */,
 				C7E95DC01E851AE300007646 /* appConfig.plist */,
 			);
@@ -510,7 +507,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C744E8581E80184C00DE2E7F /* LaunchScreen.storyboard in Resources */,
 				C744E8551E80184C00DE2E7F /* Assets.xcassets in Resources */,
 				C7D22D2B1E8300B70062D199 /* sounds in Resources */,
 				C7E7396D1E8562A800F14AAF /* fonts in Resources */,
@@ -752,14 +748,6 @@
 			name = Main.storyboard;
 			sourceTree = "<group>";
 		};
-		C744E8561E80184C00DE2E7F /* LaunchScreen.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				C744E8571E80184C00DE2E7F /* Base */,
-			);
-			name = LaunchScreen.storyboard;
-			sourceTree = "<group>";
-		};
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
@@ -861,6 +849,7 @@
 			baseConfigurationReference = DB5C6B611A836EA8DDD0A905 /* Pods-Alice.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_ENTITLEMENTS = Quotation3.0/Quotation3.0.entitlements;
 				DEVELOPMENT_TEAM = 8QKQ6Z2FMP;
 				INFOPLIST_FILE = Quotation3.0/Info.plist;
@@ -876,6 +865,7 @@
 			baseConfigurationReference = 7891FECE4A97AF4683E25E26 /* Pods-Alice.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_ENTITLEMENTS = Quotation3.0/Quotation3.0.entitlements;
 				DEVELOPMENT_TEAM = 8QKQ6Z2FMP;
 				INFOPLIST_FILE = Quotation3.0/Info.plist;
