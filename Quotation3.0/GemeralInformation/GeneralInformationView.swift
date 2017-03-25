@@ -92,6 +92,10 @@ class GeneralIfomationView: UIViewController, WithViewModel {
     self.computePrice()
   }
 
+  @IBAction func smokingSwitchChangedValue(_ sender: Any) {
+    self.computePrice()
+  }
+
   fileprivate func styleContainer(container: UIView) {
     container.layer.cornerRadius = 8
     container.clipsToBounds = true
