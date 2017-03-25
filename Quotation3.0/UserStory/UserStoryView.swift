@@ -36,6 +36,7 @@ class UserStoryView: UIViewController, WithViewModel {
   @IBOutlet weak var recordingBacground: UILabel!
   @IBOutlet weak var recordButton: UIButton!
 
+  fileprivate var displayLink: CADisplayLink?
   fileprivate var generalData: GeneralInformationData?
 
   func setData(generalData: GeneralInformationData) {
@@ -121,16 +122,16 @@ class UserStoryView: UIViewController, WithViewModel {
     self.recordButton.layer.borderWidth = 2
     self.recordButton.layer.borderColor = UIColor.white.cgColor
 
-//    self.nameLabel.text = "\(self.generalData!.user.givenName) \(self.generalData!.user.familyName)"
-//    self.ageLabel.text = "\(2017 - self.generalData!.user.birthday!.year!) yrs."
-//    self.sposeLabelValue.text = "Aleksandra"
-//    self.phoneLabelValue.text = "\(self.generalData!.user.phoneNumbers.first!.value.stringValue)"
-//    self.emailLabelValue.text = "\(self.generalData!.user.emailAddresses[0].value)"
-//    self.coverageLabelValue.text = "\(self.generalData!.sum)€"
-//    self.yearsOfProtectionLabelValue.text = "\(self.generalData!.period)"
-//    self.monthlyFeeValueLabel.text = "\(self.generalData!.price)€"
-//    let address = self.generalData!.user.postalAddresses[0].value
-//    self.addressLabel.text = "\(address.street) \(address.postalCode) \(address.city), \(address.country)"
+    self.nameLabel.text = "\(self.generalData!.user.givenName) \(self.generalData!.user.familyName)"
+    self.ageLabel.text = "\(2017 - self.generalData!.user.birthday!.year!) yrs."
+    self.sposeLabelValue.text = "Aleksandra"
+    self.phoneLabelValue.text = "\(self.generalData!.user.phoneNumbers.first!.value.stringValue)"
+    self.emailLabelValue.text = "\(self.generalData!.user.emailAddresses[0].value)"
+    self.coverageLabelValue.text = "\(self.generalData!.sum)€"
+    self.yearsOfProtectionLabelValue.text = "\(self.generalData!.period)"
+    self.monthlyFeeValueLabel.text = "\(self.generalData!.price)€"
+    let address = self.generalData!.user.postalAddresses[0].value
+    self.addressLabel.text = "\(address.street) \(address.postalCode) \(address.city), \(address.country)"
   }
 
   @IBAction func applyButtonPushed(_ sender: Any) {
@@ -138,10 +139,23 @@ class UserStoryView: UIViewController, WithViewModel {
   }
 
   @IBAction func recordingButtonDown(_ sender: Any) {
-    self.performSegue(withIdentifier: "toAdditionalQuestions", sender: self)
+    self.displayLink = CADisplayLink(target: self, selector: #selector(self.updateMeters))
+    self.displayLink?.add(to: RunLoop.current, forMode: RunLoopMode.commonModes)
+    self.waveView.isHidden = false
+//    self.model.startRecording(callback: {
+//      input, status in
+//      DispatchQueue.main.async {
+//        self.messageLabel.text = input
+//      }
+//    })
   }
 
   @IBAction func recordingButtonTouchUp(_ sender: Any) {
+
+    func updateMeters() {
+      let random = Double(arc4random_uniform(255))
+      self.waveView.updateWithLevel(CGFloat(random.divided(by: 255)))
+    }
   }
 
   fileprivate func styleKeyLabel(label: UILabel) {
@@ -170,5 +184,10 @@ class UserStoryView: UIViewController, WithViewModel {
     label.textAlignment = .right
     label.textColor = UIColor.charcoalGrey
     label.font = UIFont.userSpeechResponseFontFont()
+  }
+
+  func updateMeters() {
+    let random = Double(arc4random_uniform(255))
+    self.waveView.updateWithLevel(CGFloat(random.divided(by: 255)))
   }
 }
