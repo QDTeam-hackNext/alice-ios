@@ -7,5 +7,13 @@
 //
 
 class AdditionalQuestionsViewModel: ViewModel {
+  fileprivate let health: HealthKit
 
+  init(health: HealthKit) {
+    self.health = health
+  }
+
+  func requestHealthAccess(callback: @escaping (Bool) -> Void) {
+    self.health.authorize(callback: callback)
+  }
 }
