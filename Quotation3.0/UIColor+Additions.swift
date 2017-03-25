@@ -52,4 +52,8 @@ extension UIColor {
 	class var slate10: UIColor {
 		return UIColor(red: 58.0 / 255.0, green: 75.0 / 255.0, blue: 91.0 / 255.0, alpha: 0.1)
 	}
+
+	class var slate: UIColor {
+		return UIColor(red: 58.0 / 255.0, green: 75.0 / 255.0, blue: 91.0 / 255.0, alpha: 1.0)
+	}
 }

@@ -68,6 +68,10 @@ extension UIFont {
 		return UIFont(name: "Trenda-Semibold", size: 14.0)
 	}
 
+	class func appDiscountFontFont() -> UIFont? {
+		return UIFont(name: "Trenda-Semibold", size: 14.0)
+	}
+
 	class func perMonthFontFont() -> UIFont? {
 		return UIFont(name: "Trenda-Black", size: 8.0)
 	}

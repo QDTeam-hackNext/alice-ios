@@ -119,6 +119,7 @@ class UserStoryView: UIViewController, WithViewModel {
   }
 
   @IBAction func recordingButtonDown(_ sender: Any) {
+    self.performSegue(withIdentifier: "toAdditionalQuestions", sender: self)
   }
 
   @IBAction func recordingButtonTouchUp(_ sender: Any) {
