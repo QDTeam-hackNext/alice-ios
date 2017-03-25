@@ -81,7 +81,7 @@ class GeneralIfomationView: UIViewController, WithViewModel {
 
   @IBAction func firstSliderValueChanged(_ sender: Any) {
     let v = Int(ceil(self.firstQuestionSlider.value / 5000.0) * 5000)
-    self.firstQuestionValue.text = "\(v) €"
+    self.firstQuestionValue.text = "\(v)€"
   }
 
   @IBAction func secondSliderValueChanged(_ sender: Any) {
@@ -115,8 +115,11 @@ class GeneralIfomationView: UIViewController, WithViewModel {
   }
 
   fileprivate func aliceSayPrice(price: Float) {
-    let text = "\(self.model.userRealName()), your current quote is 3,65 €"
+    let priceStr = String(format: "%.2f", arguments: [price])
+    let text = "\(self.model.userRealName()), your current quote is \(priceStr)€"
     let formattedText = NSAttributedString(string: text)
-     self.aliceTextLabel.attributedText = formattedText
+    DispatchQueue.main.async {
+      self.aliceTextLabel.attributedText = formattedText
+    }
   }
 }
