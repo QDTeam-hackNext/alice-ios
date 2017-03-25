@@ -76,7 +76,8 @@ class UserInformation {
             let predicate = CNContact.predicateForContacts(matchingName: "\(givenName) \(familyName)")
             let contactStore = CNContactStore()
             let keys = [CNContactGivenNameKey, CNContactFamilyNameKey,
-                        CNContactBirthdayKey, CNContactJobTitleKey]
+                        CNContactBirthdayKey, CNContactJobTitleKey,
+                        CNContactEmailAddressesKey, CNContactPostalAddressesKey]
             do {
 
               let contacts = try contactStore.unifiedContacts(matching: predicate,
