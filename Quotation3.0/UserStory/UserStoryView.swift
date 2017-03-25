@@ -36,6 +36,7 @@ class UserStoryView: UIViewController, WithViewModel {
   @IBOutlet weak var recordingBacground: UILabel!
   @IBOutlet weak var recordButton: UIButton!
 
+  fileprivate var readyForNextStep = false
   fileprivate var displayLink: CADisplayLink?
   fileprivate var generalData: GeneralInformationData?
 
@@ -139,23 +140,41 @@ class UserStoryView: UIViewController, WithViewModel {
   }
 
   @IBAction func recordingButtonDown(_ sender: Any) {
+    if self.readyForNextStep {
+      self.performSegue(withIdentifier: "toAdditionalQuestions", sender: self)
+      return
+    }
     self.displayLink = CADisplayLink(target: self, selector: #selector(self.updateMeters))
     self.displayLink?.add(to: RunLoop.current, forMode: RunLoopMode.commonModes)
     self.waveView.isHidden = false
-//    self.model.startRecording(callback: {
-//      input, status in
-//      DispatchQueue.main.async {
-//        self.messageLabel.text = input
-//      }
-//    })
+    self.model.discoverUserSata(uiUpdateCallback: {
+      text, status in
+      self.user1Label.isHidden = false
+      self.user1Label.text = text
+      if status {
+        self.alice2Label.isHidden = false
+        self.readyForNextStep = true
+        self.alice2Label.text = "Great, let's continue!";
+      }
+    }, updateAliceCallback: {
+      text, fields in
+      if let f = fields,
+          f.count > 0 {
+        self.recordButton.setImage(UIImage(named: "icoTick"), for: .normal)
+        self.readyForNextStep = true
+        return
+      }
+      if let t = text {
+        self.alice2Label.isHidden = false
+        self.alice2Label.text = t;
+      }
+    })
   }
 
   @IBAction func recordingButtonTouchUp(_ sender: Any) {
-
-    func updateMeters() {
-      let random = Double(arc4random_uniform(255))
-      self.waveView.updateWithLevel(CGFloat(random.divided(by: 255)))
-    }
+    self.displayLink?.invalidate()
+    self.waveView.isHidden = true
+    self.model.stopRecording()
   }
 
   fileprivate func styleKeyLabel(label: UILabel) {

@@ -18,19 +18,28 @@ class UserStoryViewModel: ViewModel {
     self.recorder = recorder
   }
 
-  func discoverUserSata(uiUpdateCallback: @escaping (String) -> Void,
+  func discoverUserSata(uiUpdateCallback: @escaping (String, Bool) -> Void,
                         updateAliceCallback: @escaping (_ msg: String?, _ foundKeys: [String]?) -> Void) {
     self.recorder.start(recordingCompleted: {
       text, status in
-      uiUpdateCallback(text)
-      if status {
-        let data = PersonalData(id: "start", input: text, required: ["occupation", "healthy", "sport"])
-        self.backend.personalData(input: data, callback: {
-          response in
-          AppDelegate.log.info("r: \(response?.collected)")
-          updateAliceCallback(response?.message, response?.fields)
-        })
-      }
+      uiUpdateCallback(text, status)
+//      if status {
+//        let id = self.conversationId.isEmpty ? "start" : self.conversationId
+//        let data = PersonalData(id: id, input: text, required: ["occupation", "healthy", "sport"])
+//        self.backend.personalData(input: data, callback: {
+//          response in
+//          if let r = response,
+//            let id = r.id {
+//            self.conversationId = id
+//          }
+//          AppDelegate.log.info("r: \(response?.collected)")
+//          updateAliceCallback(response?.message, response?.fields)
+//        })
+//      }
     })
+  }
+
+  func stopRecording() {
+    self.recorder.stop()
   }
 }

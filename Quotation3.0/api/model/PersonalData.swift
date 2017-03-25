@@ -14,6 +14,7 @@ struct PersonalData {
   let id: String
   let input: String
   let required: [String]
+  
 }
 
 extension PersonalData {
