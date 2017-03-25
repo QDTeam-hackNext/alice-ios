@@ -417,7 +417,7 @@
                                     </imageView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="y4n-P5-X3P" userLabel="aliceTextLabel">
                                         <rect key="frame" x="112" y="456" width="226" height="56"/>
-                                        <string key="text">Michael, tell me about
+                                        <string key="text">Maciej, tell me about
 your typical day</string>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <nil key="textColor"/>
@@ -458,7 +458,7 @@ your typical day</string>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="L4B-bA-3QT" userLabel="alice1">
                                         <rect key="frame" x="20" y="28" width="168" height="41"/>
-                                        <string key="text">Michael, tell me about
+                                        <string key="text">Maciej, tell me about
 your typical day</string>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <nil key="textColor"/>
@@ -877,7 +877,7 @@ your typical day</string>
                                     </imageView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="752" ambiguous="YES" misplaced="YES" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZHv-IC-GHh">
                                         <rect key="frame" x="34" y="270" width="251" height="61"/>
-                                        <string key="text">Michael, please give me
+                                        <string key="text">Maciej, please give me
 few seconds. I need to
 get few things from:</string>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
