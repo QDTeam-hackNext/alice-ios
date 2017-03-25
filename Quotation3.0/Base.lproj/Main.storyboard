@@ -556,11 +556,6 @@ your typical day</string>
                             <constraint firstItem="8F9-Dc-Ser" firstAttribute="top" secondItem="r8y-Nl-lei" secondAttribute="bottom" id="wl6-b7-ZGQ"/>
                             <constraint firstItem="r8y-Nl-lei" firstAttribute="top" secondItem="dh0-yJ-fgk" secondAttribute="bottom" id="yBp-xU-QcS"/>
                         </constraints>
-                        <variation key="default">
-                            <mask key="subviews">
-                                <exclude reference="r8y-Nl-lei"/>
-                            </mask>
-                        </variation>
                     </view>
                     <connections>
                         <outlet property="addressLabel" destination="SCF-ZP-HQw" id="qUw-oF-haj"/>
