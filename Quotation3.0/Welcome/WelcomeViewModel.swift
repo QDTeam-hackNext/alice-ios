@@ -40,7 +40,7 @@ class WelcomeViewModel: ViewModel {
     self.userInformation.requestForAccess(completionHandler: callback)
   }
 
-  func speak(text: String) {
-    self.speech.speek(text)
+  func speak(text: String, afterSpeak: @escaping () -> ()) {
+    self.speech.speek(text, afterFinish: afterSpeak)
   }
 }

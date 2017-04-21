@@ -141,13 +141,16 @@ class WelcomeView: UIViewController, WithViewModel {
 
   fileprivate func stopRecording() {
     objc_sync_enter(self)
-    self.model.speak(text: self.questionLable.text!)
+    self.model.speak(text: self.questionLable.text!) {
+      self.recordButton.isEnabled = true
+    }
     self.displayLink?.invalidate()
     self.voiceAnimation.isHidden = true
     self.model.stopRecording()
     self.recordButton.layer.borderColor = UIColor.white.cgColor
     self.questionLable.isHidden = false
     self.recordButton.setImage(UIImage(named: "icoTick"), for: .normal)
+    self.recordButton.isEnabled = false
     objc_sync_exit(self)
   }
 
