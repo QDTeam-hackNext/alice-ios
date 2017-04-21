@@ -3,37 +3,42 @@ PODS:
   - Argo (4.1.2):
     - Runes (>= 4.0.0)
   - Curry (3.0.0)
+  - ObjcExceptionBridging (1.0.1):
+    - ObjcExceptionBridging/ObjcExceptionBridging (= 1.0.1)
+  - ObjcExceptionBridging/ObjcExceptionBridging (1.0.1)
   - ReactiveSwift (1.1.1):
     - Result (~> 3.2)
   - Result (3.2.1)
   - Runes (4.0.1)
   - Swinject (2.0.0)
-  - SwinjectAutoregistration (2.0.0):
+  - SwinjectAutoregistration (2.0.1):
     - Swinject (~> 2.0.0)
-  - XCGLogger (4.0.0):
-    - XCGLogger/Core (= 4.0.0)
-  - XCGLogger/Core (4.0.0)
+  - XCGLogger (5.0.1):
+    - XCGLogger/Core (= 5.0.1)
+  - XCGLogger/Core (5.0.1):
+    - ObjcExceptionBridging
 
 DEPENDENCIES:
   - Alamofire (~> 4.4.0)
   - Argo (~> 4.1.0)
   - Curry (~> 3.0.0)
   - ReactiveSwift (~> 1.1.0)
-  - Swinject (= 2.0.0)
-  - SwinjectAutoregistration (= 2.0.0)
-  - XCGLogger (~> 4.0)
+  - Swinject (~> 2.0.0)
+  - SwinjectAutoregistration (~> 2.0.0)
+  - XCGLogger (~> 5.0)
 
 SPEC CHECKSUMS:
   Alamofire: dc44b1600b800eb63da6a19039a0083d62a6a62d
   Argo: 5db06502fc1222d83011f574243089dab25202ff
   Curry: eb3d2c75aec678b3cc7fb2729d2ad6dd121531d1
+  ObjcExceptionBridging: c30e00eb3700467e695faeea30e26e18bd445001
   ReactiveSwift: 2489549e3231a6ff68ec99f3d320bb264f10ba0a
   Result: 2453a22e5c5b11c0c3a478736e82cd02f763b781
   Runes: ff20f163b478ac2c0e18158d6086fd5b1997f983
   Swinject: 2e964a80d70ab09b3949c99032711f89147bfd60
-  SwinjectAutoregistration: 0e52cf80253af252bb5421c06950eac8460565ae
-  XCGLogger: 38063ea89b4c8b23232d18efd2e12eb0005f3ea4
+  SwinjectAutoregistration: d19654c429354bad4b544c658dc92345ccdbb72c
+  XCGLogger: 0b43697155d41e4a1b15fc776f319c2141646b09
 
-PODFILE CHECKSUM: 45604f75668b7843c800ae231197293674f83ae2
+PODFILE CHECKSUM: 2fa3a56d0a8e27d92eece7ac2eeb1b6eb7c024cb
 
 COCOAPODS: 1.2.0
