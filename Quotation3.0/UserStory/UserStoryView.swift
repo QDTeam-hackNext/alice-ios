@@ -23,7 +23,7 @@ class UserStoryView: UIViewController, WithViewModel {
   @IBOutlet weak var yearsOfProtectionLabelValue: UILabel!
   @IBOutlet weak var dividerLabel: UILabel!
   @IBOutlet weak var monthlyFeeValueLabel: UILabel!
-  @IBOutlet weak var aliceTextLabel: UILabel!
+  @IBOutlet weak var aliceSays: AliceSaysView!
   @IBOutlet weak var applyButton: UIButton!
 
   @IBOutlet weak var container2: UIView!
@@ -61,18 +61,19 @@ class UserStoryView: UIViewController, WithViewModel {
     for label in labels {
       self.styleKeyLabel(label: label)
     }
-    self.styleKeyLabel(label: aliceTextLabel)
-    self.styleValueLabel(label: sposeLabelValue)
-    self.styleValueLabel(label: phoneLabelValue)
-    self.styleValueLabel(label: emailLabelValue)
-    self.styleValueLabel(label: coverageLabelValue)
-    self.styleValueLabel(label: yearsOfProtectionLabelValue)
+    self.styleKeyLabel(label: self.aliceSays.text)
+    self.styleValueLabel(label: self.sposeLabelValue)
+    self.styleValueLabel(label: self.phoneLabelValue)
+    self.styleValueLabel(label: self.emailLabelValue)
+    self.styleValueLabel(label: self.coverageLabelValue)
+    self.styleValueLabel(label: self.yearsOfProtectionLabelValue)
 
     self.dividerLabel.text = ""
     self.dividerLabel.backgroundColor = UIColor.slate10
 
     self.monthlyFeeValueLabel.textColor = UIColor.green
     self.monthlyFeeValueLabel.font = UIFont.partialPriceFontFont()
+    self.aliceSays.text.text = "Maciej, tell me about your typical day"
 
     self.applyButton.backgroundColor = UIColor.vividPurple
     self.applyButton.layer.cornerRadius = 8

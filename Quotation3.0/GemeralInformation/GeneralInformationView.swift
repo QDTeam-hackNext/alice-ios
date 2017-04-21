@@ -13,7 +13,7 @@ class GeneralIfomationView: UIViewController, WithViewModel {
   typealias Model = GeneralInformationViewModel
 
   @IBOutlet weak var scrollView: UIScrollView!
-  @IBOutlet weak var aliceTextLabel: UILabel!
+  @IBOutlet weak var aliceSays: AliceSaysView!
 
   @IBOutlet weak var firstQuestionContainer: UIView!
   @IBOutlet weak var firstQuestionTitle: UILabel!
@@ -37,11 +37,6 @@ class GeneralIfomationView: UIViewController, WithViewModel {
 
   override func viewDidLoad() {
     self.view.backgroundColor = UIColor.background
-
-    self.aliceTextLabel.numberOfLines = 0
-    self.aliceTextLabel.lineBreakMode = .byWordWrapping
-    self.aliceTextLabel.textColor = UIColor.charcoalGrey
-    self.aliceTextLabel.font = UIFont.aliceMessageFontFont()
 
     self.styleContainer(container: self.firstQuestionContainer)
     self.styleContainer(container: self.secondQuestionContainer)
@@ -146,9 +141,9 @@ class GeneralIfomationView: UIViewController, WithViewModel {
   fileprivate func aliceSayPrice(price: String) {
     DispatchQueue.main.async {
       if !price.isEmpty {
-        self.aliceTextLabel.text = "\(self.model.userRealName()), your current quote is \(price)€"
+        self.aliceSays.text.text = "\(self.model.userRealName()), your current quote is \(price)€"
       } else {
-        self.aliceTextLabel.text = "I'm checking price for you"
+        self.aliceSays.text.text = "I'm checking price for you"
       }
 //      let formattedText = NSAttributedString(string: text)
 //      self.aliceTextLabel.attributedText = formattedText

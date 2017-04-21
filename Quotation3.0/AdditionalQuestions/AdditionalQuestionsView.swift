@@ -12,9 +12,7 @@ class AdditionalQuestionsView: UIViewController, WithViewModel {
   typealias Model = AdditionalQuestionsViewModel
 
   @IBOutlet weak var container: UIView!
-  @IBOutlet weak var aliceImage: UIImageView!
-  @IBOutlet weak var aliceTextImage: UIImageView!
-  @IBOutlet weak var aliceTextLabel: UILabel!
+  @IBOutlet weak var aliceSays: AliceSaysView!
   @IBOutlet var appNames: [UILabel]!
   @IBOutlet var diviers: [UILabel]!
   @IBOutlet weak var healthDiscountLabel: UILabel!
@@ -45,11 +43,6 @@ class AdditionalQuestionsView: UIViewController, WithViewModel {
 
     self.container.layer.cornerRadius = 8
     self.container.clipsToBounds = true
-
-    self.aliceTextLabel.numberOfLines = 0
-    self.aliceTextLabel.lineBreakMode = .byWordWrapping
-    self.aliceTextLabel.textColor = UIColor.charcoalGrey
-    self.aliceTextLabel.font = UIFont.aliceMessageFontFont()
 
     for label in self.appNames {
       label.font = UIFont.sumaryNameFontFont()
@@ -99,17 +92,13 @@ class AdditionalQuestionsView: UIViewController, WithViewModel {
 
   @IBAction func healthChwithValueChanged(_ sender: Any) {
     if self.healthSwitch.isOn {
-      self.aliceImage.isHidden = true
-      self.aliceTextLabel.isHidden = true
-      self.aliceTextImage.isHidden = true
+      self.aliceSays.isHidden = true
       self.summaryButton.isHidden = true
       self.healthOverlay.isHidden = false
       self.model.requestHealthAccess(callback: {
         _ in
         DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + 3, execute: {
-          self.aliceImage.isHidden = false
-          self.aliceTextLabel.isHidden = false
-          self.aliceTextImage.isHidden = false
+          self.aliceSays.isHidden = false
           self.summaryButton.isHidden = false
           self.healthOverlay.isHidden = true
           self.healthDiscountLabel.text = "Great shape -10%"
@@ -125,9 +114,9 @@ class AdditionalQuestionsView: UIViewController, WithViewModel {
   fileprivate func aliceSayPrice(price: String) {
     DispatchQueue.main.async {
       if !price.isEmpty {
-        self.aliceTextLabel.text = ", your current quote is \(price)€"
+        self.aliceSays.text.text = ", your current quote is \(price)€"
       } else {
-        self.aliceTextLabel.text = "I'm checking price for you"
+        self.aliceSays.text.text = "I'm checking price for you"
       }
       //      let formattedText = NSAttributedString(string: text)
       //      self.aliceTextLabel.attributedText = formattedText
