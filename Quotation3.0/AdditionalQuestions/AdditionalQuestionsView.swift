@@ -13,18 +13,13 @@ class AdditionalQuestionsView: UIViewController, WithViewModel {
 
   @IBOutlet weak var container: UIView!
   @IBOutlet weak var aliceSays: AliceSaysView!
-  @IBOutlet var appNames: [UILabel]!
   @IBOutlet var diviers: [UILabel]!
-  @IBOutlet weak var healthDiscountLabel: UILabel!
-  @IBOutlet weak var nikeDiscountLabel: UILabel!
-  @IBOutlet weak var stravaDiscount: UILabel!
-  @IBOutlet weak var foursquareDiscountLabel: UILabel!
 
-  @IBOutlet weak var healthSwitch: UISwitch!
-  @IBOutlet weak var nikeSwitch: UISwitch!
-  @IBOutlet weak var stravaSwitch: UISwitch!
-  @IBOutlet weak var foursquareSwitch: UISwitch!
-
+  @IBOutlet weak var healthExternalApp: ExternalAppView!
+  @IBOutlet weak var nikeExternalApp: ExternalAppView!
+  @IBOutlet weak var stravaExternalApp: ExternalAppView!
+  @IBOutlet weak var foursquareExternalApp: ExternalAppView!
+  
   @IBOutlet weak var summaryButton: UIButton!
 
   @IBOutlet weak var healthOverlay: UIView!
@@ -44,24 +39,22 @@ class AdditionalQuestionsView: UIViewController, WithViewModel {
     self.container.layer.cornerRadius = 8
     self.container.clipsToBounds = true
 
-    for label in self.appNames {
-      label.font = UIFont.sumaryNameFontFont()
-      label.textColor = UIColor.slate
-    }
     for label in self.diviers {
       label.text = ""
       label.backgroundColor = UIColor.slate10
     }
+    self.healthExternalApp.icon.image = UIImage(named: "iconHealth")
+    self.healthExternalApp.nameLabel.text = "Health"
+    self.nikeExternalApp.icon.image = UIImage(named: "iconNike")
+    self.nikeExternalApp.nameLabel.text = "Nike+ Run Club"
+    self.stravaExternalApp.icon.image = UIImage(named: "iconStrava")
+    self.stravaExternalApp.nameLabel.text = "Strava"
+    self.foursquareExternalApp.icon.image = UIImage(named: "iconFoursquare")
+    self.foursquareExternalApp.nameLabel.text = "Foursquare"
 
-    self.healthSwitch.setOn(false, animated: false)
-    self.nikeSwitch.setOn(false, animated: false)
-    self.stravaSwitch.setOn(false, animated: false)
-    self.foursquareSwitch.setOn(false, animated: false)
-
-    self.styleDiscount(label: self.healthDiscountLabel)
-    self.styleDiscount(label: self.nikeDiscountLabel)
-    self.styleDiscount(label: self.stravaDiscount)
-    self.styleDiscount(label: self.foursquareDiscountLabel)
+    self.healthExternalApp.toggleSwitch.addTarget(self,
+                                                  action: #selector(healthSwitchValueChanged),
+                                                  for: .valueChanged)
 
     self.summaryButton.backgroundColor = UIColor.vividPurple
     self.summaryButton.layer.cornerRadius = 8
@@ -84,14 +77,8 @@ class AdditionalQuestionsView: UIViewController, WithViewModel {
     self.aliceSayPrice(price: (self.generalData?.price)!)
   }
 
-  fileprivate func styleDiscount(label: UILabel) {
-    label.isHidden = true
-    label.textColor = UIColor.green
-    label.font = UIFont.appDiscountFontFont()
-  }
-
-  @IBAction func healthChwithValueChanged(_ sender: Any) {
-    if self.healthSwitch.isOn {
+  func healthSwitchValueChanged(_ sender: Any) {
+    if self.healthExternalApp.toggleSwitch.isOn {
       self.aliceSays.isHidden = true
       self.summaryButton.isHidden = true
       self.healthOverlay.isHidden = false
@@ -101,13 +88,13 @@ class AdditionalQuestionsView: UIViewController, WithViewModel {
           self.aliceSays.isHidden = false
           self.summaryButton.isHidden = false
           self.healthOverlay.isHidden = true
-          self.healthDiscountLabel.text = "Great shape -10%"
-          self.healthDiscountLabel.isHidden = false
+          self.healthExternalApp.discountLabel.text = "Great shape -10%"
+          self.healthExternalApp.discountLabel.isHidden = false
           self.aliceSayPrice(price: "\(Double((self.generalData?.price)!)! * 0.9)")
         })
       })
     } else {self.aliceSayPrice(price: (self.generalData?.price)!)
-      self.healthDiscountLabel.isHidden = true
+      self.healthExternalApp.discountLabel.isHidden = true
     }
   }
 
