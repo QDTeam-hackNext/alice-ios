@@ -13,12 +13,11 @@
 		C744E84E1E80184C00DE2E7F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C744E84D1E80184C00DE2E7F /* AppDelegate.swift */; };
 		C744E8531E80184C00DE2E7F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C744E8511E80184C00DE2E7F /* Main.storyboard */; };
 		C744E8551E80184C00DE2E7F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C744E8541E80184C00DE2E7F /* Assets.xcassets */; };
-		C744E87D1E801A3300DE2E7F /* HealthKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C744E87C1E801A3300DE2E7F /* HealthKit.framework */; };
-		C744E8811E801CDD00DE2E7F /* PassKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C744E8801E801CDD00DE2E7F /* PassKit.framework */; };
 		C744E8861E80312100DE2E7F /* GeneralInformationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C744E8851E80312100DE2E7F /* GeneralInformationView.swift */; };
 		C744E8881E80313500DE2E7F /* GeneralInforationViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C744E8871E80313500DE2E7F /* GeneralInforationViewModel.swift */; };
 		C744E88A1E8039D700DE2E7F /* Recorder.swift in Sources */ = {isa = PBXBuildFile; fileRef = C744E8891E8039D700DE2E7F /* Recorder.swift */; };
 		C76BC4E61E83399100475956 /* InterviewQuestion.swift in Sources */ = {isa = PBXBuildFile; fileRef = C76BC4E51E83399100475956 /* InterviewQuestion.swift */; };
+		C77629811E893BC00085CE9A /* PassKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C77629801E893BC00085CE9A /* PassKit.framework */; };
 		C791D5DB1E86099200BE7088 /* CloudKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C791D5DA1E86099200BE7088 /* CloudKit.framework */; };
 		C791D5DD1E86254800BE7088 /* Quote.swift in Sources */ = {isa = PBXBuildFile; fileRef = C791D5DC1E86254800BE7088 /* Quote.swift */; };
 		C798F8431E807583002D7C07 /* Speech.swift in Sources */ = {isa = PBXBuildFile; fileRef = C798F8421E807583002D7C07 /* Speech.swift */; };
@@ -35,7 +34,6 @@
 		C798F85F1E82D739002D7C07 /* SummaryViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C798F85E1E82D739002D7C07 /* SummaryViewModel.swift */; };
 		C798F8611E82D760002D7C07 /* PaymentViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C798F8601E82D760002D7C07 /* PaymentViewModel.swift */; };
 		C798F8631E82DF1D002D7C07 /* ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C798F8621E82DF1D002D7C07 /* ViewModel.swift */; };
-		C7D22D251E82F53B0062D199 /* SwinjectStoryboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7D22D241E82F53B0062D199 /* SwinjectStoryboard.swift */; };
 		C7D22D2B1E8300B70062D199 /* sounds in Resources */ = {isa = PBXBuildFile; fileRef = C7D22D2A1E8300B70062D199 /* sounds */; };
 		C7D22D2D1E8301A40062D199 /* Sounds.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7D22D2C1E8301A40062D199 /* Sounds.swift */; };
 		C7E739631E8521F000F14AAF /* ExternalApps.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7E739621E8521F000F14AAF /* ExternalApps.swift */; };
@@ -93,12 +91,11 @@
 		C744E8691E80184D00DE2E7F /* AliceUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AliceUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		C744E86F1E80184D00DE2E7F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C744E87B1E801A1E00DE2E7F /* Quotation3.0.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Quotation3.0.entitlements; sourceTree = "<group>"; };
-		C744E87C1E801A3300DE2E7F /* HealthKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = HealthKit.framework; path = System/Library/Frameworks/HealthKit.framework; sourceTree = SDKROOT; };
-		C744E8801E801CDD00DE2E7F /* PassKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = PassKit.framework; path = System/Library/Frameworks/PassKit.framework; sourceTree = SDKROOT; };
 		C744E8851E80312100DE2E7F /* GeneralInformationView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GeneralInformationView.swift; sourceTree = "<group>"; };
 		C744E8871E80313500DE2E7F /* GeneralInforationViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GeneralInforationViewModel.swift; sourceTree = "<group>"; };
 		C744E8891E8039D700DE2E7F /* Recorder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Recorder.swift; sourceTree = "<group>"; };
 		C76BC4E51E83399100475956 /* InterviewQuestion.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InterviewQuestion.swift; sourceTree = "<group>"; };
+		C77629801E893BC00085CE9A /* PassKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = PassKit.framework; path = System/Library/Frameworks/PassKit.framework; sourceTree = SDKROOT; };
 		C791D5DA1E86099200BE7088 /* CloudKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CloudKit.framework; path = System/Library/Frameworks/CloudKit.framework; sourceTree = SDKROOT; };
 		C791D5DC1E86254800BE7088 /* Quote.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Quote.swift; sourceTree = "<group>"; };
 		C798F8421E807583002D7C07 /* Speech.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Speech.swift; sourceTree = "<group>"; };
@@ -115,7 +112,6 @@
 		C798F85E1E82D739002D7C07 /* SummaryViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SummaryViewModel.swift; sourceTree = "<group>"; };
 		C798F8601E82D760002D7C07 /* PaymentViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PaymentViewModel.swift; sourceTree = "<group>"; };
 		C798F8621E82DF1D002D7C07 /* ViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewModel.swift; sourceTree = "<group>"; };
-		C7D22D241E82F53B0062D199 /* SwinjectStoryboard.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwinjectStoryboard.swift; sourceTree = "<group>"; };
 		C7D22D2A1E8300B70062D199 /* sounds */ = {isa = PBXFileReference; lastKnownFileType = folder; path = sounds; sourceTree = "<group>"; };
 		C7D22D2C1E8301A40062D199 /* Sounds.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Sounds.swift; sourceTree = "<group>"; };
 		C7E739621E8521F000F14AAF /* ExternalApps.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExternalApps.swift; sourceTree = "<group>"; };
@@ -143,9 +139,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C744E8811E801CDD00DE2E7F /* PassKit.framework in Frameworks */,
+				C77629811E893BC00085CE9A /* PassKit.framework in Frameworks */,
 				C791D5DB1E86099200BE7088 /* CloudKit.framework in Frameworks */,
-				C744E87D1E801A3300DE2E7F /* HealthKit.framework in Frameworks */,
 				E1014E02E7D75CA1E5912D82 /* Pods_Alice.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -313,7 +308,6 @@
 		C7D22D231E82F5110062D199 /* extensions */ = {
 			isa = PBXGroup;
 			children = (
-				C7D22D241E82F53B0062D199 /* SwinjectStoryboard.swift */,
 				C7E7396A1E855AFA00F14AAF /* UIButton.swift */,
 			);
 			path = extensions;
@@ -342,9 +336,8 @@
 		EA0B1FBF6526E29582D0E5C3 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				C77629801E893BC00085CE9A /* PassKit.framework */,
 				C791D5DA1E86099200BE7088 /* CloudKit.framework */,
-				C744E8801E801CDD00DE2E7F /* PassKit.framework */,
-				C744E87C1E801A3300DE2E7F /* HealthKit.framework */,
 				EE30770D8B7956132000BFA9 /* Pods_Alice.framework */,
 				CD9284442721E00A33C923E5 /* Pods_AliceTests.framework */,
 				A2EF4836AA21884D8A4893DA /* Pods_AliceUITests.framework */,
@@ -455,7 +448,7 @@
 								enabled = 1;
 							};
 							com.apple.HealthKit = {
-								enabled = 1;
+								enabled = 0;
 							};
 							com.apple.Push = {
 								enabled = 1;
@@ -677,7 +670,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C7D22D251E82F53B0062D199 /* SwinjectStoryboard.swift in Sources */,
 				C7E95DBD1E8502C500007646 /* AnalyzeResult.swift in Sources */,
 				C744E8881E80313500DE2E7F /* GeneralInforationViewModel.swift in Sources */,
 				C798F8551E82D641002D7C07 /* PaymentView.swift in Sources */,

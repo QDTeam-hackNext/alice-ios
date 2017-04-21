@@ -7,7 +7,6 @@
 //
 
 import Foundation
-import SwinjectStoryboard
 
 protocol ModelData {}
 
@@ -29,7 +28,7 @@ extension WithViewModel {
   var model: Model {
     get {
       guard let m = objc_getAssociatedObject(self, &modelKey) as? Model else {
-        let new = SwinjectStoryboard.defaultContainer.resolve(Model.self)!
+        let new = AppDelegate.container.resolve(Model.self)!
         objc_setAssociatedObject(self, &modelKey, new, .OBJC_ASSOCIATION_RETAIN)
         return new
       }

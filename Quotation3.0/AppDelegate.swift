@@ -8,19 +8,41 @@
 
 import UIKit
 import XCGLogger
-import SwinjectStoryboard
+import Swinject
+import SwinjectAutoregistration
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
   static let log = XCGLogger.default
+  static let container: Container = {
+    let c = Container()
+    c.autoregister(AppConfig.self, initializer: AppConfig.init)
+    c.autoregister(Speech.self, initializer: Speech.init)
+    c.autoregister(Recorder.self, initializer: Recorder.init)
+    c.autoregister(Sounds.self, initializer: Sounds.init)
+    c.autoregister(ExternalApps.self, initializer: ExternalApps.init)
+    c.autoregister(InterviewQuestion.self, initializer: InterviewQuestion.init)
+    c.autoregister(ExternalApps.self, initializer: ExternalApps.init)
+    c.autoregister(BackendUrls.self, initializer: BackendUrls.init)
+    c.autoregister(Backend.self, initializer: Backend.init)
+    c.autoregister(UserInformation.self, initializer: UserInformation.init)
+    c.autoregister(HealthKit.self, initializer: HealthKit.init)
+    c.autoregister(WelcomeViewModel.self, initializer: WelcomeViewModel.init)
+    c.autoregister(GeneralInformationViewModel.self, initializer: GeneralInformationViewModel.init)
+    c.autoregister(UserStoryViewModel.self, initializer: UserStoryViewModel.init)
+    c.autoregister(AdditionalQuestionsViewModel.self, initializer: AdditionalQuestionsViewModel.init)
+    c.autoregister(DataAccessViewModel.self, initializer: DataAccessViewModel.init)
+    c.autoregister(SummaryViewModel.self, initializer: SummaryViewModel.init)
+    c.autoregister(PaymentViewModel.self, initializer: PaymentViewModel.init)
+    return c
+  }()
 
   var window: UIWindow?
-
 
   func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
     // Override point for customization after application launch.
     // initialize speech api
-    SwinjectStoryboard.defaultContainer.resolve(Speech.self)!.speek(" ")
+    AppDelegate.container.resolve(Speech.self)!.speek(" ")
     return true
   }
 

@@ -9,7 +9,8 @@ target 'Alice' do
   pod 'Curry', '~> 3.0.0'
   pod 'ReactiveSwift', '~> 1.1.0'
   pod 'XCGLogger', '~> 4.0'
-  pod 'SwinjectStoryboard', '~> 1.0.0'
+  pod 'Swinject', '2.0.0'
+  pod 'SwinjectAutoregistration', '2.0.0'
 
   target 'AliceTests' do
     inherit! :search_paths

@@ -8,7 +8,6 @@
 
 import UIKit
 import Contacts
-import SwinjectStoryboard
 
 class GeneralIfomationView: UIViewController, WithViewModel {
   typealias Model = GeneralInformationViewModel
