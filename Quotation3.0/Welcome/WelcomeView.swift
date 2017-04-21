@@ -140,6 +140,7 @@ class WelcomeView: UIViewController, WithViewModel {
   }
 
   fileprivate func stopRecording() {
+    objc_sync_enter(self)
     self.model.speak(text: self.questionLable.text!)
     self.displayLink?.invalidate()
     self.voiceAnimation.isHidden = true
@@ -147,6 +148,7 @@ class WelcomeView: UIViewController, WithViewModel {
     self.recordButton.layer.borderColor = UIColor.white.cgColor
     self.questionLable.isHidden = false
     self.recordButton.setImage(UIImage(named: "icoTick"), for: .normal)
+    objc_sync_exit(self)
   }
 
   func updateMeters() {
