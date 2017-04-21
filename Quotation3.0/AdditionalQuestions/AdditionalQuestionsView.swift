@@ -125,7 +125,7 @@ class AdditionalQuestionsView: UIViewController, WithViewModel {
   fileprivate func aliceSayPrice(price: String) {
     DispatchQueue.main.async {
       if !price.isEmpty {
-        self.aliceTextLabel.text = "\(self.generalData!.user.givenName), your current quote is \(price)€"
+        self.aliceTextLabel.text = ", your current quote is \(price)€"
       } else {
         self.aliceTextLabel.text = "I'm checking price for you"
       }

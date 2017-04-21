@@ -19,18 +19,18 @@ class UserInformation {
 
     switch authorizationStatus {
     case .authorized:
-      CKContainer.default().requestApplicationPermission(.userDiscoverability) {
-        status, error in
-        if status == .granted {
-          DispatchQueue.global(qos: .background).async {
-            self.loadUserContact(callback: {
-              userData in
-              self.userData = userData
+//      CKContainer.default().requestApplicationPermission(.userDiscoverability) {
+//        status, error in
+//        if status == .granted {
+//          DispatchQueue.global(qos: .background).async {
+//            self.loadUserContact(callback: {
+//              userData in
+//              self.userData = userData
               completionHandler(true)
-            })
-          }
-        }
-      }
+//            })
+//          }
+//        }
+//      }
 
     case .denied, .notDetermined:
       let contactStore = CNContactStore()
