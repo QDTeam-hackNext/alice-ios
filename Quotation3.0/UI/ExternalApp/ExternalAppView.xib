@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="12120" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12088"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ExternalAppView" customModule="Alice" customModuleProvider="target">
+            <connections>
+                <outlet property="contentView" destination="iN0-l3-epB" id="FMc-f2-EjM"/>
+                <outlet property="discountLabel" destination="3zB-Ro-VKh" id="7zy-Rh-S0b"/>
+                <outlet property="icon" destination="T8W-Gs-ve5" id="W7r-M2-GP2"/>
+                <outlet property="nameLabel" destination="5pW-PF-N0A" id="pEs-5x-W2w"/>
+                <outlet property="toggleSwitch" destination="cBz-hM-IoJ" id="JAJ-RH-XzF"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="251" height="35"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="iconHealth" translatesAutoresizingMaskIntoConstraints="NO" id="T8W-Gs-ve5" userLabel="icon">
+                    <rect key="frame" x="0.0" y="3.5" width="28" height="28"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="28" id="PZe-es-k5S"/>
+                        <constraint firstAttribute="width" constant="28" id="osD-6a-hlA"/>
+                    </constraints>
+                </imageView>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5pW-PF-N0A" userLabel="nameLabel">
+                    <rect key="frame" x="42" y="1" width="148" height="21"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3zB-Ro-VKh" userLabel="discountLabel">
+                    <rect key="frame" x="42" y="15.5" width="148" height="21"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="cBz-hM-IoJ">
+                    <rect key="frame" x="202" y="2.5" width="51" height="31"/>
+                </switch>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="T8W-Gs-ve5" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="8dj-9A-faE"/>
+                <constraint firstItem="3zB-Ro-VKh" firstAttribute="top" secondItem="5pW-PF-N0A" secondAttribute="bottom" constant="-6.5" id="DqS-2P-Cfx"/>
+                <constraint firstItem="cBz-hM-IoJ" firstAttribute="leading" secondItem="5pW-PF-N0A" secondAttribute="trailing" constant="12" id="MmG-c7-2BB"/>
+                <constraint firstItem="cBz-hM-IoJ" firstAttribute="leading" secondItem="3zB-Ro-VKh" secondAttribute="trailing" constant="12" id="Qze-20-ski"/>
+                <constraint firstAttribute="trailing" secondItem="cBz-hM-IoJ" secondAttribute="trailing" id="WlI-uQ-hab"/>
+                <constraint firstItem="cBz-hM-IoJ" firstAttribute="centerY" secondItem="T8W-Gs-ve5" secondAttribute="centerY" id="aB8-aT-1al"/>
+                <constraint firstItem="5pW-PF-N0A" firstAttribute="leading" secondItem="T8W-Gs-ve5" secondAttribute="trailing" constant="14" id="bAs-nG-4Ip"/>
+                <constraint firstItem="3zB-Ro-VKh" firstAttribute="leading" secondItem="5pW-PF-N0A" secondAttribute="leading" id="dPq-Zh-uE6"/>
+                <constraint firstItem="T8W-Gs-ve5" firstAttribute="centerY" secondItem="5pW-PF-N0A" secondAttribute="centerY" constant="6" id="nCH-ob-YtM"/>
+                <constraint firstItem="T8W-Gs-ve5" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="qCY-ZT-4ZD"/>
+            </constraints>
+            <nil key="simulatedStatusBarMetrics"/>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <point key="canvasLocation" x="-37.5" y="-264.5"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="iconHealth" width="35" height="35"/>
+    </resources>
+</document>
