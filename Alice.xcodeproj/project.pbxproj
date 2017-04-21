@@ -36,6 +36,8 @@
 		C798F8631E82DF1D002D7C07 /* ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C798F8621E82DF1D002D7C07 /* ViewModel.swift */; };
 		C7D22D2B1E8300B70062D199 /* sounds in Resources */ = {isa = PBXBuildFile; fileRef = C7D22D2A1E8300B70062D199 /* sounds */; };
 		C7D22D2D1E8301A40062D199 /* Sounds.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7D22D2C1E8301A40062D199 /* Sounds.swift */; };
+		C7E6EC6D1EAA787500EC63CE /* AliceSaysView.xib in Resources */ = {isa = PBXBuildFile; fileRef = C7E6EC6C1EAA787500EC63CE /* AliceSaysView.xib */; };
+		C7E6EC6F1EAA788000EC63CE /* AliceSaysView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7E6EC6E1EAA788000EC63CE /* AliceSaysView.swift */; };
 		C7E739631E8521F000F14AAF /* ExternalApps.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7E739621E8521F000F14AAF /* ExternalApps.swift */; };
 		C7E739651E852BBF00F14AAF /* HealthKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7E739641E852BBF00F14AAF /* HealthKit.swift */; };
 		C7E739671E8551AC00F14AAF /* UIColor+Additions.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7E739661E8551AC00F14AAF /* UIColor+Additions.swift */; };
@@ -114,6 +116,8 @@
 		C798F8621E82DF1D002D7C07 /* ViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewModel.swift; sourceTree = "<group>"; };
 		C7D22D2A1E8300B70062D199 /* sounds */ = {isa = PBXFileReference; lastKnownFileType = folder; path = sounds; sourceTree = "<group>"; };
 		C7D22D2C1E8301A40062D199 /* Sounds.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Sounds.swift; sourceTree = "<group>"; };
+		C7E6EC6C1EAA787500EC63CE /* AliceSaysView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = AliceSaysView.xib; path = Quotation3.0/UI/AliceSays/AliceSaysView.xib; sourceTree = SOURCE_ROOT; };
+		C7E6EC6E1EAA788000EC63CE /* AliceSaysView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AliceSaysView.swift; path = Quotation3.0/UI/AliceSays/AliceSaysView.swift; sourceTree = SOURCE_ROOT; };
 		C7E739621E8521F000F14AAF /* ExternalApps.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExternalApps.swift; sourceTree = "<group>"; };
 		C7E739641E852BBF00F14AAF /* HealthKit.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HealthKit.swift; sourceTree = "<group>"; };
 		C7E739661E8551AC00F14AAF /* UIColor+Additions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIColor+Additions.swift"; sourceTree = "<group>"; };
@@ -193,6 +197,7 @@
 				C7D22D2A1E8300B70062D199 /* sounds */,
 				C7FF806F1E848D010041B312 /* api */,
 				C7D22D231E82F5110062D199 /* extensions */,
+				C7E6EC6A1EAA781600EC63CE /* UI */,
 				C798F8441E82D453002D7C07 /* Welcome */,
 				C744E8821E802BEA00DE2E7F /* GeneralInformation */,
 				C798F8451E82D467002D7C07 /* UserStory */,
@@ -311,6 +316,24 @@
 				C7E7396A1E855AFA00F14AAF /* UIButton.swift */,
 			);
 			path = extensions;
+			sourceTree = "<group>";
+		};
+		C7E6EC6A1EAA781600EC63CE /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				C7E6EC6B1EAA782300EC63CE /* AliceSays */,
+			);
+			path = UI;
+			sourceTree = "<group>";
+		};
+		C7E6EC6B1EAA782300EC63CE /* AliceSays */ = {
+			isa = PBXGroup;
+			children = (
+				C7E6EC6C1EAA787500EC63CE /* AliceSaysView.xib */,
+				C7E6EC6E1EAA788000EC63CE /* AliceSaysView.swift */,
+			);
+			name = AliceSays;
+			path = UI/AliceSays;
 			sourceTree = "<group>";
 		};
 		C7FF806F1E848D010041B312 /* api */ = {
@@ -507,6 +530,7 @@
 				C7D22D2B1E8300B70062D199 /* sounds in Resources */,
 				C7E7396D1E8562A800F14AAF /* fonts in Resources */,
 				C744E8531E80184C00DE2E7F /* Main.storyboard in Resources */,
+				C7E6EC6D1EAA787500EC63CE /* AliceSaysView.xib in Resources */,
 				C7E95DC11E851AE300007646 /* appConfig.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -670,6 +694,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C7E6EC6F1EAA788000EC63CE /* AliceSaysView.swift in Sources */,
 				C7E95DBD1E8502C500007646 /* AnalyzeResult.swift in Sources */,
 				C744E8881E80313500DE2E7F /* GeneralInforationViewModel.swift in Sources */,
 				C798F8551E82D641002D7C07 /* PaymentView.swift in Sources */,
