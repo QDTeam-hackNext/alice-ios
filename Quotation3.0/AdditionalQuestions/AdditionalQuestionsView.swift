@@ -105,6 +105,7 @@ class AdditionalQuestionsView: UIViewController, WithViewModel {
       } else {
         self.aliceSays.text.text = "I'm checking price for you"
       }
+      self.aliceSays.text.sizeToFit()
       //      let formattedText = NSAttributedString(string: text)
       //      self.aliceTextLabel.attributedText = formattedText
     }

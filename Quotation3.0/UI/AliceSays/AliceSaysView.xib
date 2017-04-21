@@ -20,18 +20,17 @@
             <rect key="frame" x="0.0" y="0.0" width="324" height="68"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="aliceSays" translatesAutoresizingMaskIntoConstraints="NO" id="auM-z3-J0S">
-                    <rect key="frame" x="56" y="0.0" width="268" height="64"/>
-                    <constraints>
-                        <constraint firstAttribute="width" constant="268" id="gtJ-2J-gDM"/>
-                        <constraint firstAttribute="height" constant="64" id="tGn-91-o3q"/>
-                    </constraints>
-                </imageView>
                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="userAliceBig" translatesAutoresizingMaskIntoConstraints="NO" id="dfL-b8-taC">
                     <rect key="frame" x="0.0" y="8" width="60" height="60"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="60" id="OqU-Hr-GxP"/>
                         <constraint firstAttribute="width" constant="60" id="nv3-BU-9RW"/>
+                    </constraints>
+                </imageView>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="aliceSays" translatesAutoresizingMaskIntoConstraints="NO" id="auM-z3-J0S">
+                    <rect key="frame" x="56" y="0.0" width="268" height="64"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="64" id="tGn-91-o3q"/>
                     </constraints>
                 </imageView>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kDg-9k-wsh">
@@ -44,10 +43,8 @@
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
                 <constraint firstItem="auM-z3-J0S" firstAttribute="bottom" secondItem="kDg-9k-wsh" secondAttribute="bottom" constant="8" id="90t-Jb-13Z"/>
-                <constraint firstItem="dfL-b8-taC" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="8" id="Eh8-vT-IlB"/>
                 <constraint firstAttribute="bottom" secondItem="dfL-b8-taC" secondAttribute="bottom" id="HcQ-pl-LsZ"/>
-                <constraint firstAttribute="trailing" secondItem="auM-z3-J0S" secondAttribute="trailing" id="Q2f-iB-s1H"/>
-                <constraint firstAttribute="bottom" secondItem="auM-z3-J0S" secondAttribute="bottom" constant="4" id="aZ6-pU-jBq"/>
+                <constraint firstAttribute="trailing" secondItem="auM-z3-J0S" secondAttribute="trailing" id="IX4-2Z-mBv"/>
                 <constraint firstItem="auM-z3-J0S" firstAttribute="leading" secondItem="dfL-b8-taC" secondAttribute="trailing" constant="-4" id="etT-Yx-oID"/>
                 <constraint firstItem="auM-z3-J0S" firstAttribute="trailing" secondItem="kDg-9k-wsh" secondAttribute="trailing" constant="8" id="gLQ-9p-eOD"/>
                 <constraint firstItem="kDg-9k-wsh" firstAttribute="leading" secondItem="auM-z3-J0S" secondAttribute="leading" constant="30" id="rZf-eD-y8b"/>
