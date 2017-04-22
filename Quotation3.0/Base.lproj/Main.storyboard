@@ -829,11 +829,6 @@ get few things from:</string>
                             <constraint firstItem="q5l-hE-Y7y" firstAttribute="top" secondItem="rqG-TH-uj9" secondAttribute="bottom" id="jSB-z0-oAa"/>
                             <constraint firstItem="rqG-TH-uj9" firstAttribute="centerX" secondItem="Bem-JD-9uQ" secondAttribute="centerX" id="krz-06-cGn"/>
                         </constraints>
-                        <variation key="default">
-                            <mask key="subviews">
-                                <exclude reference="Bem-JD-9uQ"/>
-                            </mask>
-                        </variation>
                     </view>
                     <connections>
                         <outlet property="aliceSays" destination="jBn-6G-swl" id="xa7-w8-4Ki"/>
