@@ -70,8 +70,6 @@
 		<string>fonts/Trenda-ThinIt.otf</string>
 		<string>fonts/isidora-light.otf</string>
 	</array>
-	<key>UILaunchStoryboardName</key>
-	<string>LaunchScreen</string>
 	<key>UIMainStoryboardFile</key>
 	<string>Main</string>
 	<key>UIRequiredDeviceCapabilities</key>
