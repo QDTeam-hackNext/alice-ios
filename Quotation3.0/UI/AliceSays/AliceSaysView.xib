@@ -33,8 +33,11 @@
                         <constraint firstAttribute="height" constant="64" id="tGn-91-o3q"/>
                     </constraints>
                 </imageView>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kDg-9k-wsh">
-                    <rect key="frame" x="86" y="8" width="230" height="48"/>
+                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="wordWrap" numberOfLines="0" minimumFontSize="9" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="kDg-9k-wsh">
+                    <rect key="frame" x="82" y="8" width="234" height="48"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="48" id="jXg-se-D2D"/>
+                    </constraints>
                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                     <nil key="textColor"/>
                     <nil key="highlightedColor"/>
@@ -47,7 +50,7 @@
                 <constraint firstAttribute="trailing" secondItem="auM-z3-J0S" secondAttribute="trailing" id="IX4-2Z-mBv"/>
                 <constraint firstItem="auM-z3-J0S" firstAttribute="leading" secondItem="dfL-b8-taC" secondAttribute="trailing" constant="-4" id="etT-Yx-oID"/>
                 <constraint firstItem="auM-z3-J0S" firstAttribute="trailing" secondItem="kDg-9k-wsh" secondAttribute="trailing" constant="8" id="gLQ-9p-eOD"/>
-                <constraint firstItem="kDg-9k-wsh" firstAttribute="leading" secondItem="auM-z3-J0S" secondAttribute="leading" constant="30" id="rZf-eD-y8b"/>
+                <constraint firstItem="kDg-9k-wsh" firstAttribute="leading" secondItem="auM-z3-J0S" secondAttribute="leading" constant="26" id="rZf-eD-y8b"/>
                 <constraint firstItem="auM-z3-J0S" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="rt7-Ba-sax"/>
                 <constraint firstItem="dfL-b8-taC" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="stN-SZ-be1"/>
                 <constraint firstItem="kDg-9k-wsh" firstAttribute="top" secondItem="auM-z3-J0S" secondAttribute="top" constant="8" id="zTX-5j-Tfn"/>

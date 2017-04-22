@@ -37,10 +37,6 @@ class AliceSaysView: UIView {
     self.text.lineBreakMode = .byWordWrapping
     self.text.textColor = UIColor.charcoalGrey
     self.text.font = UIFont.aliceMessageFontFont()
-    self.text.adjustsFontSizeToFitWidth = true
-    self.text.minimumScaleFactor = 0.1
-    self.text.baselineAdjustment = .alignCenters
-    self.text.textAlignment = .left
 
     self.addSubview(self.contentView)
   }

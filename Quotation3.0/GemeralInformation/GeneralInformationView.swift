@@ -38,6 +38,8 @@ class GeneralIfomationView: UIViewController, WithViewModel {
   override func viewDidLoad() {
     self.view.backgroundColor = UIColor.background
 
+    self.aliceSays.text.font = UIFont.aliceMessageFontFont()?.withSize(15)
+
     self.styleContainer(container: self.firstQuestionContainer)
     self.styleContainer(container: self.secondQuestionContainer)
     self.styleContainer(container: self.thirdQuestionContainer)
@@ -145,7 +147,6 @@ class GeneralIfomationView: UIViewController, WithViewModel {
       } else {
         self.aliceSays.text.text = "I'm checking price for you"
       }
-      self.aliceSays.text.sizeToFit()
 //      let formattedText = NSAttributedString(string: text)
 //      self.aliceTextLabel.attributedText = formattedText
     }
