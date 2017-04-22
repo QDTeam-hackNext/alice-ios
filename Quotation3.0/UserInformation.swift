@@ -71,6 +71,16 @@ class UserInformation {
     let container = CKContainer.default()
     container.fetchUserRecordID(completionHandler: {
       record, error in
+      if error != nil {
+        let devContact = CNMutableContact()
+        devContact.givenName = "Darek"
+        devContact.birthday = DateComponents()
+        devContact.birthday?.day = 4
+        devContact.birthday?.month = 5
+        devContact.birthday?.year = 1986
+        callback(devContact)
+        return
+      }
       if let r = record {
         container.discoverUserIdentity(withUserRecordID: r, completionHandler: {
           userIdentity, error in
