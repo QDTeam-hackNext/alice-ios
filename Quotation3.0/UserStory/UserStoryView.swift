@@ -101,9 +101,9 @@ class UserStoryView: UIViewController, WithViewModel {
     self.container2.addSubview(self.waveView)
     self.container2.addSubview(self.dividerLabel)
 
-    self.styleAliceLable(label: self.alice1Label)
-    self.styleAliceLable(label: self.alice2Label)
-    self.styleAliceLable(label: self.alice3Label)
+    self.styleAliceLabel(label: self.alice1Label)
+    self.styleAliceLabel(label: self.alice2Label)
+    self.styleAliceLabel(label: self.alice3Label)
     self.alice1Label.isHidden = false
 
     self.styleUserLabel(label: self.user1Label)
@@ -197,7 +197,7 @@ class UserStoryView: UIViewController, WithViewModel {
     label.font = UIFont.summaryValueFontFont()
   }
 
-  fileprivate func styleAliceLable(label: UILabel) {
+  fileprivate func styleAliceLabel(label: UILabel) {
     label.isHidden = true
     label.numberOfLines = 0
     label.lineBreakMode = .byWordWrapping
