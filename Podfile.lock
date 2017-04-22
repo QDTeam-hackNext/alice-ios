@@ -23,7 +23,6 @@ DEPENDENCIES:
   - Argo (~> 4.1.0)
   - Curry (~> 3.0.0)
   - ReactiveSwift (~> 1.1.0)
-  - Swinject (~> 2.0.0)
   - SwinjectAutoregistration (~> 2.0.0)
   - XCGLogger (~> 5.0)
 
@@ -39,6 +38,6 @@ SPEC CHECKSUMS:
   SwinjectAutoregistration: d19654c429354bad4b544c658dc92345ccdbb72c
   XCGLogger: 0b43697155d41e4a1b15fc776f319c2141646b09
 
-PODFILE CHECKSUM: 2fa3a56d0a8e27d92eece7ac2eeb1b6eb7c024cb
+PODFILE CHECKSUM: 7bc3bc9bf6b45da9b3edb7b6fbacb2e76a99a46f
 
 COCOAPODS: 1.2.0
