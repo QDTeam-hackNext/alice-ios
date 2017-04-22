@@ -127,15 +127,14 @@ class UserStoryView: UIViewController, WithViewModel {
     self.recordButton.layer.borderColor = UIColor.white.cgColor
 
     self.nameLabel.text = "\(self.generalData!.user.givenName) \(self.generalData!.user.familyName)"
-    self.ageLabel.text = "\(2017 - self.generalData!.user.birthday!.year!) yrs."
+    self.ageLabel.text = "\(self.generalData!.age) yrs."
     self.sposeLabelValue.text = "Aleksandra"
-    self.phoneLabelValue.text = "\(self.generalData!.user.phoneNumbers.first!.value.stringValue)"
-    self.emailLabelValue.text = "\(self.generalData!.user.emailAddresses[0].value)"
+    self.phoneLabelValue.text = "\(self.generalData!.phoneNumber)"
+    self.emailLabelValue.text = "\(self.generalData!.email)"
     self.coverageLabelValue.text = "\(self.generalData!.sum)€"
     self.yearsOfProtectionLabelValue.text = "\(self.generalData!.period)"
     self.monthlyFeeValueLabel.text = "\(self.generalData!.price)€"
-    let address = self.generalData!.user.postalAddresses[0].value
-    self.addressLabel.text = "\(address.street) \(address.postalCode) \(address.city), \(address.country)"
+    self.addressLabel.text = "\(self.generalData!.address)"
   }
 
   override func prepare(for segue: UIStoryboardSegue, sender: Any?) {

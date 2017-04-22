@@ -77,6 +77,17 @@ class AdditionalQuestionsView: UIViewController, WithViewModel {
     self.aliceSayPrice(price: (self.generalData?.price)!)
   }
 
+  override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+    if segue.identifier == "toDataAccess" {
+      let controller = segue.destination as! DataAccessView
+      controller.model.data = self.generalData
+    }
+  }
+
+  @IBAction func summaryTouch(_ sender: Any) {
+    self.performSegue(withIdentifier: "toDataAccess", sender: self)
+  }
+
   func healthSwitchValueChanged(_ sender: Any) {
     if self.healthExternalApp.toggleSwitch.isOn {
       self.aliceSays.isHidden = true

@@ -7,5 +7,5 @@
 //
 
 class DataAccessViewModel: ViewModel {
-
+  var data: GeneralInformationData?
 }

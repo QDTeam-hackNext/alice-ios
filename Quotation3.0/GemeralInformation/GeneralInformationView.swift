@@ -169,4 +169,21 @@ struct GeneralInformationData {
   let smokes: Bool
   let sum: Int
   let user: CNContact
+
+  var age: Int {
+    return 2017 - self.user.birthday!.year!
+  }
+
+  var phoneNumber: String {
+    return self.user.phoneNumbers.first!.value.stringValue
+  }
+
+  var email: String {
+    return self.user.emailAddresses[0].value as String
+  }
+
+  var address: String {
+    let address = self.user.postalAddresses[0].value
+    return "\(address.street) \(address.postalCode) \(address.city), \(address.country)"
+  }
 }

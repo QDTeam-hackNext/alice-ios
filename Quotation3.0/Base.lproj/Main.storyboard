@@ -972,6 +972,10 @@ your typical day</string>
                                             <constraint firstAttribute="height" constant="65" id="frM-oy-kMg"/>
                                         </constraints>
                                         <state key="normal" title="Summary"/>
+                                        <connections>
+                                            <action selector="summaryTouch:" destination="Bkn-hM-KV1" eventType="touchUpInside" id="iXn-ak-YcI"/>
+                                            <action selector="summaryTouch:" destination="Bkn-hM-KV1" eventType="touchUpOutside" id="xLh-mY-nuQ"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <constraints>

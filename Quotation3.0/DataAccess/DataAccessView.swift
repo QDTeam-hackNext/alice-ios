@@ -38,20 +38,23 @@ class DataAccessView: UIViewController, WithViewModel {
     self.container.layer.cornerRadius = 8
     self.container.clipsToBounds = true
 
+    self.nameRow.name.text = "\(self.model.data!.user.givenName) \(self.model.data!.user.familyName)"
+    self.nameRow.value.text = "\(self.model.data!.age) yrs."
+
     self.addressLabel.lineBreakMode = .byWordWrapping
     self.addressLabel.numberOfLines = 0
     self.addressLabel.textColor = UIColor.slate50
     self.addressLabel.font = UIFont.questionFontFont()
-    self.addressLabel.text = ""
+    self.addressLabel.text = "\(self.model.data!.address)"
 
     self.spouseRow.name.text = "Spouse"
-    self.spouseRow.value.text = ""
+    self.spouseRow.value.text = "Aleksandra"
 
     self.phoneRow.name.text = "Phone"
-    self.phoneRow.value.text = ""
+    self.phoneRow.value.text = "\(self.model.data!.phoneNumber)"
 
     self.emailRow.name.text = "E-mail"
-    self.emailRow.value.text = ""
+    self.emailRow.value.text = "\(self.model.data!.email)"
 
     self.jobRow.name.text = "Job"
     self.jobRow.value.text = ""
@@ -63,13 +66,13 @@ class DataAccessView: UIViewController, WithViewModel {
     self.healthRow.value.text = ""
 
     self.coverageRow.name.text = "Coverage"
-    self.coverageRow.value.text = "€"
+    self.coverageRow.value.text = "\(self.model.data!.sum)€"
 
     self.yearsOfProtectionRow.name.text = "Years of protection"
-    self.yearsOfProtectionRow.value.text = ""
+    self.yearsOfProtectionRow.value.text = "\(self.model.data!.period)"
 
     self.monthlyFeeRow.name.text = "Monthly fee"
-    self.monthlyFeeRow.value.text = ""
+    self.monthlyFeeRow.value.text = "\(self.model.data!.price)€"
     self.monthlyFeeRow.value.font = UIFont.partialPriceFontFont()
     self.monthlyFeeRow.value.textColor = UIColor.green
 
