@@ -19,18 +19,25 @@ class UserInformation {
 
     switch authorizationStatus {
     case .authorized:
-//      CKContainer.default().requestApplicationPermission(.userDiscoverability) {
-//        status, error in
-//        if status == .granted {
-//          DispatchQueue.global(qos: .background).async {
-//            self.loadUserContact(callback: {
-//              userData in
-//              self.userData = userData
+      CKContainer.default().requestApplicationPermission(.userDiscoverability) {
+        status, error in
+        let result = status == .granted || status == .couldNotComplete // .couldnotComplete result occurs on the symulator
+        if result {
+          if status == .couldNotComplete {
+            completionHandler(true)
+            return
+          }
+          DispatchQueue.global(qos: .background).async {
+            self.loadUserContact(callback: {
+              userData in
+              self.userData = userData
               completionHandler(true)
-//            })
-//          }
-//        }
-//      }
+            })
+          }
+        } else {
+          completionHandler(false)
+        }
+      }
 
     case .denied, .notDetermined:
       let contactStore = CNContactStore()
@@ -39,9 +46,7 @@ class UserInformation {
         if access {
           CKContainer.default().requestApplicationPermission(.userDiscoverability) {
             status, error in
-            if status == .granted {
-              completionHandler(access)
-            }
+            completionHandler(status == .granted || status == .couldNotComplete)
           }
         } else {
           if authorizationStatus == CNAuthorizationStatus.denied {

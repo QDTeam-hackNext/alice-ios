@@ -121,13 +121,6 @@ class WelcomeView: UIViewController, WithViewModel {
           self.messageLabel.text = input
         }
       })
-    } else {
-      self.model.requestContactsAccess(callback: {
-        status in
-        if status {
-          self.performSegue(withIdentifier: "toGeneralInfrmation", sender: self)
-        }
-      })
     }
   }
 
@@ -143,6 +136,12 @@ class WelcomeView: UIViewController, WithViewModel {
     objc_sync_enter(self)
     self.model.speak(text: self.questionLable.text!) {
       self.recordButton.isEnabled = true
+      self.model.requestContactsAccess(callback: {
+        status in
+        if status {
+          self.performSegue(withIdentifier: "toGeneralInfrmation", sender: self)
+        }
+      })
     }
     self.displayLink?.invalidate()
     self.voiceAnimation.isHidden = true
@@ -151,6 +150,7 @@ class WelcomeView: UIViewController, WithViewModel {
     self.questionLable.isHidden = false
     self.recordButton.setImage(UIImage(named: "icoTick"), for: .normal)
     self.recordButton.isEnabled = false
+
     objc_sync_exit(self)
   }
 
