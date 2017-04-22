@@ -427,34 +427,49 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="r8y-Nl-lei" userLabel="container">
                                 <rect key="frame" x="0.0" y="20" width="375" height="647"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="L4B-bA-3QT" userLabel="alice1">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="0" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="L4B-bA-3QT" userLabel="alice1">
                                         <rect key="frame" x="20" y="28" width="158" height="41"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="41" id="VJ1-RL-hef"/>
+                                        </constraints>
                                         <string key="text">Maciej, tell me about
 your typical day</string>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7wS-sr-Kc0" userLabel="user1">
-                                        <rect key="frame" x="313" y="89" width="42" height="21"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="0" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7wS-sr-Kc0" userLabel="user1">
+                                        <rect key="frame" x="313" y="89" width="42" height="20"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="20" id="Lyu-am-WWW"/>
+                                        </constraints>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6hT-kX-QYl" userLabel="alice2">
-                                        <rect key="frame" x="20" y="130" width="42" height="21"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6hT-kX-QYl" userLabel="alice2">
+                                        <rect key="frame" x="20" y="129" width="42" height="21"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="21" id="tdP-Xq-nPn"/>
+                                        </constraints>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qLI-Sp-rAJ" userLabel="user2">
-                                        <rect key="frame" x="313" y="171" width="42" height="21"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="0" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qLI-Sp-rAJ" userLabel="user2">
+                                        <rect key="frame" x="313" y="170" width="42" height="21"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="21" id="l3s-Db-8eh"/>
+                                        </constraints>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MGs-36-QHd" userLabel="alice3">
-                                        <rect key="frame" x="20" y="212" width="42" height="21"/>
+                                        <rect key="frame" x="20" y="211" width="42" height="21"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="21" id="hrT-AG-73S"/>
+                                        </constraints>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
@@ -501,11 +516,15 @@ your typical day</string>
                                     <constraint firstItem="lIH-XY-8l8" firstAttribute="top" secondItem="FGz-q1-jlK" secondAttribute="bottom" constant="56" id="YDN-1k-DL4"/>
                                     <constraint firstItem="MGs-36-QHd" firstAttribute="leading" secondItem="r8y-Nl-lei" secondAttribute="leading" constant="20" id="c3o-k3-4G7"/>
                                     <constraint firstItem="GTt-AZ-y4f" firstAttribute="centerX" secondItem="lIH-XY-8l8" secondAttribute="centerX" id="cbZ-PT-Qb0"/>
+                                    <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="MGs-36-QHd" secondAttribute="trailing" constant="20" id="fAC-Yx-2Y5"/>
                                     <constraint firstAttribute="bottom" secondItem="lIH-XY-8l8" secondAttribute="bottom" id="ggc-Xg-KoN"/>
                                     <constraint firstAttribute="trailing" secondItem="qLI-Sp-rAJ" secondAttribute="trailing" constant="20" id="hMT-ta-Pdo"/>
                                     <constraint firstItem="7wS-sr-Kc0" firstAttribute="top" secondItem="L4B-bA-3QT" secondAttribute="bottom" constant="20" id="ozU-D6-ntA"/>
                                     <constraint firstItem="GTt-AZ-y4f" firstAttribute="centerY" secondItem="lIH-XY-8l8" secondAttribute="centerY" id="pR5-dx-G9g"/>
+                                    <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="6hT-kX-QYl" secondAttribute="trailing" constant="20" id="raS-mb-P9t"/>
                                     <constraint firstItem="6hT-kX-QYl" firstAttribute="top" secondItem="7wS-sr-Kc0" secondAttribute="bottom" constant="20" id="sH8-fX-OYX"/>
+                                    <constraint firstItem="7wS-sr-Kc0" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="r8y-Nl-lei" secondAttribute="leading" constant="40" id="tvy-uK-chh"/>
+                                    <constraint firstItem="qLI-Sp-rAJ" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="r8y-Nl-lei" secondAttribute="leading" constant="40" id="urA-xa-W9D"/>
                                     <constraint firstAttribute="trailing" secondItem="FGz-q1-jlK" secondAttribute="trailing" id="y1U-ln-B6L"/>
                                     <constraint firstAttribute="trailing" secondItem="lIH-XY-8l8" secondAttribute="trailing" id="zBx-Hz-VFM"/>
                                 </constraints>
@@ -943,14 +962,17 @@ get few things from:</string>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="tuD-fR-LEl" userLabel="overlay">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tap and hold mic to test it…" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dR0-K7-8QE" userLabel="messageLabel">
-                                        <rect key="frame" x="20" y="48" width="335" height="21"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tap and hold mic to test it…" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dR0-K7-8QE" userLabel="messageLabel">
+                                        <rect key="frame" x="20" y="48" width="335" height="20"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="20" id="b3l-Go-Rha"/>
+                                        </constraints>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Xml-GW-lHU" userLabel="questionLabel">
-                                        <rect key="frame" x="20" y="95" width="315" height="21"/>
+                                        <rect key="frame" x="20" y="94" width="315" height="21"/>
                                         <string key="text">I’d love to know you better.
 Can you share with me your card?</string>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
