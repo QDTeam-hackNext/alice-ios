@@ -72,13 +72,7 @@ class UserInformation {
     container.fetchUserRecordID(completionHandler: {
       record, error in
       if error != nil {
-        let devContact = CNMutableContact()
-        devContact.givenName = "Darek"
-        devContact.birthday = DateComponents()
-        devContact.birthday?.day = 4
-        devContact.birthday?.month = 5
-        devContact.birthday?.year = 1986
-        callback(devContact)
+        callback(self.devContact())
         return
       }
       if let r = record {
@@ -111,5 +105,26 @@ class UserInformation {
         })
       }
     })
+  }
+
+  fileprivate func devContact() -> CNContact {
+    let devContact = CNMutableContact()
+    devContact.givenName = "Darek"
+    devContact.birthday = DateComponents()
+    devContact.birthday?.day = 4
+    devContact.birthday?.month = 5
+    devContact.birthday?.year = 1986
+    devContact.emailAddresses.append(CNLabeledValue(label: "",
+                                                    value: "dariusz.luksza@gmail.com"))
+    devContact.phoneNumbers.append(CNLabeledValue(label: "",
+                                                  value: CNPhoneNumber(stringValue: "222 333 444")))
+    let address = CNMutablePostalAddress()
+    address.city = "Berlin"
+    address.postalCode = "10555"
+    address.street = "Alianz Str. 12"
+    address.country = "Germany"
+    devContact.postalAddresses.append(CNLabeledValue(label: "", value: address))
+
+    return devContact
   }
 }

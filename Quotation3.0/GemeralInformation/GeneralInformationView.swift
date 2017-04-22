@@ -85,10 +85,8 @@ class GeneralIfomationView: UIViewController, WithViewModel {
       let data = GeneralInformationData(price: self.price,
                                         period: Int(self.secondQuestionSlider.value),
                                         smokes: self.thirdQuestionSwitch.isOn,
-                                        sum: Int(ceil(self.firstQuestionSlider.value / 5000.0) * 5000)
-//        ,
-//                                        user: self.model.userData!
-      )
+                                        sum: Int(ceil(self.firstQuestionSlider.value / 5000.0) * 5000),
+                                        user: self.model.userData!)
       nextControler.setData(generalData: data)
     }
   }
@@ -170,5 +168,5 @@ struct GeneralInformationData {
   let period: Int
   let smokes: Bool
   let sum: Int
-//  let user: CNContact
+  let user: CNContact
 }

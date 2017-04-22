@@ -73,7 +73,9 @@ class UserStoryView: UIViewController, WithViewModel {
 
     self.monthlyFeeValueLabel.textColor = UIColor.green
     self.monthlyFeeValueLabel.font = UIFont.partialPriceFontFont()
-    self.aliceSays.text.text = "Maciej, tell me about your typical day"
+    let dayQuestion = "\(self.generalData?.user.givenName ?? ""), tell me about your typical day"
+    self.aliceSays.text.text = dayQuestion
+    self.alice1Label.text = dayQuestion
 
     self.applyButton.backgroundColor = UIColor.vividPurple
     self.applyButton.layer.cornerRadius = 8
@@ -124,16 +126,16 @@ class UserStoryView: UIViewController, WithViewModel {
     self.recordButton.layer.borderWidth = 2
     self.recordButton.layer.borderColor = UIColor.white.cgColor
 
-//    self.nameLabel.text = "\(self.generalData!.user.givenName) \(self.generalData!.user.familyName)"
-//    self.ageLabel.text = "\(2017 - self.generalData!.user.birthday!.year!) yrs."
-//    self.sposeLabelValue.text = "Aleksandra"
-//    self.phoneLabelValue.text = "\(self.generalData!.user.phoneNumbers.first!.value.stringValue)"
-//    self.emailLabelValue.text = "\(self.generalData!.user.emailAddresses[0].value)"
+    self.nameLabel.text = "\(self.generalData!.user.givenName) \(self.generalData!.user.familyName)"
+    self.ageLabel.text = "\(2017 - self.generalData!.user.birthday!.year!) yrs."
+    self.sposeLabelValue.text = "Aleksandra"
+    self.phoneLabelValue.text = "\(self.generalData!.user.phoneNumbers.first!.value.stringValue)"
+    self.emailLabelValue.text = "\(self.generalData!.user.emailAddresses[0].value)"
     self.coverageLabelValue.text = "\(self.generalData!.sum)€"
     self.yearsOfProtectionLabelValue.text = "\(self.generalData!.period)"
     self.monthlyFeeValueLabel.text = "\(self.generalData!.price)€"
-//    let address = self.generalData!.user.postalAddresses[0].value
-//    self.addressLabel.text = "\(address.street) \(address.postalCode) \(address.city), \(address.country)"
+    let address = self.generalData!.user.postalAddresses[0].value
+    self.addressLabel.text = "\(address.street) \(address.postalCode) \(address.city), \(address.country)"
   }
 
   override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
