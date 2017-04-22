@@ -18,6 +18,8 @@
 		C744E8861E80312100DE2E7F /* GeneralInformationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C744E8851E80312100DE2E7F /* GeneralInformationView.swift */; };
 		C744E8881E80313500DE2E7F /* GeneralInforationViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C744E8871E80313500DE2E7F /* GeneralInforationViewModel.swift */; };
 		C744E88A1E8039D700DE2E7F /* Recorder.swift in Sources */ = {isa = PBXBuildFile; fileRef = C744E8891E8039D700DE2E7F /* Recorder.swift */; };
+		C758FAE81EABF69E00249393 /* InformationRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C758FAE71EABF69E00249393 /* InformationRowView.swift */; };
+		C758FAEA1EABF6A600249393 /* InformationRowView.xib in Resources */ = {isa = PBXBuildFile; fileRef = C758FAE91EABF6A600249393 /* InformationRowView.xib */; };
 		C76BC4E61E83399100475956 /* InterviewQuestion.swift in Sources */ = {isa = PBXBuildFile; fileRef = C76BC4E51E83399100475956 /* InterviewQuestion.swift */; };
 		C77629811E893BC00085CE9A /* PassKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C77629801E893BC00085CE9A /* PassKit.framework */; };
 		C791D5DB1E86099200BE7088 /* CloudKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C791D5DA1E86099200BE7088 /* CloudKit.framework */; };
@@ -100,6 +102,8 @@
 		C744E8851E80312100DE2E7F /* GeneralInformationView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GeneralInformationView.swift; sourceTree = "<group>"; };
 		C744E8871E80313500DE2E7F /* GeneralInforationViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GeneralInforationViewModel.swift; sourceTree = "<group>"; };
 		C744E8891E8039D700DE2E7F /* Recorder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Recorder.swift; sourceTree = "<group>"; };
+		C758FAE71EABF69E00249393 /* InformationRowView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InformationRowView.swift; sourceTree = "<group>"; };
+		C758FAE91EABF6A600249393 /* InformationRowView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = InformationRowView.xib; sourceTree = "<group>"; };
 		C76BC4E51E83399100475956 /* InterviewQuestion.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InterviewQuestion.swift; sourceTree = "<group>"; };
 		C77629801E893BC00085CE9A /* PassKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = PassKit.framework; path = System/Library/Frameworks/PassKit.framework; sourceTree = SDKROOT; };
 		C791D5DA1E86099200BE7088 /* CloudKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CloudKit.framework; path = System/Library/Frameworks/CloudKit.framework; sourceTree = SDKROOT; };
@@ -269,6 +273,15 @@
 			path = GemeralInformation;
 			sourceTree = "<group>";
 		};
+		C758FAE61EABF67100249393 /* InformationRow */ = {
+			isa = PBXGroup;
+			children = (
+				C758FAE91EABF6A600249393 /* InformationRowView.xib */,
+				C758FAE71EABF69E00249393 /* InformationRowView.swift */,
+			);
+			path = InformationRow;
+			sourceTree = "<group>";
+		};
 		C798F8441E82D453002D7C07 /* Welcome */ = {
 			isa = PBXGroup;
 			children = (
@@ -336,6 +349,7 @@
 			children = (
 				C7E6EC6B1EAA782300EC63CE /* AliceSays */,
 				C74292991EAAAC3C00EFDDE5 /* ExternalApp */,
+				C758FAE61EABF67100249393 /* InformationRow */,
 			);
 			path = UI;
 			sourceTree = "<group>";
@@ -540,6 +554,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C758FAEA1EABF6A600249393 /* InformationRowView.xib in Resources */,
 				C744E8551E80184C00DE2E7F /* Assets.xcassets in Resources */,
 				C742929B1EAAAC7900EFDDE5 /* ExternalAppView.xib in Resources */,
 				C7D22D2B1E8300B70062D199 /* sounds in Resources */,
@@ -733,6 +748,7 @@
 				C7E739691E8551D500F14AAF /* UIFont+Additions.swift in Sources */,
 				C798F8571E82D67A002D7C07 /* WelcomeViewModel.swift in Sources */,
 				C798F8591E82D6A3002D7C07 /* UserStoryViewModel.swift in Sources */,
+				C758FAE81EABF69E00249393 /* InformationRowView.swift in Sources */,
 				C798F8631E82DF1D002D7C07 /* ViewModel.swift in Sources */,
 				C798F85B1E82D6BC002D7C07 /* AdditionalQuestionsViewModel.swift in Sources */,
 				C7E739671E8551AC00F14AAF /* UIColor+Additions.swift in Sources */,
