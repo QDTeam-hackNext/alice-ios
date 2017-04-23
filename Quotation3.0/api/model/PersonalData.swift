@@ -14,7 +14,6 @@ struct PersonalData {
   let id: String
   let input: String
   let required: [String]
-  
 }
 
 extension PersonalData {
@@ -31,3 +30,14 @@ struct PersonalResponse {
   let id: String?
   let message: String?
 }
+
+extension PersonalResponse: Decodable {
+  static func decode(_ json: JSON) -> Decoded<PersonalResponse> {
+    return curry(PersonalResponse.init)
+      <^> json <| "collexted"
+      <*> json <|| "fields"
+      <*> json <|? "id"
+      <*> json <|? "message"
+  }
+}
+
