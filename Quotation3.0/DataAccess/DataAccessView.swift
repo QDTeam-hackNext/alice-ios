@@ -94,4 +94,15 @@ class DataAccessView: UIViewController, WithViewModel {
     self.disclamierLabel.textAlignment = .center
     self.disclamierLabel.text = "This insurance proposal will land directly in your inbox."
   }
+
+  override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+    if segue.identifier == "toSummary" {
+      let controller = segue.destination as! SummaryView
+      controller.model.data = self.model.data
+    }
+  }
+
+  @IBAction func saveTouch(_ sender: Any) {
+    self.performSegue(withIdentifier: "toSummary", sender: self)
+  }
 }
