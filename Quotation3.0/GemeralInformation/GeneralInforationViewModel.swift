@@ -34,7 +34,7 @@ class GeneralInformationViewModel: ViewModel {
       result in
       self.fetchUserData()
       if let r = result {
-        callback("\(r)")
+        callback("\(r.premium.netto)")
       }
     }
   }

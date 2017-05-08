@@ -22,15 +22,14 @@ class Backend {
     Alamofire.request(urls.analysis)
       .responseJSON(completionHandler: {
         resp in
-        if let data = resp.data,
-            resp.response?.statusCode == 200 {
-          let decoded: AnalyzeResult? = decode(data)
+        if let json = resp.result.value {
+          let decoded: AnalyzeResult? = decode(json)
           callback(decoded)
         }
       })
   }
 
-  func quickQuote(_ quote: Quote, callback: @escaping (String?) -> Void) {
+  func quickQuote(_ quote: Quote, callback: @escaping (QuoteResult?) -> Void) {
     Alamofire.request(self.urls.quickQuote,
                       method: .post,
                       parameters: quote.toJson(),
@@ -38,10 +37,9 @@ class Backend {
                       headers: headers)
       .responseJSON(completionHandler: {
         resp in
-        if let data = resp.result.value as? NSDictionary,
-            resp.response?.statusCode == 200 {
-          let netto = (data["premium"] as! NSDictionary)["netto"] as? Double
-          callback("\(netto!)")
+        if let json = resp.result.value {
+          let decoded: QuoteResult? = decode(json)
+          callback(decoded)
         }
       })
   }
@@ -54,15 +52,9 @@ class Backend {
                       headers: headers)
       .responseJSON(completionHandler: {
         resp in
-        if let data = resp.result.value as? NSDictionary,
-            resp.response?.statusCode == 200 {
-          let collected = data["collected"] as! Bool
-          let fields = data["fields"] as! [String]
-          let id = data["id"] as? String
-          let message = data["message"] as? String
-
-          let personal = PersonalResponse(collected: collected, fields: fields, id: id, message: message)
-          callback(personal)
+        if let json = resp.result.value {
+          let decoded: PersonalResponse? = decode(json)
+          callback(decoded)
         }
       })
   }

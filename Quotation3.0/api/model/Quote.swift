@@ -53,22 +53,22 @@ extension Quote {
 }
 
 struct QuotePremium {
-//  let brutto: Double
+  let brutto: Double
   let netto: Double
-//  let provision: Double
+  let provision: Double
 }
 
 extension QuotePremium: Decodable {
   static func decode(_ json: JSON) -> Decoded<QuotePremium> {
     return curry(QuotePremium.init)
-//      <^> json <| "brutto"
-      <^> json <| "netto"
-//      <*> json <| "provision"
+      <^> json <| "brutto"
+      <*> json <| "netto"
+      <*> json <| "provision"
   }
 }
 
 struct QuoteResult {
-  let check: Int
+  let check: Bool
   let premium: QuotePremium
 }
 
