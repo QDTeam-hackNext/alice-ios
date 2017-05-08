@@ -18,24 +18,29 @@ class UserStoryViewModel: ViewModel {
     self.recorder = recorder
   }
 
-  func discoverUserSata(uiUpdateCallback: @escaping (String, Bool) -> Void,
-                        updateAliceCallback: @escaping (_ msg: String?, _ foundKeys: [String]?) -> Void) {
+  func discoverUserData(userDataNotFound: @escaping (String, Bool) -> Void,
+                        fundUserData: @escaping (_ msg: String?, _ foundKeys: [String]?) -> Void) {
     self.recorder.start(recordingCompleted: {
       text, status in
-      uiUpdateCallback(text, status)
-//      if status {
-//        let id = self.conversationId.isEmpty ? "start" : self.conversationId
-//        let data = PersonalData(id: id, input: text, required: ["occupation", "healthy", "sport"])
-//        self.backend.personalData(input: data, callback: {
-//          response in
-//          if let r = response,
-//            let id = r.id {
-//            self.conversationId = id
-//          }
-//          AppDelegate.log.info("r: \(response?.collected)")
-//          updateAliceCallback(response?.message, response?.fields)
-//        })
-//      }
+      if status {
+        let id = self.conversationId.isEmpty ? "start" : self.conversationId
+        let data = PersonalData(id: id, input: text, required: ["occupation", "healthy", "sport"])
+        self.backend.personalData(input: data, callback: {
+          response in
+          if let r = response {
+            if let id = r.id {
+              self.conversationId = id
+            }
+            if r.collected {
+              fundUserData(r.message, r.fields)
+              return
+            }
+          }
+          userDataNotFound(text, status)
+        })
+      } else {
+        userDataNotFound(text, status)
+      }
     })
   }
 

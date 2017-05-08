@@ -156,17 +156,19 @@ class UserStoryView: UIViewController, WithViewModel {
     self.displayLink = CADisplayLink(target: self, selector: #selector(self.updateMeters))
     self.displayLink?.add(to: RunLoop.current, forMode: RunLoopMode.commonModes)
     self.waveView.isHidden = false
-    self.model.discoverUserSata(uiUpdateCallback: {
+    self.model.discoverUserData(userDataNotFound: {
       text, status in
       self.user1Label.isHidden = false
       self.user1Label.text = text
       if status {
         self.alice2Label.isHidden = false
         self.readyForNextStep = true
-        self.alice2Label.text = "Great, let's continue!";
+        self.alice2Label.text = text.isEmpty ? "I can't hear you :(" : text;
         self.recordButton.setImage(UIImage(named: "icoTick"), for: .normal)
+      } else {
+        self.alice1Label.text = "I can't hear you :( Could you repeat please?";
       }
-    }, updateAliceCallback: {
+    }, fundUserData: {
       text, fields in
       if let f = fields,
           f.count > 0 {
