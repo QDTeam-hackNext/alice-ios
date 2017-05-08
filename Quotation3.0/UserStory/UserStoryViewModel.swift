@@ -18,28 +18,23 @@ class UserStoryViewModel: ViewModel {
     self.recorder = recorder
   }
 
-  func discoverUserData(userDataNotFound: @escaping (String, Bool) -> Void,
-                        fundUserData: @escaping (_ msg: String?, _ foundKeys: [String]?) -> Void) {
+  func discoverUserData(userInput: @escaping (String, Bool) -> Void,
+                        aliceResponse: @escaping (String?, [String]?) -> Void) {
     self.recorder.start(recordingCompleted: {
       text, status in
+      userInput(text, status)
       if status {
         let id = self.conversationId.isEmpty ? "start" : self.conversationId
         let data = PersonalData(id: id, input: text, required: ["occupation", "healthy", "sport"])
         self.backend.personalData(input: data, callback: {
-          response in
-          if let r = response {
+          resp in
+          if let r = resp {
             if let id = r.id {
               self.conversationId = id
             }
-            if r.collected {
-              fundUserData(r.message, r.fields)
-              return
-            }
+            aliceResponse(resp?.message, resp?.fields)
           }
-          userDataNotFound(text, status)
         })
-      } else {
-        userDataNotFound(text, status)
       }
     })
   }

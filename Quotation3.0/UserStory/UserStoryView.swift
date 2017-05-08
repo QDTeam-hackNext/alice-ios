@@ -156,27 +156,23 @@ class UserStoryView: UIViewController, WithViewModel {
     self.displayLink = CADisplayLink(target: self, selector: #selector(self.updateMeters))
     self.displayLink?.add(to: RunLoop.current, forMode: RunLoopMode.commonModes)
     self.waveView.isHidden = false
-    self.model.discoverUserData(userDataNotFound: {
-      text, status in
-      self.user1Label.isHidden = false
-      self.user1Label.text = text
-      if status {
-        self.alice2Label.isHidden = false
-        self.readyForNextStep = true
-        self.alice2Label.text = text.isEmpty ? "I can't hear you :(" : text;
-        self.recordButton.setImage(UIImage(named: "icoTick"), for: .normal)
+    self.model.discoverUserData(userInput: {
+      userText, status in
+      if userText.isEmpty {
+        self.alice1Label.text = "I can't hear you, could you please repeat?"
       } else {
-        self.alice1Label.text = "I can't hear you :( Could you repeat please?";
+        self.user1Label.isHidden = false
+        self.user1Label.text = userText
       }
-    }, fundUserData: {
-      text, fields in
+    }, aliceResponse: {
+      aliceText, fields in
       if let f = fields,
-          f.count > 0 {
+        f.count > 0 {
         self.recordButton.setImage(UIImage(named: "icoTick"), for: .normal)
         self.readyForNextStep = true
         return
       }
-      if let t = text {
+      if let t = aliceText {
         self.alice2Label.isHidden = false
         self.alice2Label.text = t;
       }

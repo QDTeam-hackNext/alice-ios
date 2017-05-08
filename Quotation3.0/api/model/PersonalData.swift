@@ -34,7 +34,7 @@ struct PersonalResponse {
 extension PersonalResponse: Decodable {
   static func decode(_ json: JSON) -> Decoded<PersonalResponse> {
     return curry(PersonalResponse.init)
-      <^> json <| "collexted"
+      <^> json <| "collected"
       <*> json <|| "fields"
       <*> json <|? "id"
       <*> json <|? "message"
