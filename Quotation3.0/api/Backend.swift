@@ -9,6 +9,8 @@
 import Argo
 import Alamofire
 
+fileprivate let headers = ["Content-Type": "application/json;charset=utf-8"]
+
 class Backend {
   fileprivate let urls: BackendUrls
 
@@ -33,7 +35,7 @@ class Backend {
                       method: .post,
                       parameters: quote.toJson(),
                       encoding: JSONEncoding.default,
-                      headers: ["Content-Type": "application/json;charset=utf-8"])
+                      headers: headers)
       .responseJSON(completionHandler: {
         resp in
         if let data = resp.result.value as? NSDictionary,
@@ -45,7 +47,11 @@ class Backend {
   }
 
   func personalData(input: PersonalData, callback: @escaping (PersonalResponse?) -> Void) {
-    Alamofire.request(self.urls.personalData, method: .post, parameters: input.toJson(), encoding: JSONEncoding.default, headers: ["Content-Type": "application/json;charset=utf-8"])
+    Alamofire.request(self.urls.personalData,
+                      method: .post,
+                      parameters: input.toJson(),
+                      encoding: JSONEncoding.default,
+                      headers: headers)
       .responseJSON(completionHandler: {
         resp in
         if let data = resp.result.value as? NSDictionary,
