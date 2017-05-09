@@ -19,13 +19,13 @@ class UserStoryViewModel: ViewModel {
   }
 
   func discoverUserData(userInput: @escaping (String, Bool) -> Void,
-                        aliceResponse: @escaping (String?, [String]?) -> Void) {
+                        aliceResponse: @escaping (String?, [PersonalData.Field: String]?) -> Void) {
     self.recorder.start(recordingCompleted: {
       text, status in
       userInput(text, status)
       if status {
         let id = self.conversationId.isEmpty ? "start" : self.conversationId
-        let data = PersonalData(id: id, input: text, required: ["occupation", "healthy", "sport"])
+        let data = PersonalData(id: id, input: text, required: [.occupation, .healthy, .sport])
         self.backend.personalData(input: data, callback: {
           resp in
           if let r = resp {
