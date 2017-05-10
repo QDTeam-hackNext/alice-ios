@@ -119,6 +119,9 @@ class WelcomeView: UIViewController, WithViewModel {
         input, status in
         DispatchQueue.main.async {
           self.messageLabel.text = input
+          if status {
+            self.askForContactAccess()
+          }
         }
       })
     }
@@ -134,6 +137,19 @@ class WelcomeView: UIViewController, WithViewModel {
 
   fileprivate func stopRecording() {
     objc_sync_enter(self)
+    self.displayLink?.invalidate()
+    self.voiceAnimation.isHidden = true
+    self.model.stopRecording()
+    self.recordButton.layer.borderColor = UIColor.white.cgColor
+
+    objc_sync_exit(self)
+  }
+
+  fileprivate func askForContactAccess() {
+    self.questionLable.isHidden = false
+    self.recordButton.setImage(UIImage(named: "icoTick"), for: .normal)
+    self.recordButton.isEnabled = false
+
     self.model.speak(text: self.questionLable.text!) {
       self.recordButton.isEnabled = true
       self.model.requestContactsAccess(callback: {
@@ -143,15 +159,6 @@ class WelcomeView: UIViewController, WithViewModel {
         }
       })
     }
-    self.displayLink?.invalidate()
-    self.voiceAnimation.isHidden = true
-    self.model.stopRecording()
-    self.recordButton.layer.borderColor = UIColor.white.cgColor
-    self.questionLable.isHidden = false
-    self.recordButton.setImage(UIImage(named: "icoTick"), for: .normal)
-    self.recordButton.isEnabled = false
-
-    objc_sync_exit(self)
   }
 
   func updateMeters() {
