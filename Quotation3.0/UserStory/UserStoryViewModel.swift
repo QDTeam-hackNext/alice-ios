@@ -10,7 +10,10 @@ class UserStoryViewModel: ViewModel {
   fileprivate let backend: Backend
   fileprivate let recorder: Recorder
 
+  fileprivate let requiredFields: [PersonalData.Field] = [.occupation, .healthy, .sport]
+
   fileprivate var conversationId = ""
+  fileprivate var personalData: [PersonalData.Field: String] = [:]
 
   init(backend: Backend,
        recorder: Recorder) {
@@ -19,20 +22,23 @@ class UserStoryViewModel: ViewModel {
   }
 
   func discoverUserData(userInput: @escaping (String, Bool) -> Void,
-                        aliceResponse: @escaping (String?, [PersonalData.Field: String]?) -> Void) {
+                        aliceResponse: @escaping (String?, [PersonalData.Field: String]) -> Void) {
     self.recorder.start(recordingCompleted: {
       text, status in
       userInput(text, status)
       if status {
         let id = self.conversationId.isEmpty ? "start" : self.conversationId
-        let data = PersonalData(id: id, input: text, required: [.occupation, .healthy, .sport])
+        let data = PersonalData(id: id, input: text, required: self.requiredFields)
         self.backend.personalData(input: data, callback: {
           resp in
           if let r = resp {
             if let id = r.id {
               self.conversationId = id
             }
-            aliceResponse(resp?.message, resp?.fields)
+            if r.fields.count > self.personalData.count {
+              self.personalData = r.fields
+            }
+            aliceResponse(r.message, r.fields)
           }
         })
       }
@@ -41,5 +47,9 @@ class UserStoryViewModel: ViewModel {
 
   func stopRecording() {
     self.recorder.stop()
+  }
+
+  func canContinue() -> Bool {
+    return self.requiredFields.count == self.personalData.count
   }
 }

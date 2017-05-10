@@ -447,33 +447,6 @@ your typical day</string>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6hT-kX-QYl" userLabel="alice2">
-                                        <rect key="frame" x="20" y="129" width="42" height="21"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="21" id="tdP-Xq-nPn"/>
-                                        </constraints>
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                        <nil key="textColor"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="0" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qLI-Sp-rAJ" userLabel="user2">
-                                        <rect key="frame" x="313" y="170" width="42" height="21"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="21" id="l3s-Db-8eh"/>
-                                        </constraints>
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                        <nil key="textColor"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MGs-36-QHd" userLabel="alice3">
-                                        <rect key="frame" x="20" y="211" width="42" height="21"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="21" id="hrT-AG-73S"/>
-                                        </constraints>
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                        <nil key="textColor"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="FGz-q1-jlK" customClass="WaveformView" customModule="Alice_Alianz" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="389" width="375" height="82"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -510,22 +483,13 @@ your typical day</string>
                                     <constraint firstItem="L4B-bA-3QT" firstAttribute="leading" secondItem="r8y-Nl-lei" secondAttribute="leading" constant="20" id="2W0-KF-4wJ"/>
                                     <constraint firstAttribute="trailing" secondItem="7wS-sr-Kc0" secondAttribute="trailing" constant="20" id="4V9-Xe-E6o"/>
                                     <constraint firstItem="lIH-XY-8l8" firstAttribute="leading" secondItem="r8y-Nl-lei" secondAttribute="leading" id="AQg-no-6Sz"/>
-                                    <constraint firstItem="6hT-kX-QYl" firstAttribute="leading" secondItem="r8y-Nl-lei" secondAttribute="leading" constant="20" id="FQA-oq-YRi"/>
-                                    <constraint firstItem="MGs-36-QHd" firstAttribute="top" secondItem="qLI-Sp-rAJ" secondAttribute="bottom" constant="20" id="VGD-m5-Yj4"/>
-                                    <constraint firstItem="qLI-Sp-rAJ" firstAttribute="top" secondItem="6hT-kX-QYl" secondAttribute="bottom" constant="20" id="XbN-wL-OHv"/>
                                     <constraint firstItem="lIH-XY-8l8" firstAttribute="top" secondItem="FGz-q1-jlK" secondAttribute="bottom" constant="56" id="YDN-1k-DL4"/>
-                                    <constraint firstItem="MGs-36-QHd" firstAttribute="leading" secondItem="r8y-Nl-lei" secondAttribute="leading" constant="20" id="c3o-k3-4G7"/>
                                     <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="L4B-bA-3QT" secondAttribute="trailing" constant="20" id="c7v-Rc-cxp"/>
                                     <constraint firstItem="GTt-AZ-y4f" firstAttribute="centerX" secondItem="lIH-XY-8l8" secondAttribute="centerX" id="cbZ-PT-Qb0"/>
-                                    <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="MGs-36-QHd" secondAttribute="trailing" constant="20" id="fAC-Yx-2Y5"/>
                                     <constraint firstAttribute="bottom" secondItem="lIH-XY-8l8" secondAttribute="bottom" id="ggc-Xg-KoN"/>
-                                    <constraint firstAttribute="trailing" secondItem="qLI-Sp-rAJ" secondAttribute="trailing" constant="20" id="hMT-ta-Pdo"/>
                                     <constraint firstItem="7wS-sr-Kc0" firstAttribute="top" secondItem="L4B-bA-3QT" secondAttribute="bottom" constant="20" id="ozU-D6-ntA"/>
                                     <constraint firstItem="GTt-AZ-y4f" firstAttribute="centerY" secondItem="lIH-XY-8l8" secondAttribute="centerY" id="pR5-dx-G9g"/>
-                                    <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="6hT-kX-QYl" secondAttribute="trailing" constant="20" id="raS-mb-P9t"/>
-                                    <constraint firstItem="6hT-kX-QYl" firstAttribute="top" secondItem="7wS-sr-Kc0" secondAttribute="bottom" constant="20" id="sH8-fX-OYX"/>
                                     <constraint firstItem="7wS-sr-Kc0" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="r8y-Nl-lei" secondAttribute="leading" constant="40" id="tvy-uK-chh"/>
-                                    <constraint firstItem="qLI-Sp-rAJ" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="r8y-Nl-lei" secondAttribute="leading" constant="40" id="urA-xa-W9D"/>
                                     <constraint firstAttribute="trailing" secondItem="FGz-q1-jlK" secondAttribute="trailing" id="y1U-ln-B6L"/>
                                     <constraint firstAttribute="trailing" secondItem="lIH-XY-8l8" secondAttribute="trailing" id="zBx-Hz-VFM"/>
                                 </constraints>
@@ -555,9 +519,6 @@ your typical day</string>
                     <connections>
                         <outlet property="addressLabel" destination="SCF-ZP-HQw" id="qUw-oF-haj"/>
                         <outlet property="ageLabel" destination="iA5-Wm-xh2" id="7Mi-sa-yVq"/>
-                        <outlet property="alice1Label" destination="L4B-bA-3QT" id="mtb-7L-f4h"/>
-                        <outlet property="alice2Label" destination="6hT-kX-QYl" id="Wfd-jD-Kxo"/>
-                        <outlet property="alice3Label" destination="MGs-36-QHd" id="nsD-0G-tVs"/>
                         <outlet property="aliceSays" destination="BnD-AX-E17" id="wzK-Ht-Qnp"/>
                         <outlet property="applyButton" destination="R76-ID-9Gk" id="aWZ-Vi-Pk0"/>
                         <outlet property="container" destination="DPB-HD-72v" id="m5T-pw-cln"/>
@@ -571,8 +532,6 @@ your typical day</string>
                         <outlet property="recordButton" destination="GTt-AZ-y4f" id="ML9-E1-Em8"/>
                         <outlet property="recordingBacground" destination="lIH-XY-8l8" id="y4e-mg-Q52"/>
                         <outlet property="sposeLabelValue" destination="QJU-4S-TaA" id="lFa-HP-Psn"/>
-                        <outlet property="user1Label" destination="7wS-sr-Kc0" id="trC-uN-Isk"/>
-                        <outlet property="user3Label" destination="qLI-Sp-rAJ" id="dg0-FZ-8Wx"/>
                         <outlet property="waveView" destination="FGz-q1-jlK" id="Ziq-x6-1cu"/>
                         <outlet property="yearsOfProtectionLabelValue" destination="tJ8-Nf-W6z" id="J6u-Zb-58Q"/>
                         <outletCollection property="labels" destination="rum-jB-Jo8" collectionClass="NSMutableArray" id="VPW-mT-dQE"/>
@@ -581,6 +540,8 @@ your typical day</string>
                         <outletCollection property="labels" destination="rO0-97-OVG" collectionClass="NSMutableArray" id="0LS-NN-1Jd"/>
                         <outletCollection property="labels" destination="F9O-1b-cRE" collectionClass="NSMutableArray" id="bDf-nk-Qpl"/>
                         <outletCollection property="labels" destination="RbZ-Lh-ek1" collectionClass="NSMutableArray" id="mLl-Km-WrD"/>
+                        <outletCollection property="aliceLabels" destination="L4B-bA-3QT" collectionClass="NSMutableArray" id="gND-wq-MO8"/>
+                        <outletCollection property="userLabels" destination="7wS-sr-Kc0" collectionClass="NSMutableArray" id="ecO-w5-ghs"/>
                         <segue destination="Bkn-hM-KV1" kind="show" identifier="toAdditionalQuestions" id="TG7-z8-Fsh"/>
                     </connections>
                 </viewController>

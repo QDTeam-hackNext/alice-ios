@@ -27,11 +27,8 @@ class UserStoryView: UIViewController, WithViewModel {
   @IBOutlet weak var applyButton: UIButton!
 
   @IBOutlet weak var container2: UIView!
-  @IBOutlet weak var alice1Label: UILabel!
-  @IBOutlet weak var user1Label: UILabel!
-  @IBOutlet weak var alice2Label: UILabel!
-  @IBOutlet weak var user3Label: UILabel!
-  @IBOutlet weak var alice3Label: UILabel!
+  @IBOutlet var aliceLabels: [UILabel]!
+  @IBOutlet var userLabels: [UILabel]!
   @IBOutlet weak var waveView: WaveformView!
   @IBOutlet weak var recordingBacground: UILabel!
   @IBOutlet weak var recordButton: UIButton!
@@ -75,7 +72,7 @@ class UserStoryView: UIViewController, WithViewModel {
     self.monthlyFeeValueLabel.font = UIFont.partialPriceFontFont()
     let dayQuestion = "\(self.generalData?.user.givenName ?? ""), tell me about your typical day"
     self.aliceSays.text.text = dayQuestion
-    self.alice1Label.text = dayQuestion
+    self.aliceLabels.first!.text = dayQuestion
 
     self.applyButton.backgroundColor = UIColor.vividPurple
     self.applyButton.layer.cornerRadius = 8
@@ -93,21 +90,13 @@ class UserStoryView: UIViewController, WithViewModel {
                                   width: self.container2.frame.width,
                                   height: self.container2.frame.height - self.recordingBacground.frame.height)
     self.container2.addSubview(blurEffectView)
-    self.container2.addSubview(self.alice1Label)
-    self.container2.addSubview(self.alice2Label)
-    self.container2.addSubview(self.alice3Label)
-    self.container2.addSubview(self.user1Label)
-    self.container2.addSubview(self.user3Label)
+    self.container2.addSubview(self.aliceLabels.first!)
+    self.container2.addSubview(self.userLabels.first!)
     self.container2.addSubview(self.waveView)
     self.container2.addSubview(self.dividerLabel)
 
-    self.styleAliceLabel(label: self.alice1Label)
-    self.styleAliceLabel(label: self.alice2Label)
-    self.styleAliceLabel(label: self.alice3Label)
-    self.alice1Label.isHidden = false
-
-    self.styleUserLabel(label: self.user1Label)
-    self.styleUserLabel(label: self.user3Label)
+    self.styleAliceLabel(label: self.aliceLabels.first!)
+    self.styleUserLabel(label: self.userLabels.first!)
 
     self.waveView.isHidden = true
     self.waveView.numberOfWaves = 4
@@ -159,22 +148,21 @@ class UserStoryView: UIViewController, WithViewModel {
     self.model.discoverUserData(userInput: {
       userText, status in
       if userText.isEmpty {
-        self.alice1Label.text = "I can't hear you, could you please repeat?"
+        self.newAliceLabel().text = "I can't hear you, could you please repeat?"
       } else {
-        self.user1Label.isHidden = false
-        self.user1Label.text = userText
+        self.userLabels.last!.text = userText
       }
     }, aliceResponse: {
       aliceText, fields in
-      if let f = fields,
-        f.count > 0 {
+      if fields.count > 0 {
         self.recordButton.setImage(UIImage(named: "icoTick"), for: .normal)
-        self.readyForNextStep = true
+        self.newAliceLabel().text = "So, you are a \(fields[.occupation])"
+        self.readyForNextStep = self.model.canContinue()
         return
       }
       if let t = aliceText {
-        self.alice2Label.isHidden = false
-        self.alice2Label.text = t;
+        self.newAliceLabel().text = t;
+        self.newUserLabel()
       }
     })
   }
@@ -195,7 +183,6 @@ class UserStoryView: UIViewController, WithViewModel {
   }
 
   fileprivate func styleAliceLabel(label: UILabel) {
-    label.isHidden = true
     label.numberOfLines = 0
     label.lineBreakMode = .byWordWrapping
     label.textAlignment = .left
@@ -205,12 +192,46 @@ class UserStoryView: UIViewController, WithViewModel {
 
   fileprivate func styleUserLabel(label: UILabel) {
     label.text = ""
-    label.isHidden = true
     label.numberOfLines = 0
     label.lineBreakMode = .byWordWrapping
     label.textAlignment = .right
     label.textColor = UIColor.charcoalGrey
     label.font = UIFont.userSpeechResponseFontFont()
+  }
+
+  fileprivate func newAliceLabel() -> UILabel {
+    let label = newConversationLabel(topView: self.userLabels.last!, identation: .right)
+    self.styleAliceLabel(label: label)
+    self.aliceLabels.append(label)
+    return label
+  }
+
+  fileprivate func newUserLabel() {
+    let label = newConversationLabel(topView: self.aliceLabels.last!, identation: .left)
+    self.styleUserLabel(label: label)
+    self.userLabels.append(label)
+  }
+
+  enum Identation {
+    case left
+    case right
+  }
+
+  fileprivate func newConversationLabel(topView: UIView, identation: Identation) -> UILabel {
+    let mainGuides = self.container2.layoutMarginsGuide
+    let label = UILabel()
+    self.container2.addSubview(label)
+    label.translatesAutoresizingMaskIntoConstraints = false
+    label.heightAnchor.constraint(greaterThanOrEqualToConstant: 41).isActive = true
+    label.topAnchor.constraint(equalTo: topView.layoutMarginsGuide.bottomAnchor, constant: 20).isActive = true
+    if identation == .right {
+      label.leadingAnchor.constraint(equalTo: mainGuides.leadingAnchor, constant: 20).isActive = true
+      label.trailingAnchor.constraint(lessThanOrEqualTo: mainGuides.trailingAnchor, constant: -40).isActive = true
+    } else {
+      label.leadingAnchor.constraint(greaterThanOrEqualTo: mainGuides.leadingAnchor, constant: 40).isActive = true
+      label.trailingAnchor.constraint(equalTo: mainGuides.trailingAnchor, constant: -20).isActive = true
+    }
+    return label
   }
 
   func updateMeters() {
