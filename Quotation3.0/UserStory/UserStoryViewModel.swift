@@ -10,7 +10,7 @@ class UserStoryViewModel: ViewModel {
   fileprivate let backend: Backend
   fileprivate let recorder: Recorder
 
-  fileprivate let requiredFields: [PersonalData.Field] = [.occupation, .healthy, .sport]
+  fileprivate let requiredFields: [PersonalData.Field] = [.occupation]
 
   fileprivate var conversationId = ""
   fileprivate var personalData: [PersonalData.Field: String] = [:]

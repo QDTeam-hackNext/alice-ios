@@ -27,6 +27,7 @@ class UserStoryView: UIViewController, WithViewModel {
   @IBOutlet weak var applyButton: UIButton!
 
   @IBOutlet weak var container2: UIView!
+  @IBOutlet weak var scroolContainer: UIScrollView!
   @IBOutlet var aliceLabels: [UILabel]!
   @IBOutlet var userLabels: [UILabel]!
   @IBOutlet weak var waveView: WaveformView!
@@ -90,8 +91,7 @@ class UserStoryView: UIViewController, WithViewModel {
                                   width: self.container2.frame.width,
                                   height: self.container2.frame.height - self.recordingBacground.frame.height)
     self.container2.addSubview(blurEffectView)
-    self.container2.addSubview(self.aliceLabels.first!)
-    self.container2.addSubview(self.userLabels.first!)
+    self.container2.addSubview(self.scroolContainer)
     self.container2.addSubview(self.waveView)
     self.container2.addSubview(self.dividerLabel)
 
@@ -150,18 +150,26 @@ class UserStoryView: UIViewController, WithViewModel {
       if userText.isEmpty {
         self.newAliceLabel().text = "I can't hear you, could you please repeat?"
       } else {
-        self.userLabels.last!.text = userText
+        let userLabel = self.userLabels.last!
+        userLabel.text = userText
+        self.scroolContainer.scrollRectToVisible(userLabel.frame, animated: true)
       }
     }, aliceResponse: {
       aliceText, fields in
       if fields.count > 0 {
         self.recordButton.setImage(UIImage(named: "icoTick"), for: .normal)
-        self.newAliceLabel().text = "So, you are a \(fields[.occupation])"
+        let aliceLabel = self.newAliceLabel()
+        if let occupation = fields[.occupation] {
+          aliceLabel.text = "So, you are a \(occupation)"
+        }
+        self.scroolContainer.scrollRectToVisible(aliceLabel.frame, animated: true)
         self.readyForNextStep = self.model.canContinue()
         return
       }
       if let t = aliceText {
-        self.newAliceLabel().text = t;
+        let aliceLabel = self.newAliceLabel()
+        aliceLabel.text = t;
+        self.scroolContainer.scrollRectToVisible(aliceLabel.frame, animated: true)
         self.newUserLabel()
       }
     })
@@ -220,7 +228,7 @@ class UserStoryView: UIViewController, WithViewModel {
   fileprivate func newConversationLabel(topView: UIView, identation: Identation) -> UILabel {
     let mainGuides = self.container2.layoutMarginsGuide
     let label = UILabel()
-    self.container2.addSubview(label)
+    self.scroolContainer.addSubview(label)
     label.translatesAutoresizingMaskIntoConstraints = false
     label.heightAnchor.constraint(greaterThanOrEqualToConstant: 41).isActive = true
     label.topAnchor.constraint(equalTo: topView.layoutMarginsGuide.bottomAnchor, constant: 20).isActive = true
@@ -231,6 +239,7 @@ class UserStoryView: UIViewController, WithViewModel {
       label.leadingAnchor.constraint(greaterThanOrEqualTo: mainGuides.leadingAnchor, constant: 40).isActive = true
       label.trailingAnchor.constraint(equalTo: mainGuides.trailingAnchor, constant: -20).isActive = true
     }
+    label.bottomAnchor.constraint(equalTo: self.scroolContainer.layoutMarginsGuide.bottomAnchor, constant: 6)
     return label
   }
 
