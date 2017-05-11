@@ -89,7 +89,7 @@
 		C71CB68C1E86945900CA6681 /* PersonalData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PersonalData.swift; sourceTree = "<group>"; };
 		C742929A1EAAAC7900EFDDE5 /* ExternalAppView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ExternalAppView.xib; sourceTree = "<group>"; };
 		C742929C1EAAAC8400EFDDE5 /* ExternalAppView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExternalAppView.swift; sourceTree = "<group>"; };
-		C744E84A1E80184C00DE2E7F /* Alice.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Alice.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		C744E84A1E80184C00DE2E7F /* Alice Alianz.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Alice Alianz.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C744E84D1E80184C00DE2E7F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C744E8521E80184C00DE2E7F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		C744E8541E80184C00DE2E7F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -200,7 +200,7 @@
 		C744E84B1E80184C00DE2E7F /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				C744E84A1E80184C00DE2E7F /* Alice.app */,
+				C744E84A1E80184C00DE2E7F /* Alice Alianz.app */,
 				C744E85E1E80184D00DE2E7F /* AliceTests.xctest */,
 				C744E8691E80184D00DE2E7F /* AliceUITests.xctest */,
 			);
@@ -435,7 +435,7 @@
 			);
 			name = Alice;
 			productName = Quotation3.0;
-			productReference = C744E84A1E80184C00DE2E7F /* Alice.app */;
+			productReference = C744E84A1E80184C00DE2E7F /* Alice Alianz.app */;
 			productType = "com.apple.product-type.application";
 		};
 		C744E85D1E80184D00DE2E7F /* AliceTests */ = {
@@ -845,6 +845,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+				"INFOPLIST_FILE[sdk=*]" = "";
 				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -904,11 +905,13 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_ENTITLEMENTS = Quotation3.0/Quotation3.0.entitlements;
+				CREATE_INFOPLIST_SECTION_IN_BINARY = YES;
 				DEVELOPMENT_TEAM = 8QKQ6Z2FMP;
+				ENABLE_BITCODE = YES;
 				INFOPLIST_FILE = Quotation3.0/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = de.hacknext.alice;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = "$(TARGET_NAME) Alianz";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
@@ -920,11 +923,13 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_ENTITLEMENTS = Quotation3.0/Quotation3.0.entitlements;
+				CREATE_INFOPLIST_SECTION_IN_BINARY = YES;
 				DEVELOPMENT_TEAM = 8QKQ6Z2FMP;
+				ENABLE_BITCODE = YES;
 				INFOPLIST_FILE = Quotation3.0/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = de.hacknext.alice;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = "$(TARGET_NAME) Alianz";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
