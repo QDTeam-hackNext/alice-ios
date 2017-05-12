@@ -736,7 +736,7 @@ your typical day</string>
                                         <state key="normal" title="Button"/>
                                     </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="J1z-d5-2Z4" userLabel="disclaimer">
-                                        <rect key="frame" x="166" y="745" width="42" height="34"/>
+                                        <rect key="frame" x="80" y="745" width="215" height="34"/>
                                         <constraints>
                                             <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="34" id="9Db-Lo-JiM"/>
                                         </constraints>
@@ -751,12 +751,14 @@ your typical day</string>
                                     <constraint firstItem="AiF-Sq-5ls" firstAttribute="top" secondItem="x4r-ZS-OXQ" secondAttribute="top" constant="35" id="BB9-aY-9ER"/>
                                     <constraint firstItem="dV5-i6-opY" firstAttribute="trailing" secondItem="AiF-Sq-5ls" secondAttribute="trailing" id="HFU-Dq-ibl"/>
                                     <constraint firstItem="dV5-i6-opY" firstAttribute="leading" secondItem="AiF-Sq-5ls" secondAttribute="leading" id="LXS-dX-CDT"/>
+                                    <constraint firstItem="J1z-d5-2Z4" firstAttribute="leading" secondItem="x4r-ZS-OXQ" secondAttribute="leading" constant="80" id="Uw6-0O-ubH"/>
                                     <constraint firstItem="J1z-d5-2Z4" firstAttribute="centerX" secondItem="x4r-ZS-OXQ" secondAttribute="centerX" id="WvR-8a-tNe"/>
                                     <constraint firstItem="dV5-i6-opY" firstAttribute="top" secondItem="AiF-Sq-5ls" secondAttribute="bottom" constant="30" id="aqC-Ra-DQB"/>
                                     <constraint firstAttribute="bottom" secondItem="J1z-d5-2Z4" secondAttribute="bottom" constant="36" id="hZg-1e-itp"/>
                                     <constraint firstItem="HiX-7p-LB9" firstAttribute="leading" secondItem="AiF-Sq-5ls" secondAttribute="leading" id="kAw-3z-6b1"/>
                                     <constraint firstItem="HiX-7p-LB9" firstAttribute="trailing" secondItem="AiF-Sq-5ls" secondAttribute="trailing" id="kut-e8-r6Q"/>
                                     <constraint firstItem="J1z-d5-2Z4" firstAttribute="top" secondItem="HiX-7p-LB9" secondAttribute="bottom" constant="14" id="p3y-ZH-fzE"/>
+                                    <constraint firstAttribute="trailing" secondItem="J1z-d5-2Z4" secondAttribute="trailing" constant="80" id="tv4-2i-gXR"/>
                                 </constraints>
                             </scrollView>
                         </subviews>

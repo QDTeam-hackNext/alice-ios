@@ -79,16 +79,22 @@ class DataAccessView: UIViewController, WithViewModel {
     self.divider.text = ""
     self.divider.backgroundColor = UIColor.slate10
 
+    self.payButton.layer.cornerRadius = 8
+    self.payButton.clipsToBounds = true
     self.payButton.backgroundColor = UIColor.greenTwo
     self.payButton.setTitleColor(UIColor.white, for: .normal)
     self.payButton.titleLabel?.font = UIFont.buttonFontFont()
     self.payButton.setTitle("Pay now", for: .normal)
 
+    self.saveButton.layer.cornerRadius = 8
+    self.saveButton.clipsToBounds = true
     self.saveButton.backgroundColor = UIColor.darkGreyBlue
     self.saveButton.setTitleColor(UIColor.white, for: .normal)
     self.saveButton.titleLabel?.font = UIFont.buttonFontFont()
     self.saveButton.setTitle("Save for later", for: .normal)
 
+    self.disclamierLabel.numberOfLines = 0
+    self.disclamierLabel.lineBreakMode = .byWordWrapping
     self.disclamierLabel.font = UIFont.disclaimerFont()
     self.disclamierLabel.textColor = UIColor.slate
     self.disclamierLabel.textAlignment = .center
