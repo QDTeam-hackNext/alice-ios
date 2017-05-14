@@ -1064,7 +1064,6 @@ your typical day</string>
                                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="headerS09Insurance" translatesAutoresizingMaskIntoConstraints="NO" id="4A7-I5-on9">
                                                 <rect key="frame" x="33" y="26" width="252" height="77"/>
                                                 <constraints>
-                                                    <constraint firstAttribute="height" constant="77" id="Ixm-Bb-EIb"/>
                                                     <constraint firstAttribute="width" secondItem="4A7-I5-on9" secondAttribute="height" multiplier="36:11" id="jYP-Qg-ahL"/>
                                                 </constraints>
                                             </imageView>
