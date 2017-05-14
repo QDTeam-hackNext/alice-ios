@@ -160,7 +160,7 @@ class UserStoryView: UIViewController, WithViewModel {
         self.recordButton.setImage(UIImage(named: "icoTick"), for: .normal)
         let aliceLabel = self.newAliceLabel()
         if let occupation = fields[.occupation] {
-          aliceLabel.text = "So, you are a \(occupation)"
+          aliceLabel.text = "So, you are a \(occupation), lets continue!"
         }
         self.scroolContainer.scrollRectToVisible(aliceLabel.frame, animated: true)
         self.readyForNextStep = self.model.canContinue()
