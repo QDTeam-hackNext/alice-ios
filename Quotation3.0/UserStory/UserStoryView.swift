@@ -129,7 +129,7 @@ class UserStoryView: UIViewController, WithViewModel {
   override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
      if segue.identifier == "toAdditionalQuestions" {
       let controller = segue.destination as! AdditionalQuestionsView
-      controller.setData(generalData: self.generalData!)
+      controller.model.data = self.generalData
     }
   }
 

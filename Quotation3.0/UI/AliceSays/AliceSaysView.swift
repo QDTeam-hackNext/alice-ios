@@ -36,7 +36,7 @@ class AliceSaysView: UIView {
     self.text.numberOfLines = 0
     self.text.lineBreakMode = .byWordWrapping
     self.text.textColor = UIColor.charcoalGrey
-    self.text.font = UIFont.aliceMessageFontFont()
+    self.text.font = UIFont.aliceMessageFontFont()?.withSize(19)
 
     self.addSubview(self.contentView)
   }

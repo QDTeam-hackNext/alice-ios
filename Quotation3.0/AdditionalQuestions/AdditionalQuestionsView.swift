@@ -26,11 +26,6 @@ class AdditionalQuestionsView: UIViewController, WithViewModel {
   @IBOutlet weak var healthMsg: UILabel!
   @IBOutlet weak var healthLabel: UILabel!
   @IBOutlet weak var bottomLabel: UILabel!
-  fileprivate var generalData: GeneralInformationData?
-
-  func setData(generalData: GeneralInformationData) {
-    self.generalData = generalData
-  }
 
   override func viewDidLoad() {
     self.healthOverlay.isHidden = true
@@ -65,22 +60,25 @@ class AdditionalQuestionsView: UIViewController, WithViewModel {
     self.healthOverlay.layer.cornerRadius = 8
     self.healthOverlay.clipsToBounds = true
 
+    self.healthMsg.numberOfLines = 0
+    self.healthMsg.lineBreakMode = .byWordWrapping
     self.healthMsg.textAlignment = .center
     self.healthMsg.font = UIFont.headerFontFont()
     self.healthMsg.textColor = UIColor.charcoalGrey
+    self.healthMsg.text = "\(self.model.data?.user.givenName ?? ""), please give me few seconds. I need to get few things from:"
 
     self.healthLabel.font = UIFont.sumaryNameFontFont()
     self.healthLabel.textColor = UIColor.slate
 
     self.bottomLabel.text = ""
     self.bottomLabel.backgroundColor = UIColor.vividPurple
-    self.aliceSayPrice(price: (self.generalData?.price)!)
+    self.aliceSayPrice(price: (self.model.data?.price)!)
   }
 
   override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
     if segue.identifier == "toDataAccess" {
       let controller = segue.destination as! DataAccessView
-      controller.model.data = self.generalData
+      controller.model.data = self.model.data
     }
   }
 
@@ -91,20 +89,22 @@ class AdditionalQuestionsView: UIViewController, WithViewModel {
   func healthSwitchValueChanged(_ sender: Any) {
     if self.healthExternalApp.toggleSwitch.isOn {
       self.aliceSays.isHidden = true
+      self.container.isHidden = true
       self.summaryButton.isHidden = true
       self.healthOverlay.isHidden = false
       self.model.requestHealthAccess(callback: {
         _ in
         DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + 3, execute: {
           self.aliceSays.isHidden = false
+          self.container.isHidden = false
           self.summaryButton.isHidden = false
           self.healthOverlay.isHidden = true
           self.healthExternalApp.discountLabel.text = "Great shape -10%"
           self.healthExternalApp.discountLabel.isHidden = false
-          self.aliceSayPrice(price: "\(Double((self.generalData?.price)!)! * 0.9)")
+          self.aliceSayPrice(price: "\(Double((self.model.data?.price)!)! * 0.9)")
         })
       })
-    } else {self.aliceSayPrice(price: (self.generalData?.price)!)
+    } else {self.aliceSayPrice(price: (self.model.data?.price)!)
       self.healthExternalApp.discountLabel.isHidden = true
     }
   }
@@ -112,7 +112,7 @@ class AdditionalQuestionsView: UIViewController, WithViewModel {
   fileprivate func aliceSayPrice(price: String) {
     DispatchQueue.main.async {
       if !price.isEmpty {
-        self.aliceSays.text.text = ", your current quote is \(price)€"
+        self.aliceSays.text.text = "\(self.model.data?.user.givenName ?? ""), your current quote is \(price)€"
       } else {
         self.aliceSays.text.text = "I'm checking price for you"
       }

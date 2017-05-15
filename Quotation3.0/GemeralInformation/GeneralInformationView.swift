@@ -38,8 +38,6 @@ class GeneralIfomationView: UIViewController, WithViewModel {
   override func viewDidLoad() {
     self.view.backgroundColor = UIColor.background
 
-    self.aliceSays.text.font = UIFont.aliceMessageFontFont()?.withSize(19)
-
     self.styleContainer(container: self.firstQuestionContainer)
     self.styleContainer(container: self.secondQuestionContainer)
     self.styleContainer(container: self.thirdQuestionContainer)
