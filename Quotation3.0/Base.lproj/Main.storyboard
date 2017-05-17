@@ -441,18 +441,8 @@ your typical day</string>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="0" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7wS-sr-Kc0" userLabel="user1">
-                                                <rect key="frame" x="313" y="101" width="42" height="20"/>
-                                                <constraints>
-                                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="20" id="Lyu-am-WWW"/>
-                                                </constraints>
-                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                <nil key="textColor"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
                                         </subviews>
                                         <constraints>
-                                            <constraint firstItem="7wS-sr-Kc0" firstAttribute="top" secondItem="L4B-bA-3QT" secondAttribute="bottom" constant="20" id="jc5-45-VOq"/>
                                             <constraint firstItem="L4B-bA-3QT" firstAttribute="top" secondItem="laa-q4-gZV" secondAttribute="top" constant="40" id="reY-Tq-pEY"/>
                                         </constraints>
                                     </scrollView>
@@ -489,14 +479,12 @@ your typical day</string>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstItem="FGz-q1-jlK" firstAttribute="leading" secondItem="r8y-Nl-lei" secondAttribute="leading" id="0pc-R2-Tew"/>
-                                    <constraint firstAttribute="trailing" secondItem="7wS-sr-Kc0" secondAttribute="trailing" constant="20" id="39F-7B-Tau"/>
                                     <constraint firstItem="lIH-XY-8l8" firstAttribute="leading" secondItem="r8y-Nl-lei" secondAttribute="leading" id="AQg-no-6Sz"/>
                                     <constraint firstAttribute="trailing" secondItem="laa-q4-gZV" secondAttribute="trailing" id="Lbr-Sl-d4c"/>
                                     <constraint firstItem="L4B-bA-3QT" firstAttribute="leading" secondItem="r8y-Nl-lei" secondAttribute="leading" constant="20" id="Lop-7Q-ief"/>
                                     <constraint firstItem="lIH-XY-8l8" firstAttribute="top" secondItem="FGz-q1-jlK" secondAttribute="bottom" constant="56" id="YDN-1k-DL4"/>
                                     <constraint firstItem="GTt-AZ-y4f" firstAttribute="centerX" secondItem="lIH-XY-8l8" secondAttribute="centerX" id="cbZ-PT-Qb0"/>
                                     <constraint firstItem="laa-q4-gZV" firstAttribute="leading" secondItem="r8y-Nl-lei" secondAttribute="leading" id="drJ-gw-BeK"/>
-                                    <constraint firstItem="7wS-sr-Kc0" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="r8y-Nl-lei" secondAttribute="leading" constant="40" id="eCh-D1-L4o"/>
                                     <constraint firstAttribute="bottom" secondItem="lIH-XY-8l8" secondAttribute="bottom" id="ggc-Xg-KoN"/>
                                     <constraint firstItem="FGz-q1-jlK" firstAttribute="top" secondItem="laa-q4-gZV" secondAttribute="bottom" id="gh9-F1-LaX"/>
                                     <constraint firstItem="GTt-AZ-y4f" firstAttribute="centerY" secondItem="lIH-XY-8l8" secondAttribute="centerY" id="pR5-dx-G9g"/>
@@ -553,7 +541,6 @@ your typical day</string>
                         <outletCollection property="labels" destination="F9O-1b-cRE" collectionClass="NSMutableArray" id="bDf-nk-Qpl"/>
                         <outletCollection property="labels" destination="RbZ-Lh-ek1" collectionClass="NSMutableArray" id="mLl-Km-WrD"/>
                         <outletCollection property="aliceLabels" destination="L4B-bA-3QT" collectionClass="NSMutableArray" id="gND-wq-MO8"/>
-                        <outletCollection property="userLabels" destination="7wS-sr-Kc0" collectionClass="NSMutableArray" id="ecO-w5-ghs"/>
                         <segue destination="Bkn-hM-KV1" kind="show" identifier="toAdditionalQuestions" id="TG7-z8-Fsh"/>
                     </connections>
                 </viewController>

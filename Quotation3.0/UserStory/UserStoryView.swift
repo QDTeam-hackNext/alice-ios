@@ -29,13 +29,13 @@ class UserStoryView: UIViewController, WithViewModel {
   @IBOutlet weak var container2: UIView!
   @IBOutlet weak var scroolContainer: UIScrollView!
   @IBOutlet var aliceLabels: [UILabel]!
-  @IBOutlet var userLabels: [UILabel]!
   @IBOutlet weak var waveView: WaveformView!
   @IBOutlet weak var recordingBacground: UILabel!
   @IBOutlet weak var recordButton: UIButton!
 
   fileprivate var readyForNextStep = false
   fileprivate var displayLink: CADisplayLink?
+  fileprivate var userLabels: [UILabel]! = [UILabel]()
   fileprivate var generalData: GeneralInformationData?
 
   func setData(generalData: GeneralInformationData) {
@@ -96,7 +96,6 @@ class UserStoryView: UIViewController, WithViewModel {
     self.container2.addSubview(self.dividerLabel)
 
     self.styleAliceLabel(label: self.aliceLabels.first!)
-    self.styleUserLabel(label: self.userLabels.first!)
 
     self.waveView.isHidden = true
     self.waveView.numberOfWaves = 4
@@ -105,6 +104,8 @@ class UserStoryView: UIViewController, WithViewModel {
 
     self.dividerLabel.text = ""
     self.dividerLabel.backgroundColor = UIColor.dodgerBlue
+
+    self.scroolContainer.autoresizingMask = .flexibleHeight
 
     self.recordingBacground.text = ""
     self.recordingBacground.backgroundColor = UIColor.vividPurple
@@ -146,14 +147,16 @@ class UserStoryView: UIViewController, WithViewModel {
     self.displayLink = CADisplayLink(target: self, selector: #selector(self.updateMeters))
     self.displayLink?.add(to: RunLoop.current, forMode: RunLoopMode.commonModes)
     self.waveView.isHidden = false
+    self.newUserLabel()
     self.model.discoverUserData(userInput: {
       userText, status in
       if userText.isEmpty {
+        self.newUserLabel()
         self.newAliceLabel().text = "I can't hear you, could you please repeat?"
       } else {
         let userLabel = self.userLabels.last!
         userLabel.text = userText
-        self.scroolContainer.scrollRectToVisible(userLabel.frame, animated: true)
+        self.updateScorllView(visibleView: userLabel)
       }
     }, aliceResponse: {
       aliceText, fields in
@@ -164,15 +167,14 @@ class UserStoryView: UIViewController, WithViewModel {
           self.model.occupation = occupation
           aliceLabel.text = "So, you are a \(occupation), lets continue!"
         }
-        self.scroolContainer.scrollRectToVisible(aliceLabel.frame, animated: true)
+        self.updateScorllView(visibleView: aliceLabel)
         self.readyForNextStep = self.model.canContinue()
         return
       }
       if let t = aliceText {
         let aliceLabel = self.newAliceLabel()
         aliceLabel.text = t;
-        self.scroolContainer.scrollRectToVisible(aliceLabel.frame, animated: true)
-        self.newUserLabel()
+        self.updateScorllView(visibleView: aliceLabel)
       }
     })
   }
@@ -210,7 +212,7 @@ class UserStoryView: UIViewController, WithViewModel {
   }
 
   fileprivate func newAliceLabel() -> UILabel {
-    let label = newConversationLabel(topView: self.userLabels.last!, identation: .right)
+    let label = newConversationLabel(topView: self.userLabels.last ?? self.container, identation: .right)
     self.styleAliceLabel(label: label)
     self.aliceLabels.append(label)
     return label
@@ -242,11 +244,26 @@ class UserStoryView: UIViewController, WithViewModel {
       label.trailingAnchor.constraint(equalTo: mainGuides.trailingAnchor, constant: -20).isActive = true
     }
     label.bottomAnchor.constraint(equalTo: self.scroolContainer.layoutMarginsGuide.bottomAnchor, constant: 6)
+    self.updateScorllView(visibleView: label)
     return label
   }
 
   func updateMeters() {
     let random = Double(arc4random_uniform(255))
     self.waveView.updateWithLevel(CGFloat(random.divided(by: 255)))
+  }
+
+  fileprivate func updateScorllView(visibleView: UIView) {
+    let bottomEdge = max(self.viewPosition(self.userLabels.last),
+                         self.viewPosition(self.aliceLabels.last)) + 20
+    self.scroolContainer.contentSize = CGSize(width: self.scroolContainer.contentSize.width, height: bottomEdge)
+    self.scroolContainer.scrollRectToVisible(CGRect(x: 0, y: bottomEdge, width: 1, height: 1), animated: true)
+  }
+
+  func viewPosition(_ view: UIView?) -> CGFloat {
+    if let v = view {
+      return v.frame.maxY + v.bounds.height
+    }
+    return 0
   }
 }
