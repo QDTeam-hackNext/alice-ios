@@ -8,6 +8,7 @@
 
 class AdditionalQuestionsViewModel: ViewModel {
   var data: GeneralInformationData?
+  var additionalData: AdditionalUserData?
 
   fileprivate let health: HealthKit
 

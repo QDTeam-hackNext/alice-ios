@@ -127,9 +127,10 @@ class UserStoryView: UIViewController, WithViewModel {
   }
 
   override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-     if segue.identifier == "toAdditionalQuestions" {
-      let controller = segue.destination as! AdditionalQuestionsView
+     if segue.identifier == "toAdditionalQuestions",
+        let controller = segue.destination as? AdditionalQuestionsView {
       controller.model.data = self.generalData
+      controller.model.additionalData = AdditionalUserData(occupation: self.model.occupation, health: "", sport: "")
     }
   }
 
@@ -160,6 +161,7 @@ class UserStoryView: UIViewController, WithViewModel {
         self.recordButton.setImage(UIImage(named: "icoTick"), for: .normal)
         let aliceLabel = self.newAliceLabel()
         if let occupation = fields[.occupation] {
+          self.model.occupation = occupation
           aliceLabel.text = "So, you are a \(occupation), lets continue!"
         }
         self.scroolContainer.scrollRectToVisible(aliceLabel.frame, animated: true)

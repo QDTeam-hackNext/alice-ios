@@ -79,6 +79,7 @@ class AdditionalQuestionsView: UIViewController, WithViewModel {
     if segue.identifier == "toDataAccess" {
       let controller = segue.destination as! DataAccessView
       controller.model.data = self.model.data
+      controller.model.additionalData = self.model.additionalData
     }
   }
 

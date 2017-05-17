@@ -8,4 +8,5 @@
 
 class DataAccessViewModel: ViewModel {
   var data: GeneralInformationData?
+  var additionalData: AdditionalUserData?
 }

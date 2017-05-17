@@ -6,7 +6,16 @@
 //  Copyright © 2017 QD Team. All rights reserved.
 //
 
+
+struct AdditionalUserData {
+  let occupation: String
+  let health: String
+  let sport: String
+}
+
 class UserStoryViewModel: ViewModel {
+  var occupation = ""
+
   fileprivate let backend: Backend
   fileprivate let recorder: Recorder
 
@@ -53,3 +62,4 @@ class UserStoryViewModel: ViewModel {
     return self.requiredFields.count == self.personalData.count
   }
 }
+

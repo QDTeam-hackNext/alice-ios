@@ -19,8 +19,11 @@ class DataAccessView: UIViewController, WithViewModel {
   @IBOutlet weak var phoneRow: InformationRowView!
   @IBOutlet weak var emailRow: InformationRowView!
   @IBOutlet weak var jobRow: InformationRowView!
+  @IBOutlet var jobConstraints: [NSLayoutConstraint]!
   @IBOutlet weak var activitiesRow: InformationRowView!
+  @IBOutlet var activitiesConstraints: [NSLayoutConstraint]!
   @IBOutlet weak var healthRow: InformationRowView!
+  @IBOutlet var healthConstraints: [NSLayoutConstraint]!
   @IBOutlet weak var coverageRow: InformationRowView!
   @IBOutlet weak var yearsOfProtectionRow: InformationRowView!
   @IBOutlet weak var divider: UILabel!
@@ -56,14 +59,39 @@ class DataAccessView: UIViewController, WithViewModel {
     self.emailRow.name.text = "E-mail"
     self.emailRow.value.text = "\(self.model.data!.email)"
 
-    self.jobRow.name.text = "Job"
-    self.jobRow.value.text = ""
+    if let data = self.model.additionalData,
+        !data.occupation.isEmpty {
+      self.jobRow.name.text = "Job"
+      self.jobRow.value.text = "\(data.occupation.capitalized)"
+    } else {
+      self.jobRow.isHidden = true
+      self.jobRow.heightAnchor.constraint(equalToConstant: 0)
+      for constraint in self.jobConstraints {
+        constraint.constant = 0
+      }
+    }
 
-    self.activitiesRow.name.text = "Activities"
-    self.activitiesRow.value.text = ""
+    if let data = self.model.additionalData,
+        !data.sport.isEmpty {
+      self.activitiesRow.name.text = "Activities"
+      self.activitiesRow.value.text = "\(data.sport.capitalized)"
+    } else {
+      self.activitiesRow.isHidden = true
+      for constraint in self.activitiesConstraints {
+        constraint.constant = 0
+      }
+    }
 
-    self.healthRow.name.text = "Health"
-    self.healthRow.value.text = ""
+    if let data = self.model.additionalData,
+        !data.health.isEmpty {
+      self.healthRow.name.text = "Health"
+      self.healthRow.value.text = "\(data.health.capitalized)"
+    } else {
+      self.healthRow.isHidden = true
+      for constraint in self.healthConstraints {
+        constraint.constant = 0
+      }
+    }
 
     self.coverageRow.name.text = "Coverage"
     self.coverageRow.value.text = "\(self.model.data!.sum)€"
@@ -105,6 +133,7 @@ class DataAccessView: UIViewController, WithViewModel {
     if segue.identifier == "toSummary" {
       let controller = segue.destination as! SummaryView
       controller.model.data = self.model.data
+      controller.model.additionalData = self.model.additionalData
     }
   }
 

@@ -7,5 +7,6 @@
 //
 
 class SummaryViewModel: ViewModel {
-  var data: GeneralInformationData? 
+  var data: GeneralInformationData?
+  var additionalData: AdditionalUserData?
 }
