@@ -63,17 +63,17 @@ class GeneralIfomationView: UIViewController, WithViewModel {
     self.secondQuestionSlider.value = 10
     self.thirdQuestionSwitch.setOn(false, animated: false)
 
-    DispatchQueue.main.async {
-      self.quoteButton.backgroundColor = UIColor.vividPurple
-      self.quoteButton.layer.cornerRadius = 8
-      self.quoteButton.clipsToBounds = true
-      self.quoteButton.titleLabel?.font = UIFont.buttonFontFont()
-      self.quoteButton.setTitleColor(UIColor.white, for: .normal)
+    self.quoteButton.backgroundColor = UIColor.vividPurple
+    self.quoteButton.layer.cornerRadius = 8
+    self.quoteButton.clipsToBounds = true
+    self.quoteButton.titleLabel?.font = UIFont.buttonFontFont()
+    self.quoteButton.setTitleColor(UIColor.white, for: .normal)
+    self.quoteButton.setTitleColor(UIColor.gray, for: .disabled)
+    self.quoteButton.setTitle("Updating quote...", for: .disabled)
 
-      self.aliceSayPrice(price: "")
-      self.firstSliderValueChanged(self)
-      self.secondSliderValueChanged(self)
-    }
+    self.aliceSayPrice(price: "")
+    self.firstSliderValueChanged(self)
+    self.secondSliderValueChanged(self)
     self.computePrice()
   }
 
@@ -139,8 +139,11 @@ class GeneralIfomationView: UIViewController, WithViewModel {
   fileprivate func aliceSayPrice(price: String) {
     DispatchQueue.main.async {
       if !price.isEmpty {
+        self.quoteButton.isEnabled = true
         self.aliceSays.text.text = "\(self.model.userRealName()), your current quote is \(price)€"
       } else {
+
+        self.quoteButton.isEnabled = false
         self.aliceSays.text.text = "I'm checking price for you"
       }
 //      let formattedText = NSAttributedString(string: text)
